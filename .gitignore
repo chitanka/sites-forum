@@ -1,0 +1,8 @@
+cache
+images/avatars/upload
+install*
+config.php
+*.log
+*.pid
+*.min.js
+chat/logs*

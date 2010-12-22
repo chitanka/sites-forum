@@ -1,0 +1,83 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#content {
+	position: relative;
+	padding: 1em 1em 66em 1em;
+	width: auto;
+}
+#content #chatList {
+	position: relative;
+	margin: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	clear: both;
+}
+#content #chatList .login {
+	opacity: .2;
+}
+
+time {
+	font-size: 80%;
+}
+time a {
+	text-decoration: none;
+	color: #808080;
+}
+
+dl {
+	margin: 0;
+	padding: 0;
+}
+dt {
+	margin: 0;
+	padding: .5em 1em 0 1em;
+}
+dd {
+	margin: 0;
+	padding: 0 0 .1em 7em;
+}
+
+ul.navigation {
+	padding: 0;
+	list-style-type: none;
+}
+ul.navigation li {
+	display: inline-block;
+	width: 33%;
+}
+ul.navigation li.previous {
+	text-align: left;
+}
+ul.navigation li.up {
+	text-align: center;
+}
+ul.navigation li.next {
+	text-align: right;
+}
+
+div.index {
+	text-align: right;
+}
+
+.Yo {color: #FF7200 !important}
+.gogo_mir {color: #6F0000 !important}
+.haripetrov {color: #CF00DF !important}
+.Вилорп {color: #8E35EF !important}
+.Ti6anko {color: #DF0000 !important}
+.Xesiona {color: #FF5F7C !important}
+.Alegria {color: #00AA00 !important}
+.ultimat {color: #842DCE !important}
+.mistar_ti {color: #5F5F5F !important}
+.NomaD {color: #254117 !important}
+.moosehead {color: #0000FF !important}
+.MikoBG {color: #00AA00 !important}
+.Boman {color: #FF6600 !important}
+.forri {color: #DF0000 !important}
+.Mandor {color: #AA0000 !important}
+.GeOrg {color: #00AA00 !important}
+.Борислав {color: #AA0000 !important}
+.northeast {color: #0892D0 !important}

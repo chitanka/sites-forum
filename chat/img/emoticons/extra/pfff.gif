@@ -1,0 +1,176 @@
+<html>
+<head><title>RapidShare Webhosting + Webspace</title>
+<Style>
+body {
+ font-family: Verdana;
+ font-size: 12px;
+}
+table {
+ font-family: Verdana;
+ font-size: 12px;
+}
+</Style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" alink="#555555" vlink="#555555" link="#555555" topmargin=0 leftmargin=0 bottommargin=0 rightmargin=0>
+<script>if (self != top) { top.location.replace(window.location.href) }</script>
+
+<Table width=100% height=100% border=0 cellspacing=0 cellpadding=0>
+<TR><TD nowrap colspan=2 height=20 align=center valign=top bgcolor=#E2E6ED></TD></TR>
+
+<tr>
+<td width="50%" align="right" style="background-image:url(http://images.rapidforum.com/rapidshare/logobg.jpg); background-repeat:repeat-x;"><img src="http://images.rapidforum.com/rapidshare/logo-left.jpg"></td>
+<td width="50%" align="left" style="background-image:url(http://images.rapidforum.com/rapidshare/logobg2.jpg); background-repeat:repeat-x;"><img src="http://images.rapidforum.com/rapidshare/logo-right.jpg"></td>
+</tr>
+
+<TR><TD colspan=2 height=100% align=center valign=top bgcolor=#E2E6ED>
+<BR><BR>
+
+<!-- Inhalt !-->
+<Table width=90% height=90% border=0 cellspacing=0 cellpadding=0>
+<TR><TD nowrap colspan=5 height=1 bgcolor=#000000></TD></TR>
+
+<TR>
+<TD nowrap width=1 bgcolor=#000000></TD>
+<TD nowrap width=5 bgcolor=#FCFEFE></TD>
+<TD width=100% height=100% valign=top align=center bgcolor=#FCFEFE>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="33%">
+<a href="http://rapidshare.de/en/premium.html"><b>PREMIUM-Downloads</b></a> &nbsp;&nbsp;&nbsp;
+<a href="https://ssl.rapidshare.de/cgi-bin/premiumzone.cgi"><b>PREMIUM-Zone</b></a><br>
+</td><td align="center">
+</td><td align="right" width="33%">
+<a href="http://rapidshare.de/en/faq.html">FAQ</a> &nbsp;&nbsp;
+<a href="http://rapidshare.de/en/impressum.html">Imprint</a><br>
+<a href="http://rapidshare.de/en/forgotpw.html">Forgot Premium-password?</a><br>
+<a href="http://rapidshare.de/en/phishing.html">WARNING OF PHISHING!</a>
+</td></tr></table>
+
+<iframe src="http://dl9.rapidshare.de/en/progress.html?uploadid=146480876258945999" width="600" height="95" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO"></iframe>
+<script>function switchfiles() {document.getElementById('files').innerHTML = 'File #01: <input type="file" size="64" name="filecontent"><br>File #02: <input type="file" size="64" name="filecontent2"><br>File #03: <input type="file" size="64" name="filecontent3"><br>' +
+'File #04: <input type="file" size="64" name="filecontent4"><br>File #05: <input type="file" size="64" name="filecontent5"><br>File #06: <input type="file" size="64" name="filecontent6"><br>File #07: <input type="file" size="64" name="filecontent7"><br>' +
+'File #08: <input type="file" size="64" name="filecontent8"><br>File #09: <input type="file" size="64" name="filecontent9"><br>File #10: <input type="file" size="64" name="filecontent10"><br><input type="submit" name="u" value="Upload!">'}</script>
+<form name="ul" method="post" action="http://ul9.rapidshare.de/cgi-bin/upload.cgi?rsuploadid=146480876258945999" enctype="multipart/form-data" onsubmit="document.ul.u.value='Uploading...';document.ul.u.disabled=true">
+<a href="#" onclick="switchfiles()">Multi-Upload</a><br>
+<div id="files"><input type="file" size="64" name="filecontent"> <input type="submit" name="u" value="Upload!"></div>
+Please check our <a href="http://rapidshare.de/en/faq.html" target="_blank">upload rules and service conditions</a>.</form>
+<b><big>NEW: Upload up to <font color="red">300 MB</font> per file now!</big></b><br><br>
+
+<iframe src="http://www.adtology3.com/728x90geo.php" scrolling="No" width="728" height="90" frameborder="No"></iframe>
+<p><p>Access-code wrong. Only free-users have to enter an access-code to prevent abuse.<br>
+Premium-users don't have to enter anything! Get your own Premium-account now. Instant download-access!<br>
+<a href="http://rapidshare.de/files/43632106/pfff.gif">Click here to try again.</a></p><p><table border="2" cellpadding="5" cellspacing="0">
+<tr><td align="center"><b>Price</b></td><td align="center"><b>Valid for</b></td>
+<td align="center" colspan="2"><b>Payment options</b></td></tr>
+
+<!-- WARNING: The following values are checked for VAILIDITY! Do NOT modify them or we will just ignore your payment! -->
+
+<tr>
+<td><b>9.90 EUR</b></td>
+<td>1 month</td>
+<td align="center">
+<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="webmaster@rapidshare.de">
+<input type="hidden" name="item_name" value="RapidShare - PREMIUM (1 month)">
+<input type="hidden" name="item_number" value="15">
+<input type="hidden" name="amount" value="9.90">
+<input type="hidden" name="page_style" value="RapidShare">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="https://ssl.rapidshare.de/cgi-bin/paypalok.cgi">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="bn" value="PP-BuyNowBF">
+<input type="image" src="http://images.rapidforum.com/rapidshare/paypal_buy.gif">
+</form>
+</td>
+</tr>
+
+<tr>
+<td><b>24.- EUR</b><br><small>~8 EUR/month</small></td>
+<td>3 months</td>
+<td align="center">
+<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="webmaster@rapidshare.de">
+<input type="hidden" name="item_name" value="RapidShare - PREMIUM (3 months)">
+<input type="hidden" name="item_number" value="16">
+<input type="hidden" name="amount" value="24.00">
+<input type="hidden" name="page_style" value="RapidShare">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="https://ssl.rapidshare.de/cgi-bin/paypalok.cgi">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="bn" value="PP-BuyNowBF">
+<input type="image" src="http://images.rapidforum.com/rapidshare/paypal_buy.gif">
+</form>
+</td>
+</tr>
+
+<tr>
+<td><b>44.- EUR</b><br><small>~7.3 EUR/month</small></td>
+<td>6 months</td>
+<td align="center">
+<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="webmaster@rapidshare.de">
+<input type="hidden" name="item_name" value="RapidShare - PREMIUM (6 month)">
+<input type="hidden" name="item_number" value="17">
+<input type="hidden" name="amount" value="44.00">
+<input type="hidden" name="page_style" value="RapidShare">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="https://ssl.rapidshare.de/cgi-bin/paypalok.cgi">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="bn" value="PP-BuyNowBF">
+<input type="image" src="http://images.rapidforum.com/rapidshare/paypal_buy.gif">
+</form>
+</td>
+</tr>
+
+<tr>
+<td><b>79.- EUR</b><br><small>~6.6 EUR/month</small></td>
+<td><b><big>1 year</big></b></td>
+<td align="center">
+<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="webmaster@rapidshare.de">
+<input type="hidden" name="item_name" value="RapidShare - PREMIUM (1 year)">
+<input type="hidden" name="item_number" value="18">
+<input type="hidden" name="amount" value="79.00">
+<input type="hidden" name="page_style" value="RapidShare">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="https://ssl.rapidshare.de/cgi-bin/paypalok.cgi">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="bn" value="PP-BuyNowBF">
+<input type="image" src="http://images.rapidforum.com/rapidshare/paypal_buy.gif">
+</form>
+</td>
+</tr>
+
+</table></p>
+
+<p>Premium-accounts do NOT automatically renew! Absolutely no risk for you!<br>
+Of course you can extend your account anytime, if you are satisfied with RapidShare.</p>
+</p>
+<iframe src="http://www.adtology3.com/728x90geo2.php" scrolling="No" width="728" height="90" frameborder="No"></iframe>
+
+</TD>
+<TD nowrap width=5 bgcolor=#FCFEFE></TD>
+<TD nowrap width=1 bgcolor=#000000></TD>
+</TR>
+
+<TR><TD nowrap colspan=5 height=1 bgcolor=#000000></TD></TR>
+</Table>
+
+<BR><BR>
+
+<!--Inhalt Ende 1-->
+</TD></TR></Table>
+
+</body></html>

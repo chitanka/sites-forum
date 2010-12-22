@@ -1,0 +1,1 @@
+../../prosilver/template/editor.js
