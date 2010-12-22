@@ -19,7 +19,9 @@ $db->sql_freeresult($result);
 if (empty($poster['username'])) {
 	$username = empty($post_data['username']) ? 'гост' : $post_data['username'];
 } else {
-	$username = '[color=#' . $poster['user_colour]'] . ']'.$poster['username'].'[/color]';
+	$username = empty($poster['user_colour'])
+		? $poster['username']
+		: "[color=#$poster[user_colour]]$poster[username][/color]";
 }
 
 $chat_post = '[i]'
