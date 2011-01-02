@@ -8,20 +8,15 @@ $str_from = array('&lt;', '&gt;', '&#91;', '&#93;', '&#46;', '&#58;', '&#058;','
 $str_to = array('<', '>', '[', ']', '.', ':', ':', '&', '"');
 $clean_title = str_replace($str_from, $str_to, $true_title);
 
-#print_r($post_data);print_r($data);
+#print_r($post_data);
+#file_put_contents('posting.log', print_r($post_data, true)."\n\n", FILE_APPEND);
 
-// Get 'poster_id' details
-$csql = 'SELECT * FROM ' . USERS_TABLE
-	. ' WHERE username_clean = "' . $db->sql_escape(utf8_clean_string($post_data['username'])) .'"';
-$result = $db->sql_query($csql);
-$poster = $db->sql_fetchrow($result);
-$db->sql_freeresult($result);
-if (empty($poster['username'])) {
+if ($user->data['user_id'] == ANONYMOUS) {
 	$username = empty($post_data['username']) ? 'гост' : $post_data['username'];
 } else {
-	$username = empty($poster['user_colour'])
-		? $poster['username']
-		: "[color=#$poster[user_colour]]$poster[username][/color]";
+	$username = empty($user->data['user_colour'])
+		? $user->data['username']
+		: "[color=#{$user->data['user_colour']}]{$user->data['username']}[/color]";
 }
 
 $chat_post = '[i]'
