@@ -567,11 +567,11 @@
 
 
 	/* borislav */
+	#onlineList a {
+		text-decoration: none;
+	}
 	.userMenu li {
 		list-style-type: none;
-	}
-	.userMenu a {
-		text-decoration: none;
 	}
 	.userMenu a:hover {
 		color: #000000;
@@ -581,6 +581,9 @@
 		background-color: #FFE77B;
 		padding: 0.1em 0.5em;
 		-moz-border-radius: .5em;
+	}
+	.away {
+		opacity: .5;
 	}
 
 	#content #chatList code {

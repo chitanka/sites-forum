@@ -51,7 +51,7 @@ ajaxChat.getUserNodeString = function(userID, userName, userRole) {
 					+ userID
 					+ ');" class="'
 					+ this.getRoleClass(userRole)
-					+ ' ' + userName // borislav
+					+ ' ' + this.getUserNameClass(userName) // borislav
 					+ '" title="'
 					+ this.lang['toggleUserMenu'].replace(/%s/, userName)
 					+ '">'
@@ -120,6 +120,26 @@ ajaxChat.getChatListMessageString = function(dateObject, userID, userName, userR
 				+ colon
 				+ this.replaceText(messageText)
 				+ '</div>';
+	};
+
+
+ajaxChat.replaceText = function(text) {
+		try{
+			text = this.replaceLineBreaks(text);
+			if(text.charAt(0) == '/') {
+				text = this.replaceCommands(text);
+			} else {
+				text = this.replaceBBCode(text);
+				text = this.replaceHyperLinks(text);
+				text = " " + text; // some smiley codes start with a space
+				text = this.replaceEmoticons(text);
+			}
+			text = this.breakLongWords(text);
+			text = this.replaceCustomText(text);
+		} catch(e){
+			//alert(e);
+		}
+		return text;
 	};
 
 ajaxChat.replaceCommandNick = function(textParts) {
@@ -255,7 +275,22 @@ ajaxChat.isImportantMsg = function(messageText)
 
 ajaxChat.getCustomUserName = function(userName)
 {
-	return this.replaceEmoticons(userName);
+	if (userName[0] == "[") {
+		userName = '<span class="away">' + userName + '</span>';
+	}
+
+	return userName;
+};
+
+ajaxChat.getUserNameClass = function(userName)
+{
+	var className = userName;
+	var m = userName.match(/^\[(.+)\]$/);
+	if (m) {
+		className = m[1];
+	}
+
+	return className;
 };
 
 ajaxChat.replaceCustomCommands = function(text, textParts)
@@ -273,10 +308,12 @@ ajaxChat.replaceCustomCommands = function(text, textParts)
 ajaxChat.replaceCustomText = function(text)
 {
 	if (text.indexOf("chatBotMessage") == -1) {
+		var userName = this.userName.replace(/[\(\)\[\]]/g, "\\$&");
 		text = (" " + text).replace(
-			new RegExp("(\\s+)(" + this.userName + "[\\wа-яА-Я]*)", "g"),
+			new RegExp("(\\s+)(" + userName + "[\\wа-яА-Я]*)", "g"),
 			'$1<span class="myname">$2</span>');
 	}
+
 	return text;
 };
 
@@ -355,9 +392,13 @@ jQuery.merge(ajaxChatConfig.emoticonFiles, [
 	'extra/trophy.gif'
 ]);
 
+ajaxChatConfig.emoticonCodes[3] = ' :P';
+ajaxChatConfig.emoticonCodes[4] = ' :D';
+ajaxChatConfig.emoticonCodes[5] = ' :|';
+ajaxChatConfig.emoticonCodes[6] = ' :O';
+ajaxChatConfig.emoticonCodes[7] = ' :?';
+ajaxChatConfig.emoticonCodes[8] = ' 8)';
+ajaxChatConfig.emoticonCodes[10] = ' B)';
 ajaxChatConfig.emoticonCodes[15] = '}:-D';
-
-// ajaxChatConfig.socketServerEnabled = true;
-// ajaxChatConfig.socketServerHost = 'forum.chitanka.info';
 
 ajaxChatConfig.settings.privmsgPng = 'img/extra/chat_privmsg.png';

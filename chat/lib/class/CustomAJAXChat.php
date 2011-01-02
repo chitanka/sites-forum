@@ -229,33 +229,48 @@ class CustomAJAXChat extends AJAXChat {
 
 
 
-// 	function parseCustomCommands($text, $textParts) {
-// 		switch ($textParts[0]) {
-// 			// Away from keyboard message:
-// 			case '/afk':
-// 			case '/away':
-// 				$this->setUserName($this->getUserName());
-// 				// Update the online user table:
-// 				$this->updateOnlineList();
-// 				// Add info message to update the client-side stored userName:
-// 				$this->addInfoMessage($this->getUserName(), 'userName');
-// 				// Store AFK status as session variable:
-// 				$this->setSessionVar('AwayFromKeyboard', true);
-// 				return true;
-// 			default:
-// 				return false;
-// 		}
-// 	}
-//
-// 	function onNewMessage($text) {
-// 		// Reset AFK status on first inserted message:
-// 		if ($this->getSessionVar('AwayFromKeyboard')) {
-// 			$this->setUserName($this->subString($this->getUserName(), 6));
-// 			$this->updateOnlineList();
-// 			$this->addInfoMessage($this->getUserName(), 'userName');
-// 			$this->setSessionVar('AwayFromKeyboard', false);
-// 		}
-// 		return true;
-// 	}
+	function parseCustomCommands($text, $textParts) {
+		switch ($textParts[0]) {
+			// Away from keyboard message:
+			case '/afk':
+			case '/away':
+				$this->markUserAsAway();
+				return true;
+			case '/back':
+			case '/online':
+				$this->markUserAsOnline();
+				return true;
+			default:
+				return false;
+		}
+	}
+
+	function onNewMessage($text) {
+		// Reset AFK status on first inserted message:
+		if ($this->getSessionVar('AwayFromKeyboard')) {
+			$this->markUserAsOnline();
+		}
+		return true;
+	}
+
+	function markUserAsAway() {
+		$this->setUserName('[' . $this->getUserName() . ']');
+		// Update the online user table:
+		$this->updateOnlineList();
+		// Add info message to update the client-side stored userName:
+		$this->addInfoMessage($this->getUserName(), 'userName');
+		// Store AFK status as session variable:
+		$this->setSessionVar('AwayFromKeyboard', true);
+	}
+
+	function markUserAsOnline() {
+		$oldUserName = $this->getUserName();
+		if (preg_match('/^\[(.+)\]$/', $oldUserName, $m)) {
+			$oldUserName = $m[1];
+		}
+		$this->setUserName($oldUserName);
+		$this->updateOnlineList();
+		$this->addInfoMessage($this->getUserName(), 'userName');
+		$this->setSessionVar('AwayFromKeyboard', false);
+	}
 }
-?>
