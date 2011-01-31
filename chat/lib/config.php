@@ -131,7 +131,7 @@ $config['minGuestUserID'] = 400000000;
 // Allow/Disallow users to change their userName (Nickname):
 $config['allowNickChange'] = true;
 // Changed userNames should be distinguished by either a prefix or a suffix or both (no whitespace):
-$config['changedNickPrefix'] = '-';
+$config['changedNickPrefix'] = '~';
 // Changed userNames should be distinguished by either a prefix or a suffix or both (no whitespace):
 $config['changedNickSuffix'] = '';
 
