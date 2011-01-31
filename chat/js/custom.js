@@ -76,7 +76,7 @@ ajaxChat.getUserNodeString = function(userID, userName, userRole) {
 ajaxChat.getChatListMessageString = function(dateObject, userID, userName, userRole, messageID, messageText, channelID, ip) {
 		var rowClass = this.DOMbufferRowClass;
 		var userClass = this.getRoleClass(userRole)
-			+ ' ' + userName; // borislav
+			+ ' ' + this.getUserNameClass(userName); // borislav
 		var colon;
 		if(messageText.indexOf('/action') == 0 || messageText.indexOf('/me') == 0 || messageText.indexOf('/privaction') == 0) {
 			userClass += ' action';
@@ -284,13 +284,18 @@ ajaxChat.getCustomUserName = function(userName)
 
 ajaxChat.getUserNameClass = function(userName)
 {
-	var className = userName;
-	var m = userName.match(/^\[(.+)\]$/);
-	if (m) {
-		className = m[1];
+	userName = userName.replace(/\./g, '_');
+
+	if (userName.charAt(0) == "~") {
+		return userName.substring(1);
 	}
 
-	return className;
+	var m = userName.match(/^\[(.+)\]$/);
+	if (m) {
+		return m[1];
+	}
+
+	return userName;
 };
 
 ajaxChat.replaceCustomCommands = function(text, textParts)
