@@ -19,7 +19,7 @@ require_once $phpbb_root_path . '../mylib/include/get_user.php';
 /**
 * Login function
 */
-/*function login_mylib(&$username, &$password)
+function login_mylib(&$username, &$password)
 {
 	$row = autologin_mylib();
 
@@ -37,7 +37,7 @@ require_once $phpbb_root_path . '../mylib/include/get_user.php';
 		'error_msg'		=> 'LOGIN_ERROR_EXTERNAL_AUTH_MYLIB',
 		'user_row'		=> array('user_id' => ANONYMOUS),
 	);
-}*/
+}
 
 
 /*
