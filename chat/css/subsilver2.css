@@ -597,6 +597,30 @@
 
 
 	/* borislav */
+	#loginContent {
+		text-align: center;
+	}
+	#loginContent #loginHeadlineContainer {
+		margin-top: 5em;
+		margin-bottom: 3em;
+	}
+	#loginContent h1 {
+		font-size: 2em;
+	}
+	#loginForm {
+		font-size: 125%;
+	}
+	#loginForm input {
+		font-size: 130%;
+		border-radius: .3em;
+		-moz-border-radius: .3em;
+		padding: .1ex .2ex;
+	}
+	#loginContent #copyright {
+		position: absolute;
+		bottom: 1em;
+		right: 1em;
+	}
 	#onlineList a {
 		text-decoration: none;
 	}

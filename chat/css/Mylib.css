@@ -470,7 +470,7 @@
 
 @media screen,projection,handheld {
 
-	#content {
+	#content, #loginContent {
 		background-color: #F9F6E6;
 	}
 	#loginContent #errorContainer {
@@ -500,6 +500,15 @@
 	#content #emoticonsContainer {
 		border-color:#ffd100;
 		background-color:#FFF;
+	}
+	.statusContainerOn {
+		background-image: url('../img/loading.png');
+	}
+	.statusContainerOff {
+		background-image: url('../img/loading-done.png');
+	}
+	.statusContainerAlert {
+		background-image: url('../img/loading-trouble.png');
 	}
 	#content #colorCodesContainer a {
 		border-color:black;
@@ -567,6 +576,30 @@
 
 
 	/* borislav */
+	#loginContent {
+		text-align: center;
+	}
+	#loginContent #loginHeadlineContainer {
+		margin-top: 5em;
+		margin-bottom: 3em;
+	}
+	#loginContent h1 {
+		font-size: 2em;
+	}
+	#loginForm {
+		font-size: 125%;
+	}
+	#loginForm input {
+		font-size: 130%;
+		border-radius: .3em;
+		-moz-border-radius: .3em;
+		padding: .1ex .2ex;
+	}
+	#loginContent #copyright {
+		position: absolute;
+		bottom: 1em;
+		right: 1em;
+	}
 	#onlineList a {
 		text-decoration: none;
 	}
