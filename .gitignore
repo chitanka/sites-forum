@@ -6,3 +6,4 @@ config.php
 *.pid
 *.min.js
 chat/logs*
+chat/css/usercolors.css

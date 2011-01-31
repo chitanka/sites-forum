@@ -1,3 +1,4 @@
+@import url("usercolors.css");
 body {
 	padding: 0;
 	margin: 0;
@@ -62,22 +63,3 @@ ul.navigation li.next {
 div.index {
 	text-align: right;
 }
-
-.Yo {color: #FF7200 !important}
-.gogo_mir {color: #6F0000 !important}
-.haripetrov {color: #CF00DF !important}
-.Вилорп {color: #8E35EF !important}
-.Ti6anko {color: #DF0000 !important}
-.Xesiona {color: #FF5F7C !important}
-.Alegria {color: #00AA00 !important}
-.ultimat {color: #842DCE !important}
-.mistar_ti {color: #5F5F5F !important}
-.NomaD {color: #254117 !important}
-.moosehead {color: #0000FF !important}
-.MikoBG {color: #00AA00 !important}
-.Boman {color: #FF6600 !important}
-.forri {color: #DF0000 !important}
-.Mandor {color: #AA0000 !important}
-.GeOrg {color: #00AA00 !important}
-.Борислав {color: #AA0000 !important}
-.northeast {color: #0892D0 !important}
