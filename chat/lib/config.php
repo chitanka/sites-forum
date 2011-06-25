@@ -81,7 +81,7 @@ $config['defaultChannelName'] = 'Моята библиотека';
 // ChannelID used when no channel is given:
 $config['defaultChannelID'] = 0;
 // Defines an array of channelIDs (e.g. array(0, 1)) to limit the number of available channels, will be ignored if set to null:
-$config['limitChannelList'] = array(0);
+$config['limitChannelList'] = array(0, 44);
 
 // UserID plus this value are private channels (this is also the max userID and max channelID):
 $config['privateChannelDiff'] = 500000000;
