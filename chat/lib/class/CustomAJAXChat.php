@@ -220,7 +220,7 @@ class CustomAJAXChat extends AJAXChat {
 
 		$classes = array();
 		while ($row = $db->sql_fetchrow($result)) {
-			$username = strtr($row['username'], array('.' => '_'));
+			$username = strtr($row['username'], array('.' => '_', ' ' => '_'));
 			$classes[] = ".$username {color: #$row[user_colour] !important}";
 		}
 		$db->sql_freeresult($result);

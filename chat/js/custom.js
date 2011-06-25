@@ -284,7 +284,7 @@ ajaxChat.getCustomUserName = function(userName)
 
 ajaxChat.getUserNameClass = function(userName)
 {
-	userName = userName.replace(/\./g, '_');
+	userName = userName.replace(/[\.]/g, '_');
 
 	if (userName.charAt(0) == "~") {
 		return userName.substring(1);
@@ -344,6 +344,7 @@ jQuery.merge(ajaxChatConfig.emoticonCodes, [
 	':beer:',
 	':redwine:',
 	':rakija:',
+	':bloodymary:',
 	':agree:',
 	':disagree:',
 	':rose:',
@@ -365,7 +366,8 @@ jQuery.merge(ajaxChatConfig.emoticonCodes, [
 	//':bow:',
 	':pirate:',
 	':metalhorns:',
-	':trophy:'
+	':trophy:',
+	':choco:'
 ]);
 
 jQuery.merge(ajaxChatConfig.emoticonFiles, [
@@ -373,6 +375,7 @@ jQuery.merge(ajaxChatConfig.emoticonFiles, [
 	'extra/beer.gif',
 	'extra/redwine.gif',
 	'extra/rakija.png',
+	'extra/bloody_mary.png',
 	'extra/agree.gif',
 	'extra/disagree.gif',
 	'extra/rose.gif',
@@ -394,7 +397,8 @@ jQuery.merge(ajaxChatConfig.emoticonFiles, [
 	//'extra/bow.gif',
 	'extra/pirate2.gif',
 	'extra/metalhorns.png',
-	'extra/trophy.gif'
+	'extra/trophy.gif',
+	'extra/choco.png'
 ]);
 
 ajaxChatConfig.emoticonCodes[3] = ' :P';
@@ -407,3 +411,14 @@ ajaxChatConfig.emoticonCodes[10] = ' B)';
 ajaxChatConfig.emoticonCodes[15] = '}:-D';
 
 ajaxChatConfig.settings.privmsgPng = 'img/extra/chat_privmsg.png';
+
+
+$.idleTimer(1800000);
+
+$(document).bind("idle.idleTimer", function(){
+	ajaxChat.sendMessageWrapper('/away');
+});
+
+$(document).bind("active.idleTimer", function(){
+	ajaxChat.sendMessageWrapper('/back');
+});

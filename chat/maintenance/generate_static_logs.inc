@@ -134,7 +134,7 @@ function generateYearIndexFile($year)
 			foreach ($usersByDay[$curDate] as $userData) {
 				$users[] = sprintf('<span class="%s %s">%s</span>&nbsp;×%d',
 					getRoleClass($userData['userRole']),
-					$userData['userName'],
+					getUserNameClass($userData['userName']),
 					$userData['userName'],
 					$userData['count']);
 			}
@@ -206,7 +206,7 @@ function formatUsername($message)
 {
 	return sprintf('<span class="%s %s">%s</span>',
 		getRoleClass($message['userRole']),
-		$message['userName'],
+		getUserNameClass($message['userName']),
 		$message['userName']);
 }
 
@@ -236,12 +236,17 @@ function getRoleClass($roleId)
 }
 
 
+function getUserNameClass($userName)
+{
+	return strtr($userName, array('.' => '_', ' ' => '_'));
+}
+
 function getMessages($date)
 {
 	global $db;
 
 	$sql = 'SELECT * FROM '.ARCHIVE_TABLE.'
-		WHERE dateTime LIKE "'.$date.'%"';
+		WHERE channel = 0 AND dateTime LIKE "'.$date.'%"';
 	$result = $db->sql_query($sql);
 
 	$messages = array();
@@ -372,6 +377,7 @@ $emoticons = array(
 	':beer:' => 'extra/beer.gif',
 	':redwine:' => 'extra/redwine.gif',
 	':rakija:' => 'extra/rakija.png',
+	':bloodymary:' => 'extra/bloody_mary.png',
 	':agree:' => 'extra/agree.gif',
 	':disagree:' => 'extra/disagree.gif',
 	':rose:' => 'extra/rose.gif',
@@ -390,6 +396,7 @@ $emoticons = array(
 	':pirate:' => 'extra/pirate2.gif',
 	':metalhorns:' => 'extra/metalhorns.png',
 	':trophy:' => 'extra/trophy.gif',
+	':choco:' => 'extra/choco.png',
 );
 $emoticonsInitialized = false;
 
