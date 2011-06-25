@@ -111,6 +111,17 @@
 
 <body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
 
+<!--borislav--><div id="project-links">
+	<ul>
+		<li id="project-main"><a href="http://chitanka.info">Библиотека</a></li>
+		<li id="project-forum" class="current"><a href="http://forum.chitanka.info">Форум</a></li>
+		<li id="project-blog"><a href="http://blog.chitanka.info">Блог</a></li>
+		<li id="project-wiki"><a href="http://wiki.chitanka.info">Уики</a></li>
+		<li id="project-rechnik"><a href="http://rechnik.chitanka.info">Речник</a></li>
+		<li id="project-tools"><a href="http://tools.chitanka.info">Инструменти</a></li>
+	</ul>
+</div><!--/borislav-->
+
 <div id="wrap">
 	<a id="top" name="top" accesskey="t"></a>
 	<div id="page-header">
@@ -174,10 +185,10 @@
 				<!-- IF not S_IS_BOT -->
 					<!-- IF S_DISPLAY_MEMBERLIST --><li class="icon-members"><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}">{L_MEMBERLIST}</a></li><!-- ENDIF -->
 					<!-- borislav: custom login link -->
-					<!-- IF not S_USER_LOGGED_IN --><li class="icon-register"><a href="http://chitanka.info/lib/register">{L_REGISTER}</a></li>
-					<li class="icon-logout"><a href="http://chitanka.info/lib/login">{L_LOGIN}</a></li>
+					<!-- IF not S_USER_LOGGED_IN --><li class="icon-register"><a href="http://chitanka.info/register">{L_REGISTER}</a></li>
+					<li class="icon-logout"><a href="http://chitanka.info/login?returnto={SEO_CANONICAL_URL}">{L_LOGIN}</a></li>
 					<!-- ELSE -->
-					<li class="icon-logout"><a href="http://chitanka.info/lib/logout">{L_LOGOUT} [ {S_USERNAME} ]</a></li>
+					<li class="icon-logout"><a href="http://chitanka.info/signout">{L_LOGOUT} [ {S_USERNAME} ]</a></li>
 					<!-- ENDIF -->
 				<!-- ENDIF -->
 			</ul>

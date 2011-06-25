@@ -4,10 +4,10 @@
 	Based on style:	subSilver (the default phpBB 2 style)
 	Original author:	subBlue ( http://www.subBlue.com/ )
 	Modified by:		psoTFX and the phpBB team ( http://www.phpbb.com )
-	
+
 	This is an alternative style for phpBB3 for those wishing to stay with
 	the familiar subSilver style of phpBB version 2.x
-	
+
 	Copyright 2006 phpBB Group ( http://www.phpbb.com/ )
     --------------------------------------------------------------
 */
@@ -186,7 +186,7 @@ p.datetime {
 p.searchbar {
 	padding: 2px 0;
 	white-space: nowrap;
-} 
+}
 
 p.searchbarreg {
 	margin: 0;
@@ -454,7 +454,7 @@ textarea {
 	background-color: #FAFAFA;
 	color: #333333;
 	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
-	font-size: 1.3em; 
+	font-size: 1.3em;
 	line-height: 1.4em;
 	font-weight: normal;
 	border: 1px solid #A9B8C2;
@@ -691,3 +691,57 @@ div.gymsublist ul li {
 	font-size:11px;
 }
 /* GYM Sitemaps & RSS - www.phpbb-seo.com */
+
+/* begin chitanka.info projects */
+#project-links ul {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #bbb;
+	background-color: #cbcbcb;
+	background-image: -moz-linear-gradient(top, #e8e8e8, #cbcbcb);
+	color: black;
+	text-align: center;
+}
+#project-links li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border-right: 1px #818181 solid;
+	-moz-box-shadow: 1px 1px 1px #bbb;
+	-webkit-box-shadow: 1px 1px 1px #bbb;
+	box-shadow: 1px 1px 1px #bbb;
+	list-style-type: none;
+	text-align: center;
+	font-variant: small-caps;
+}
+#project-links li a {
+	display: block;
+	width: 7em;
+	padding: .2em .3em 0 .3em;
+	background-color: #dadada;
+	background-image: -moz-linear-gradient(top, #ddd, #ddd 35%, #999);
+	color: #292929;
+	text-shadow: 1px 1px 0 #e8e8e8;
+	text-decoration: none;
+}
+#project-links li.current a {
+	background-color: #555;
+	background-image: -moz-linear-gradient(top, #555, #888);
+	color: #e8e8e8;
+	text-shadow: 1px 1px 0 black;
+}
+#project-links li:hover a {
+	background-color: #333;
+	background-image: -moz-linear-gradient(top, #333, #4c4c4c);
+	color: #e8e8e8;
+	text-shadow: 1px 1px 0 black;
+	text-decoration: none;
+}
+
+/* tweaks for the forum */
+#project-links {
+	font-size: 160%;
+}
+/* end tweaks */
+
+/* end chitanka.info projects */

@@ -3,8 +3,8 @@
 	Style name:		proSilver
 	Based on style:	proSilver (this is the default phpBB 3 style)
 	Original author:	subBlue ( http://www.subBlue.com/ )
-	Modified by:		
-	
+	Modified by:
+
 	Copyright 2006 phpBB Group ( http://www.phpbb.com/ )
     --------------------------------------------------------------
 */
@@ -17,3 +17,4 @@
 @import url("forms.css");
 @import url("tweaks.css");
 @import url("colours.css");
+@import url("chitanka.css");
