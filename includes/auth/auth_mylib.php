@@ -10,7 +10,7 @@ if ( ! defined('IN_PHPBB')) {
 	die('Auth Mylib');
 }
 
-require_once $phpbb_root_path . '../mylib/include/get_user.php';
+require_once $phpbb_root_path . '../mylib-single-login/get_user.php';
 
 // function init_mylib()
 // {

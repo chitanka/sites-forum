@@ -90,7 +90,6 @@ function login_db(&$username, &$password)
 		{
 			$captcha->reset();
 		}
-		
 	}
 
 	// If the password convert flag is set we need to convert it
