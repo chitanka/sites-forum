@@ -99,7 +99,7 @@ if ($id)
 		$db->sql_freeresult($result);
 	}
 
-	$recompile = true;#$config['load_tplcompile'];
+	$recompile = $config['load_tplcompile'];
 	if (!$user)
 	{
 		$id			= ($id) ? $id : $config['default_style'];
