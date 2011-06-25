@@ -331,7 +331,7 @@
 	font-style:italic;
 }
 #content #chatList q {
-	font-variant:small-caps;
+	font-style:italic;
 }
 #content #chatList code {
     font-size:1.2em;
