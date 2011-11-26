@@ -1160,21 +1160,21 @@ function delete_topic_shadows($forum_id, $sql_more = '', $auto_sync = true)
 				' . (($sql_more) ? 'AND ' . $sql_more : '');
 		$result = $db->sql_query_limit($sql, $batch_size);
 
-			$topic_ids = array();
-			while ($row = $db->sql_fetchrow($result))
-			{
+		$topic_ids = array();
+		while ($row = $db->sql_fetchrow($result))
+		{
 			$topic_ids[] = (int) $row['topic_id'];
 
 			$sync_forum_ids[(int) $row['forum_id']] = (int) $row['forum_id'];
-			}
-			$db->sql_freeresult($result);
+		}
+		$db->sql_freeresult($result);
 
 		if (!empty($topic_ids))
-			{
-				$sql = 'DELETE FROM ' . TOPICS_TABLE . '
-					WHERE ' . $db->sql_in_set('topic_id', $topic_ids);
-				$db->sql_query($sql);
-			}
+		{
+			$sql = 'DELETE FROM ' . TOPICS_TABLE . '
+				WHERE ' . $db->sql_in_set('topic_id', $topic_ids);
+			$db->sql_query($sql);
+		}
 	}
 	while (sizeof($topic_ids) == $batch_size);
 
@@ -2506,6 +2506,7 @@ function cache_moderators()
 
 /**
 * View log
+* If $log_count is set to false, we will skip counting all entries in the database.
 */
 function view_log($mode, &$log, &$log_count, $limit = 0, $offset = 0, $forum_id = 0, $topic_id = 0, $user_id = 0, $limit_days = 0, $sort_by = 'l.log_time DESC', $keywords = '')
 {
@@ -2761,16 +2762,19 @@ function view_log($mode, &$log, &$log_count, $limit = 0, $offset = 0, $forum_id 
 		}
 	}
 
-	$sql = 'SELECT COUNT(l.log_id) AS total_entries
-		FROM ' . LOG_TABLE . ' l, ' . USERS_TABLE . " u
-		WHERE l.log_type = $log_type
-			AND l.user_id = u.user_id
-			AND l.log_time >= $limit_days
-			$sql_keywords
-			$sql_forum";
-	$result = $db->sql_query($sql);
-	$log_count = (int) $db->sql_fetchfield('total_entries');
-	$db->sql_freeresult($result);
+	if ($log_count !== false)
+	{
+		$sql = 'SELECT COUNT(l.log_id) AS total_entries
+			FROM ' . LOG_TABLE . ' l, ' . USERS_TABLE . " u
+			WHERE l.log_type = $log_type
+				AND l.user_id = u.user_id
+				AND l.log_time >= $limit_days
+				$sql_keywords
+				$sql_forum";
+		$result = $db->sql_query($sql);
+		$log_count = (int) $db->sql_fetchfield('total_entries');
+		$db->sql_freeresult($result);
+	}
 
 	return;
 }

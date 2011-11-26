@@ -119,6 +119,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_REMOVE_FOLDER'		=> 'Папката не може да бъде премахната.',
 	'CHANGE_DEFAULT_GROUP'		=> 'Смяна на основната група',
 	'CHANGE_PASSWORD'			=> 'Смяна на паролата',
+	'CLICK_GOTO_FOLDER'			=> '%1$sКъм папката „%3$s“%2$s',
 	'CLICK_RETURN_FOLDER'		=> '%1$sОбратно към папката „%3$s“%2$s',
 	'CONFIRMATION'				=> 'Confirmation of registration',
 	'CONFIRM_CHANGES'			=> 'Confirm changes',
@@ -194,6 +195,8 @@ $lang = array_merge($lang, array(
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'The field “%s” has invalid characters, only alphanumeric characters are allowed.',
 	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'The field “%s” has an invalid date.',
+	'FIELD_INVALID_VALUE'				=> 'The field “%s” has an invalid value.',
+
 
 	'FOE_MESSAGE'				=> 'Съобщение от неприятел',
 	'FOES_EXPLAIN'				=> 'Неприятелите са пренебрегнати потребители. Техните мнения ще бъдат само частично видими, но все пак ще им е разрешено да ви изпращат лични съобщения. Обърнете внимание, че не може да пренебрегвате модератори или администратори.',
