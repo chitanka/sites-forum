@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB SEO GYM Sitemaps
-* @version $Id: gym_rss.php 314 2011-06-27 08:21:34Z dcz $
+* @version $Id: gym_rss.php 331 2011-11-11 15:42:06Z dcz $
 * @copyright (c) 2006 - 2010 www.phpbb-seo.com
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
@@ -11,7 +11,7 @@
 if ( !defined('IN_PHPBB') ) {
 	exit;
 }
-require_once($phpbb_root_path . 'gym_sitemaps/includes/gym_sitemaps.' . $phpEx);
+require($phpbb_root_path . 'gym_sitemaps/includes/gym_sitemaps.' . $phpEx);
 /**
 * gym_rss Class
 * www.phpBB-SEO.com
@@ -425,9 +425,9 @@ class gym_rss extends gym_sitemaps {
 		$message = censor_text($message);
 		if (!$this->rss_config['rss_nohtml']) {
 			if ($bitfield && $this->rss_config['rss_allow_bbcode']) {
-				if (!class_exists('bbcode')) {
+				if (!class_exists('bbcode'/*, false */)) {
 					global $phpbb_root_path, $phpEx;
-					include_once($phpbb_root_path . 'includes/bbcode.' . $phpEx);
+					require($phpbb_root_path . 'includes/bbcode.' . $phpEx);
 				}
 				if (empty($bbcode)) {
 					$bbcode = new bbcode($bitfield);

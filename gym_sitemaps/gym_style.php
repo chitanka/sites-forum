@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB SEO GYM Sitemaps
-* @version $Id: gym_style.php 302 2011-04-13 19:44:08Z dcz $
+* @version $Id: gym_style.php 331 2011-11-11 15:42:06Z dcz $
 * @copyright (c) 2006 - 2010 www.phpbb-seo.com
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
@@ -94,7 +94,7 @@ if (!empty($action) && !empty($gym_style_type) && !empty($language) && !empty($t
 		require($phpbb_root_path . 'includes/cache.' . $phpEx);
 		require($phpbb_root_path . 'includes/db/' . $dbms . '.' . $phpEx);
 		require($phpbb_root_path . 'includes/constants.' . $phpEx);
-		require_once($phpbb_root_path . 'gym_sitemaps/includes/gym_common.' . $phpEx);
+		require($phpbb_root_path . 'gym_sitemaps/includes/gym_common.' . $phpEx);
 		$db = new $sql_db();
 		$cache = new cache();
 		// Connect to DB

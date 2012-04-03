@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB SEO GYM Sitemaps
-* @version $Id: gym_google.php 272 2010-11-21 13:56:31Z dcz $
+* @version $Id: gym_google.php 331 2011-11-11 15:42:06Z dcz $
 * @copyright (c) 2006 - 2010 www.phpbb-seo.com
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
@@ -11,7 +11,7 @@
 if ( !defined('IN_PHPBB') ) {
 	exit;
 }
-require_once($phpbb_root_path . 'gym_sitemaps/includes/gym_sitemaps.' . $phpEx);
+require($phpbb_root_path . 'gym_sitemaps/includes/gym_sitemaps.' . $phpEx);
 /**
 * gym_google Class
 * www.phpBB-SEO.com

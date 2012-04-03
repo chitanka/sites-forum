@@ -60,7 +60,7 @@ $help = array(
 	),
 	array(
 		0 => 'I registered in the past but cannot login any more?!',
-		1 => 'Attempt to locate the e-mail sent to you when you first registered, check your username and password and try again. It is possible an administrator has deactivated or deleted your account for some reason. Also, many boards periodically remove users who have not posted for a long time to reduce the size of the database. If this has happened, try registering again and being more involved in discussions.'
+		1 => 'It is possible an administrator has deactivated or deleted your account for some reason. Also, many boards periodically remove users who have not posted for a long time to reduce the size of the database. If this has happened, try registering again and being more involved in discussions.'
 	),
 	array(
 		0 => 'What is COPPA?',
@@ -128,7 +128,7 @@ $help = array(
 	),
 	array(
 		0 => 'Why can’t I add more poll options?',
-		1 => 'The limit for poll options is set by the board administrator. If you feel you need to add more options to your poll then the allowed amount, contact the board administrator.'
+		1 => 'The limit for poll options is set by the board administrator. If you feel you need to add more options to your poll than the allowed amount, contact the board administrator.'
 	),
 	array(
 		0 => 'How do I edit or delete a poll?',
@@ -159,8 +159,8 @@ $help = array(
 		1 => 'The board administrator may have decided that posts in the forum you are posting to require review before submission. It is also possible that the administrator has placed you in a group of users whose posts require review before submission. Please contact the board administrator for further details.'
 	),
 	array(
-		0 => 'Как да вдигна темата си?',
-		1 => 'By clicking the „Вдигане на темата“ link when you are viewing it, you can “bump” the topic to the top of the forum on the first page. However, if you do not see this, then topic bumping may be disabled or the time allowance between bumps has not yet been reached. It is also possible to bump the topic simply by replying to it, however, be sure to follow the board rules when doing so.'
+		0 => 'How do I bump my topic?',
+		1 => 'By clicking the “Bump topic” link when you are viewing it, you can “bump” the topic to the top of the forum on the first page. However, if you do not see this, then topic bumping may be disabled or the time allowance between bumps has not yet been reached. It is also possible to bump the topic simply by replying to it, however, be sure to follow the board rules when doing so.'
 	),
 	array(
 		0 => '--',

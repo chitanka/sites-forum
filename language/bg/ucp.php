@@ -138,6 +138,7 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'				=> 'Текущо изпбражение',
 	'CURRENT_PASSWORD'			=> 'Текуща парола',
 	'CURRENT_PASSWORD_EXPLAIN'	=> 'You must confirm your current password if you wish to change it, alter your e-mail address or username.',
+	'CUR_PASSWORD_EMPTY'		=> 'You did not enter your current password.',
 	'CUR_PASSWORD_ERROR'		=> 'The current password you entered is incorrect.',
 	'CUSTOM_DATEFORMAT'			=> 'Собствен…',
 
@@ -269,9 +270,11 @@ $lang = array_merge($lang, array(
 	'MOVE_TO_FOLDER'				=> 'Преместване в папка',
 	'MOVE_UP'						=> 'Нагоре',
 
+	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'You did not enter a confirm e-mail address.',
 	'NEW_EMAIL_ERROR'				=> 'Въведените адреси за електронна поща не съвпадат.',
 	'NEW_FOLDER_NAME'				=> 'Ново име на папка',
 	'NEW_PASSWORD'					=> 'Нова парола',
+	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'You did not enter a confirm password.',
 	'NEW_PASSWORD_ERROR'			=> 'Въведените пароли не съвпадат.',
 	'NOTIFY_METHOD'					=> 'Метод на известяване',
 	'NOTIFY_METHOD_BOTH'			=> 'И двава',

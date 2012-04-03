@@ -48,7 +48,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_A_HELP'				=> 'Прикачен файл сред текста: [attachment=]filename.ext[/attachment]',
 	'BBCODE_B_HELP'				=> 'Получерен текст: [b]текст[/b]',
 	'BBCODE_C_HELP'				=> 'Показване на код: [code]код[/code]',
-	'BBCODE_E_HELP'				=> 'Списък: Добавяне на елемент към списъка',
+	'BBCODE_D_HELP'				=> 'Флаш: [flash=ширина,височина]http://url[/flash]',
 	'BBCODE_F_HELP'				=> 'Размер на шрифта: [size=85]малък текст[/size]',
 	'BBCODE_IS_OFF'				=> '%sBBCode%s е <em>изключен</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s е <em>включен</em>',
@@ -61,7 +61,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_S_HELP'				=> 'Цвят на шрифта: [color=red]текст[/color]  Съвет: може да ползвате и код за цвета, напр. color=#FF0000',
 	'BBCODE_U_HELP'				=> 'Подчертан текст: [u]текст[/u]',
 	'BBCODE_W_HELP'				=> 'Адрес: [url]http://url[/url] или [url=http://url]текст[/url]',
-	'BBCODE_D_HELP'				=> 'Флаш: [flash=ширина,височина]http://url[/flash]',
+	'BBCODE_Y_HELP'				=> 'Списък: Добавяне на елемент към списъка',
 	'BUMP_ERROR'				=> 'Не може да вдигате темата толкова скоро след последното мнение.',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Може да изтривате само мнения без отговор.',

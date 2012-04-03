@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB SEO GYM Sitemaps
-* @version $Id: acp_gym_sitemaps.php 272 2010-11-21 13:56:31Z dcz $
+* @version $Id: acp_gym_sitemaps.php 331 2011-11-11 15:42:06Z dcz $
 * @copyright (c) 2006 - 2010 www.phpbb-seo.com
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
@@ -343,8 +343,10 @@ class acp_gym_sitemaps {
 		$module_class = $mode . '_' . $mode_module;
 		$module_file = $phpbb_root_path . 'gym_sitemaps/acp/' . $module_class . '.' . $phpEx;
 		if ( file_exists($module_file) ) {
-			include_once($module_file);
-			if (class_exists($module_class)) {
+			if (!class_exists($module_class/*, false*/)) {
+				include($module_file);
+			}
+			if (class_exists($module_class/*, false*/)) {
 				$gym_module = new $module_class($this);
 				if ( method_exists($gym_module, 'acp_module')) {
 					$return_array[$mode][$mode_module] = $gym_module->acp_module();
@@ -839,8 +841,10 @@ class acp_gym_sitemaps {
 		$method = 'select_' . $key;
 		$module_file = $phpbb_root_path . 'gym_sitemaps/acp/modules/' . $this->mode . '_' . $this->module . '.' . $phpEx;
 		if ( file_exists($module_file) ) {
-			include_once($module_file);
-			if (class_exists($module_class)) {
+			if (!class_exists($module_class/*, false */)) {
+				include($module_file);
+			}
+			if (class_exists($module_class/*, false */)) {
 				$gym_module = new $module_class($this);
 				if ( method_exists($gym_module, $method)) {
 					return $gym_module->$method($value, $key);

@@ -193,24 +193,24 @@ class acp_users
 
 						if ($delete_type)
 						{
-						if (confirm_box(true))
-						{
-							user_delete($delete_type, $user_id, $user_row['username']);
+							if (confirm_box(true))
+							{
+								user_delete($delete_type, $user_id, $user_row['username']);
 
-							add_log('admin', 'LOG_USER_DELETED', $user_row['username']);
-							trigger_error($user->lang['USER_DELETED'] . adm_back_link($this->u_action));
-						}
-						else
-						{
-							confirm_box(false, $user->lang['CONFIRM_OPERATION'], build_hidden_fields(array(
-								'u'				=> $user_id,
-								'i'				=> $id,
-								'mode'			=> $mode,
-								'action'		=> $action,
-								'update'		=> true,
-								'delete'		=> 1,
-								'delete_type'	=> $delete_type))
-							);
+								add_log('admin', 'LOG_USER_DELETED', $user_row['username']);
+								trigger_error($user->lang['USER_DELETED'] . adm_back_link($this->u_action));
+							}
+							else
+							{
+								confirm_box(false, $user->lang['CONFIRM_OPERATION'], build_hidden_fields(array(
+									'u'				=> $user_id,
+									'i'				=> $id,
+									'mode'			=> $mode,
+									'action'		=> $action,
+									'update'		=> true,
+									'delete'		=> 1,
+									'delete_type'	=> $delete_type))
+								);
 							}
 						}
 						else
@@ -348,10 +348,7 @@ class acp_users
 
 								$messenger->to($user_row['user_email'], $user_row['username']);
 
-								$messenger->headers('X-AntiAbuse: Board servername - ' . $config['server_name']);
-								$messenger->headers('X-AntiAbuse: User_id - ' . $user->data['user_id']);
-								$messenger->headers('X-AntiAbuse: Username - ' . $user->data['username']);
-								$messenger->headers('X-AntiAbuse: User IP - ' . $user->ip);
+								$messenger->anti_abuse_headers($config, $user);
 
 								$messenger->assign_vars(array(
 									'WELCOME_MSG'	=> htmlspecialchars_decode(sprintf($user->lang['WELCOME_SUBJECT'], $config['sitename'])),
@@ -406,10 +403,7 @@ class acp_users
 
 									$messenger->to($user_row['user_email'], $user_row['username']);
 
-									$messenger->headers('X-AntiAbuse: Board servername - ' . $config['server_name']);
-									$messenger->headers('X-AntiAbuse: User_id - ' . $user->data['user_id']);
-									$messenger->headers('X-AntiAbuse: Username - ' . $user->data['username']);
-									$messenger->headers('X-AntiAbuse: User IP - ' . $user->ip);
+									$messenger->anti_abuse_headers($config, $user);
 
 									$messenger->assign_vars(array(
 										'USERNAME'	=> htmlspecialchars_decode($user_row['username']))
@@ -819,7 +813,7 @@ class acp_users
 
 					// Which updates do we need to do?
 					$update_username = ($user_row['username'] != $data['username']) ? $data['username'] : false;
-					$update_password = ($data['new_password'] && !phpbb_check_hash($user_row['user_password'], $data['new_password'])) ? true : false;
+					$update_password = ($data['new_password'] && !phpbb_check_hash($data['new_password'], $user_row['user_password'])) ? true : false;
 					$update_email = ($data['email'] != $user_row['user_email']) ? $data['email'] : false;
 					include dirname(__FILE__) .'/acp_users_username_color_change.2.mod.php'; // borislav
 
@@ -1128,7 +1122,7 @@ class acp_users
 				// Grab log data
 				$log_data = array();
 				$log_count = 0;
-				view_log('user', $log_data, $log_count, $config['topics_per_page'], $start, 0, 0, $user_id, $sql_where, $sql_sort);
+				$start = view_log('user', $log_data, $log_count, $config['topics_per_page'], $start, 0, 0, $user_id, $sql_where, $sql_sort);
 
 				$template->assign_vars(array(
 					'S_FEEDBACK'	=> true,

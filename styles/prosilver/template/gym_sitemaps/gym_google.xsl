@@ -12,7 +12,7 @@
 	indent="yes" />
 <!--
 @package phpBB SEO GYM Sitemaps
-@version $Id: gym_google.xsl 302 2011-04-13 19:44:08Z dcz $
+@version $Id: gym_google.xsl 334 2011-12-08 14:47:45Z dcz $
 @copyright (c) 2006 - 2010 www.phpbb-seo.com
 @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 -->
@@ -139,7 +139,7 @@
 		</xsl:choose>
 	</div>
 </div>
-<div class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a> &#169; 2000 - 2010 phpBB Group</div>
+<div class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a></div>
 <!--
 	We request you retain the full copyright notice below, as well as in all templates you may use,
 	including the link to www.phpbb-seo.com.

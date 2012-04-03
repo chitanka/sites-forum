@@ -2,7 +2,7 @@
 /**
 *
 * @package Ultimate SEO URL phpBB SEO
-* @version $Id: setup_phpbb_seo.php 307 2011-05-04 20:24:42Z dcz $
+* @version $Id: setup_phpbb_seo.php 327 2011-09-07 07:24:49Z dcz $
 * @copyright (c) 2006 - 2010 www.phpbb-seo.com
 * @license http://www.opensource.org/licenses/rpl1.5.txt Reciprocal Public License 1.5
 *
@@ -151,6 +151,9 @@ class setup_phpbb_seo {
 		}
 		$http = 'HTTP/1.1 ';
 		header($http . $header, $replace, $code);
+		header('Cache-Control: no-store, no-cache, must-revalidate');
+		header('Pragma: no-cache');
+		header('Expires: -1');
 		header('Location: ' . $url);
 		exit_handler();
 	}

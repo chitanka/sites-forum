@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB SEO GYM Sitemaps
-* @version $Id: gym_sitemaps.php 272 2010-11-21 13:56:31Z dcz $
+* @version $Id: gym_sitemaps.php 331 2011-11-11 15:42:06Z dcz $
 * @copyright (c) 2006 - 2010 www.phpbb-seo.com
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
@@ -11,10 +11,12 @@
 if ( !defined('IN_PHPBB') ) {
 	exit;
 }
-require_once($phpbb_root_path . 'gym_sitemaps/includes/gym_common.' . $phpEx);
+require($phpbb_root_path . 'gym_sitemaps/includes/gym_common.' . $phpEx);
 // For Compatibility with the phpBB SEO mod rewrites
 if (empty($phpbb_seo)) {
-	require_once($phpbb_root_path . 'gym_sitemaps/includes/phpbb_seo_class_light.' . $phpEx);
+	if (!class_exists('phpbb_seo'/*, false*/)) {
+		require($phpbb_root_path . 'gym_sitemaps/includes/phpbb_seo_class_light.' . $phpEx);
+	}
 	$phpbb_seo = new phpbb_seo();
 	define('STARTED_LIGHT', true);
 }
@@ -176,8 +178,10 @@ class gym_sitemaps {
 		global $phpEx;
 		$module_file = $this->path_config['gym_path'] . 'modules/' . $module_class . '.' . $phpEx;
 		if ( !empty($this->gym_config[$module_class . '_installed']) && file_exists($module_file) ) {
-			include_once($module_file);
-			if (class_exists($module_class)) {
+			if (!class_exists($module_class/*, false*/)) {
+				require($module_file);
+			}
+			if (class_exists($module_class/*, false*/)) {
 				$gym_module = new $module_class($this);
 				if ( !empty($method) && method_exists($gym_module, $method)) {
 					$gym_module->$method();
@@ -197,7 +201,9 @@ class gym_sitemaps {
 	*/
 	function gym_init_output() {
 		global $phpEx;
-		include_once($this->path_config['gym_path'] . 'includes/gym_output.' . $phpEx);
+		if (!class_exists('gym_output'/*, false*/)) {
+			require($this->path_config['gym_path'] . 'includes/gym_output.' . $phpEx);
+		}
 		$this->gym_output = new gym_output($this);
 	}
 	/**

@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB SEO Related topics
-* @version $Id: phpbb_seo_related.php 314 2011-06-27 08:21:34Z dcz $
+* @version $Id: phpbb_seo_related.php 338 2012-01-03 17:13:44Z dcz $
 * @copyright (c) 2006 - 2011 www.phpbb-seo.com
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License v2
 *
@@ -20,7 +20,7 @@ if (!defined('IN_PHPBB')) {
 * @package phpBB SEO Related topics
 */
 class seo_related {
-	var $version = '0.2.4';
+	var $version = '0.2.6';
 	var $fulltext = true;
 	var $limit = 5;
 	var $allforums = false;
