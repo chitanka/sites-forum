@@ -36,7 +36,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'CAPTCHA_QA'				=> 'Уловка с въпроси и отговори',
+	'CAPTCHA_QA'				=> 'Въпроси и отговори',
 	'CONFIRM_QUESTION_EXPLAIN'	=> 'Този въпрос служи за улавяне на ботове и предотвратяване на спама.',
 	'CONFIRM_QUESTION_WRONG'	=> 'Дадохте грешен отговор на въпроса.',
 
@@ -47,15 +47,15 @@ $lang = array_merge($lang, array(
 	'ANSWER'					=> 'Отговор',
 	'EDIT_QUESTION'				=> 'Промяна на въпроса',
 	'QUESTIONS'					=> 'Въпроси',
-	'QUESTIONS_EXPLAIN'			=> 'During registration, users will be asked one of the questions specified here. To use this plugin, at least one question must be set in the default language. These questions should be easy for your target audience to answer, but beyond the ability of a bot capable of running a Google™ search. Using a large and regulary changed set of questions will yield the best results. Enable the strict setting if your question relies on punctuation or capitalisation.',
+	'QUESTIONS_EXPLAIN'			=> 'For every form submission where you have enabled the Q&amp;A plugin, users will be asked one of the questions specified here. To use this plugin at least one question must be set in the default language. These questions should be easy for your target audience to answer but beyond the ability of a bot capable of running a Google™ search. Using a large and regularly changed set of questions will yield the best results. Enable the strict setting if your question relies on mixed case, punctuation or whitespace.',
 	'QUESTION_DELETED'			=> 'Въпросът беше изтрит',
 	'QUESTION_LANG'				=> 'Език',
-	'QUESTION_LANG_EXPLAIN'		=> 'The language that this question and its answers are written in.',
+	'QUESTION_LANG_EXPLAIN'		=> 'Езикък, на който са написани въпросът и неговите отговори.',
 	'QUESTION_STRICT'			=> 'Стриктна проверка',
 	'QUESTION_STRICT_EXPLAIN'	=> 'Ако е включена, ще се прави разлика между главни и малки букви, като броят на интервалите също ще е от значение.',
 
 	'QUESTION_TEXT'				=> 'Въпрос',
-	'QUESTION_TEXT_EXPLAIN'		=> 'The question that will be asked on registration.',
+	'QUESTION_TEXT_EXPLAIN'		=> 'Въпросът, зададен на потребителя.',
 
 	'QA_ERROR_MSG'				=> 'Please fill in all fields and enter at least one answer.',
 	'QA_LAST_QUESTION'			=> 'You cannot delete all questions while the plugin is active.',

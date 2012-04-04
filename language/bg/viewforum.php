@@ -48,15 +48,20 @@ $lang = array_merge($lang, array(
 
 	'MARK_TOPICS_READ'		=> 'Отбелязване на темите като прочетени',
 
-	'NEW_POSTS_HOT'			=> 'Има нови мнения [ популярна ]',
-	'NEW_POSTS_LOCKED'		=> 'Има нови мнения [ заключена ]',
-	'NO_NEW_POSTS_HOT'		=> 'Няма нови мнения [ популярна ]',
-	'NO_NEW_POSTS_LOCKED'	=> 'Няма нови мнения [ заключена ]',
+	'NEW_POSTS_HOT'			=> 'Има нови мнения [ популярна ]',	// Not used anymore
+	'NEW_POSTS_LOCKED'		=> 'Има нови мнения [ заключена ]',	// Not used anymore
+	'NO_NEW_POSTS_HOT'		=> 'Няма нови мнения [ популярна ]',	// Not used anymore
+	'NO_NEW_POSTS_LOCKED'	=> 'Няма нови мнения [ заключена ]',	// Not used anymore
 	'NO_READ_ACCESS'		=> 'Нямате права да четете темите в този форум.',
+	'NO_UNREAD_POSTS_HOT'		=> 'Няма непрочетени мнения [ популярна ]',
+	'NO_UNREAD_POSTS_LOCKED'	=> 'Няма непрочетени мнения [ заключена ]',
 
 	'POST_FORUM_LOCKED'		=> 'Форумът е заключен',
 
 	'TOPICS_MARKED'			=> 'Темите във форума бяха отбелязани като прочетени.',
+
+	'UNREAD_POSTS_HOT'		=> 'Непрочетени мнения [ популярна ]',
+	'UNREAD_POSTS_LOCKED'	=> 'Непрочетени мнения [ заключена ]',
 
 	'VIEW_FORUM'			=> 'Преглед на форума',
 	'VIEW_FORUM_TOPIC'		=> 'Една тема',
