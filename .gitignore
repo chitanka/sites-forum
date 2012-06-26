@@ -4,6 +4,6 @@ install*
 config.php
 *.log
 *.pid
-*.min.js
+#*.min.js
 chat/logs*
 chat/css/usercolors.css
