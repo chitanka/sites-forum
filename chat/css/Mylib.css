@@ -592,7 +592,7 @@
 	#loginForm input {
 		font-size: 120%;
 		border: 2px solid #ccc;
-		border-radius: 1.5em; -moz-border-radius: 1.5em; -webkit-border-radius: 1.5em;
+		border-radius: 1.5em;
 		padding: .1em .5em;
 	}
 	/* borrowed from http://girliemac.com/sandbox/button.html */
@@ -609,8 +609,6 @@
 		text-overflow: ellipsis;
 		overflow: hidden;
 		box-shadow: 0 10px 16px rgba(204,0,0, 0.3), inset 0 -8px 12px 0 #f88181, inset 0 -8px 0 8px #CF3333, inset 0 -35px 15px -10px #DD7777;
-		-moz-box-shadow: 0 10px 16px rgba(204,0,0, 0.3), inset 0 -8px 12px 0 #f88181, inset 0 -8px 0 8px #CF3333, inset 0 -35px 15px -10px #DD7777;
-		-webkit-box-shadow: 0 10px 16px rgba(204,0,0, 0.3), inset 0 -8px 12px 0 #f88181, inset 0 -8px 0 8px #CF3333, inset 0 -35px 15px -10px #DD7777;
 	}
 
 	#loginForm input[type=submit]:hover {
@@ -637,7 +635,7 @@
 	.myname {
 		background-color: #FFE77B;
 		padding: 0.1em 0.5em;
-		-moz-border-radius: .5em;
+		border-radius: .5em;
 	}
 	.away {
 		opacity: .5;
