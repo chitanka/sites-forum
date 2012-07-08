@@ -6,14 +6,15 @@
  * @license GNU Affero General Public License
  * @link https://blueimp.net/ajax/
  */
+// borislav: added static/visibility declarations for methods
 
 // Class to provide multibyte enabled string methods
 class AJAXChatString {
 
-	function subString($str, $start=0, $length=null, $encoding='UTF-8') {
+	public static function subString($str, $start=0, $length=null, $encoding='UTF-8') {
 		if($length === null) {
 			$length = AJAXChatString::stringLength($str);
-		}		
+		}
 		if(function_exists('mb_substr')) {
 			return mb_substr($str, $start, $length, $encoding);
 		} else if(function_exists('iconv_substr')) {
@@ -22,8 +23,8 @@ class AJAXChatString {
 			return substr($str, $start, $length);
 		}
 	}
-	
-	function stringLength($str, $encoding='UTF-8') {
+
+	public static function stringLength($str, $encoding='UTF-8') {
 		if(function_exists('mb_strlen')) {
 			return mb_strlen($str, $encoding);
 		} else if(function_exists('iconv_strlen')) {
