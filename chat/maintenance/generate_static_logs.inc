@@ -7,22 +7,25 @@ class StaticLogGenerator
 	const CHAT_BOT_ID = 2147483647;
 
 	private $db;
+
 	public function __construct(PDO $db)
 	{
 		$this->db = $db;
 	}
 
-	public function generateNewLogs()
+	public function generateNewLogs(array $channels)
 	{
 		$startDate = $this->archiveMessages();
 		$today = date('Y-m-d');
 
-		$this->generateFilesForPeriod($startDate, $today);
+		foreach ($channels as $channel) {
+			$this->generateFilesForPeriod($startDate, $today, $channel);
 
-		if ($this->getYear($startDate) != $this->getYear($today)) {
-			$this->generateIndexFile();
-		} else {
-			$this->generateYearIndexFile($this->getYear($startDate));
+			if ($this->getYear($startDate) != $this->getYear($today)) {
+				$this->generateIndexFile($channel);
+			} else {
+				$this->generateYearIndexFile($this->getYear($startDate), $channel);
+			}
 		}
 	}
 
@@ -40,18 +43,18 @@ class StaticLogGenerator
 	}
 
 
-	public function generateFilesForPeriod($startDate, $endDate)
+	public function generateFilesForPeriod($startDate, $endDate, $channel)
 	{
 		$this->initEmoticons();
 
 		for ($curDate = $startDate; $curDate <= $endDate; $curDate = $this->getNextDay($curDate)) {
-			$this->generateFile($curDate);
+			$this->generateFile($curDate, $channel);
 		}
 	}
 
-	private function generateFile($date)
+	private function generateFile($date, $channel)
 	{
-		$messages = $this->getMessages($date);
+		$messages = $this->getMessages($date, $channel);
 
 		$prevDay = $this->getPrevDay($date);
 		if ($prevDay < self::START_CHAT_DATE) {
@@ -64,10 +67,10 @@ class StaticLogGenerator
 		$nextDay = $this->getNextDay($date);
 		$nextDayLink = '../../' . $this->getDateFile($nextDay);
 
-		$file = __DIR__.'/../logs/'.$this->getDateFile($date);
+		$file = $this->getLogFilePath($this->getDateFile($date), $channel);
 		$tpl = file_get_contents(dirname(__FILE__).'/static_log_day.tpl.html');
 		myfile_put_contents($file, strtr($tpl, array(
-			'[BASEDIR/]'         => '../../../',
+			'[BASEDIR/]'         => '../../../../',
 			'[YEAR/]'            => $this->getYear($date),
 			'[DATE/]'            => $this->getHumanDate($date),
 			'[MESSAGES/]'        => $this->formatMessages($messages),
@@ -81,24 +84,24 @@ class StaticLogGenerator
 	}
 
 
-	private function generateIndexFile()
+	private function generateIndexFile($channel)
 	{
 		$rowClass = 'even';
 		$startYear = $this->getYear(self::START_CHAT_DATE);
 		$endYear = date('Y');
 		$links = array();
 		for ($year = $startYear; $year <= $endYear; $year++) {
-			$this->generateYearIndexFile($year);
+			$this->generateYearIndexFile($year, $channel);
 
 			$rowClass = $rowClass == 'rowEven' ? 'rowOdd' : 'rowEven';
 			$links[] = sprintf('<dt class="%s"><a href="%d/index.html">%d</a></dt><dd></dd>',
 				$rowClass, $year, $year);
 		}
 
-		$file = __DIR__.'/../logs/index.html';
+		$file = $this->getLogFilePath('index.html', $channel);
 		$tpl = file_get_contents(dirname(__FILE__).'/static_log_index.tpl.html');
 		myfile_put_contents($file, strtr($tpl, array(
-			'[BASEDIR/]' => '../',
+			'[BASEDIR/]' => '../../',
 			'[LIST/]'    => '<dl>'. implode("\n", $links) . '</dl>',
 		)));
 
@@ -106,10 +109,10 @@ class StaticLogGenerator
 	}
 
 
-	private function generateYearIndexFile($year)
+	private function generateYearIndexFile($year, $channel)
 	{
 		$data = array();
-		$usersByDay = $this->getUsersByDay($year);
+		$usersByDay = $this->getUsersByDay($year, $channel);
 
 		$rowClass = 'even';
 		$curDate = "$year-01-01";
@@ -145,10 +148,10 @@ class StaticLogGenerator
 			$curDate = $this->getNextDay($curDate);
 		} while ($curDate <= $endDate);
 
-		$file = __DIR__.'/../logs/'.$year.'/index.html';
+		$file = $this->getLogFilePath($year.'/index.html', $channel);
 		$tpl = file_get_contents(dirname(__FILE__).'/static_log_year.tpl.html');
 		myfile_put_contents($file, strtr($tpl, array(
-			'[BASEDIR/]' => '../../',
+			'[BASEDIR/]' => '../../../',
 			'[YEAR/]' => $year,
 			'[LIST/]' => '<dl>'. implode("\n", $data) . '</dl>',
 		)));
@@ -156,6 +159,10 @@ class StaticLogGenerator
 		return $file;
 	}
 
+	private function getLogFilePath($file, $channel)
+	{
+		return __DIR__.'/../logs/'.$channel['name'].'/'.$file;
+	}
 
 	private function formatMessages($messages)
 	{
@@ -235,10 +242,10 @@ class StaticLogGenerator
 		return strtr($userName, array('.' => '_', ' ' => '_'));
 	}
 
-	private function getMessages($date)
+	private function getMessages($date, $channel)
 	{
 		$sql = 'SELECT * FROM '.self::ARCHIVE_TABLE.'
-			WHERE channel = 0 AND dateTime LIKE "'.$date.'%"';
+			WHERE channel = '.$channel['id'].' AND dateTime LIKE "'.$date.'%"';
 
 		$messages = array();
 		foreach ($this->db->query($sql)->fetchAll() as $row) {
@@ -251,11 +258,11 @@ class StaticLogGenerator
 	}
 
 
-	private function getUsersByDay($year)
+	private function getUsersByDay($year, $channel)
 	{
 		$sql = 'SELECT DISTINCT DATE_FORMAT(dateTime, "%Y-%m-%d") day, userName, userRole, COUNT(*) count
 			FROM '.self::ARCHIVE_TABLE.'
-			WHERE channel = 0 AND userId != '.self::CHAT_BOT_ID.' AND dateTime LIKE "'.$year.'%"
+			WHERE channel = '.$channel['id'].' AND userId != '.self::CHAT_BOT_ID.' AND dateTime LIKE "'.$year.'%"
 			GROUP BY day, userName
 			ORDER BY day, count DESC, userName';
 
@@ -394,7 +401,7 @@ class StaticLogGenerator
 		}
 
 		foreach ($this->emoticons as $code => $image) {
-			$root = '../../../img/emoticons';
+			$root = '../../../../img/emoticons';
 			$this->emoticons[$code] = sprintf('<img src="%s/%s" alt="%s">', $root, $image, $code);
 			if ($code[0] == ' ') {
 				$this->emoticons[$code] = ' ' . $this->emoticons[$code];
