@@ -1,5 +1,6 @@
 <?php
-$specialChannels = array(44);
+define('HIDDEN_CHANNEL_ID', 44);
+$specialChannels = array(HIDDEN_CHANNEL_ID, 46, 47);
 
 // $true_title = (($mode == 'edit') || (empty($post_data['topic_title'])))
 // 	? $post_data['post_subject']
@@ -36,7 +37,7 @@ $sql_ary = array(
 	'userName' => 'Аякс',
 	'userRole' => 4,          // bot
 	'channel'  => 0,
-	'channel' => (in_array($data['forum_id'], $specialChannels) ? $data['forum_id'] : 0),
+	'channel' => (in_array($data['forum_id'], $specialChannels) ? HIDDEN_CHANNEL_ID : 0),
 	'dateTime' => date('Y-m-d H:i:s'),
 	'ip'       => '',
 	'text'     => $chat_post,
