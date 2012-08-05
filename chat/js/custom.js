@@ -364,9 +364,10 @@ jQuery.merge(ajaxChatConfig.emoticonCodes, [
 	//':priapos:',
 	':shame:',
 	':wub:',
-	//':bow:',
+	':bow:',
 	':pirate:',
 	':metalhorns:',
+	':lol:',
 	':trophy:',
 	':choco:'
 ]);
@@ -396,9 +397,10 @@ jQuery.merge(ajaxChatConfig.emoticonFiles, [
 	//'extra/priapos.gif',
 	'extra/shame.gif',
 	'extra/wub.gif',
-	//'extra/bow.gif',
+	'extra/bow.gif',
 	'extra/pirate2.gif',
 	'extra/metalhorns.png',
+	'extra/lol.gif',
 	'extra/trophy.gif',
 	'extra/choco.png'
 ]);
