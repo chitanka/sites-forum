@@ -1,6 +1,6 @@
 <?php
 define('HIDDEN_CHANNEL_ID', 44);
-$specialChannels = array(HIDDEN_CHANNEL_ID, 46, 47);
+$specialChannels = array(HIDDEN_CHANNEL_ID, 46, 47, 48);
 
 // $true_title = (($mode == 'edit') || (empty($post_data['topic_title'])))
 // 	? $post_data['post_subject']
