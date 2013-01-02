@@ -3010,6 +3010,7 @@ function confirm_box($check, $title = '', $hidden = '', $html_body = 'confirm_bo
 */
 function login_box($redirect = '', $l_explain = '', $l_success = '', $admin = false, $s_display = true)
 {
+	if (function_exists('redirectToExternalLogin')) redirectToExternalLogin("http://$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]");
 	global $db, $user, $template, $auth, $phpEx, $phpbb_root_path, $config;
 
 	if (!class_exists('phpbb_captcha_factory'))
@@ -3386,7 +3387,7 @@ function parse_cfg_file($filename, $lines = false)
 
 		$parsed_items[$key] = $value;
 	}
-	
+
 	if (isset($parsed_items['inherit_from']) && isset($parsed_items['name']) && $parsed_items['inherit_from'] == $parsed_items['name'])
 	{
 		unset($parsed_items['inherit_from']);
