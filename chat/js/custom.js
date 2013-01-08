@@ -322,11 +322,17 @@ ajaxChat.replaceCustomText = function(text)
 	return text;
 };
 
-ajaxChat.customFinalize = function()
-{
-	ajaxChat.logout();
-};
+// does not work
+// ajaxChat.customFinalize = function()
+// {
+// 	$("#logoutButton").click();
+// };
 
+window.onbeforeunload = function(event)
+{
+	$("#logoutButton").click();
+	alert("Чао!");
+};
 
 $(function(){
 	var _toggler = null;
