@@ -322,6 +322,11 @@ ajaxChat.replaceCustomText = function(text)
 	return text;
 };
 
+ajaxChat.customFinalize = function()
+{
+	ajaxChat.logout();
+};
+
 
 $(function(){
 	var _toggler = null;
