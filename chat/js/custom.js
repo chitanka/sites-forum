@@ -338,7 +338,7 @@ ajaxChat.logout = function()
 
 window.onbeforeunload = function(event)
 {
-	if ( ! ajaxChat._loggingOut) {
+	if ( ! ajaxChat._loggingOut && window.confirm("Излизате ли от чата?")) {
 		$("#logoutButton").click();
 		alert("Чао!");
 	}
