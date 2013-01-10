@@ -328,10 +328,20 @@ ajaxChat.replaceCustomText = function(text)
 // 	$("#logoutButton").click();
 // };
 
+ajaxChat.logoutOrig = ajaxChat.logout;
+ajaxChat._loggingOut = false;
+ajaxChat.logout = function()
+{
+	ajaxChat._loggingOut = true;
+	ajaxChat.logoutOrig();
+};
+
 window.onbeforeunload = function(event)
 {
-	$("#logoutButton").click();
-	alert("Чао!");
+	if ( ! ajaxChat._loggingOut) {
+		$("#logoutButton").click();
+		alert("Чао!");
+	}
 };
 
 $(function(){
