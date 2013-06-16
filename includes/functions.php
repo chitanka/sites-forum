@@ -4881,6 +4881,7 @@ function page_footer($run_cron = true)
 		'DEBUG_OUTPUT'			=> (defined('DEBUG')) ? $debug_output : '',
 		'TRANSLATION_INFO'		=> (!empty($user->lang['TRANSLATION_INFO'])) ? $user->lang['TRANSLATION_INFO'] : '',
 		'CREDIT_LINE'			=> $user->lang('POWERED_BY', '<a href="http://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group'),
+		'CUSTOM_ANALYTICS' => '<script>var _paq=_paq||[];_paq.push([\'trackPageView\']);_paq.push([\'enableLinkTracking\']);(function(){var u=(("https:"==document.location.protocol)?"https":"http")+"://s.chitanka.info:81/";_paq.push([\'setTrackerUrl\',u+\'piwik.php\']);_paq.push([\'setSiteId\',3]);var d=document,g=d.createElement(\'script\'),s=d.getElementsByTagName(\'script\')[0];g.type=\'text/javascript\';g.defer=true;g.async=true;g.src=u+\'a.js\';s.parentNode.insertBefore(g,s);})();</script><noscript><img src="http://s.chitanka.info:81/piwik.php?idsite=3" style="border:0" alt=""></noscript>',
 
 		'U_ACP' => ($auth->acl_get('a_') && !empty($user->data['is_registered'])) ? append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) : '')
 	);
