@@ -7,3 +7,5 @@ config.php
 #*.min.js
 chat/logs*
 chat/css/usercolors.css
+chat/socket/server.log
+chat/socket/server.pid
