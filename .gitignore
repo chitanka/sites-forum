@@ -1,5 +1,6 @@
 /cache
 images/avatars/upload
+/files/*
 install*
 config.php
 *.log
