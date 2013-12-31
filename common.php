@@ -28,6 +28,8 @@ if (file_exists($phpbb_root_path . 'config.' . $phpEx))
 if (!defined('PHPBB_INSTALLED'))
 {
 	// Redirect the user to the installer
+	require($phpbb_root_path . 'includes/functions.' . $phpEx);
+
 	// We have to generate a full HTTP/1.1 header here since we can't guarantee to have any of the information
 	// available as used by the redirect function
 	$server_name = (!empty($_SERVER['HTTP_HOST'])) ? strtolower($_SERVER['HTTP_HOST']) : ((!empty($_SERVER['SERVER_NAME'])) ? $_SERVER['SERVER_NAME'] : getenv('SERVER_NAME'));
@@ -40,10 +42,13 @@ if (!defined('PHPBB_INSTALLED'))
 		$script_name = (!empty($_SERVER['REQUEST_URI'])) ? $_SERVER['REQUEST_URI'] : getenv('REQUEST_URI');
 	}
 
+	// $phpbb_root_path accounts for redirects from e.g. /adm
+	$script_path = trim(dirname($script_name)) . '/' . $phpbb_root_path . 'install/index.' . $phpEx;
 	// Replace any number of consecutive backslashes and/or slashes with a single slash
 	// (could happen on some proxy setups and/or Windows servers)
-	$script_path = trim(dirname($script_name)) . '/install/index.' . $phpEx;
 	$script_path = preg_replace('#[\\\\/]{2,}#', '/', $script_path);
+	// Eliminate . and .. from the path
+	$script_path = phpbb_clean_path($script_path);
 
 	$url = (($secure) ? 'https://' : 'http://') . $server_name;
 
@@ -128,7 +133,7 @@ if (empty($seo_meta)) {
 	if (!class_exists('seo_meta' /*, false*/)) {
 		require($phpbb_root_path . 'phpbb_seo/phpbb_seo_meta.'.$phpEx);
 	}
-$seo_meta = new seo_meta();
+	$seo_meta = new seo_meta();
 }
 // www.phpBB-SEO.com SEO TOOLKIT END - META
 // Add own hook handler
