@@ -211,6 +211,8 @@ define('CAPTCHA_MAX_CHARS', 7);
 
 // Additional constants
 define('VOTE_CONVERTED', 127);
+define('TOPICS_EVALUATION_POS_VOICE_WEIGHT', 10); // borislav: ideas
+define('TOPICS_EVALUATION_NEG_VOICE_WEIGHT', 5); // borislav: ideas
 
 // Table names
 define('ACL_GROUPS_TABLE',			$table_prefix . 'acl_groups');
@@ -278,6 +280,6 @@ define('WORDS_TABLE',				$table_prefix . 'words');
 define('ZEBRA_TABLE',				$table_prefix . 'zebra');
 
 // Additional tables
-
+define('TOPICS_EVALUATION_TABLE', $table_prefix . 'topics_evaluation'); // borislav: ideas
 
 ?>

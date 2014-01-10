@@ -16,6 +16,7 @@ $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : './';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx);
 include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
+include($phpbb_root_path . 'includes/mods/ideas/viewforum.' . $phpEx); // borislav: ideas
 // www.phpBB-SEO.com SEO TOOLKIT BEGIN
 if (empty($_REQUEST['f'])) {
 	$phpbb_seo->get_forum_id($session_forum_id);
@@ -408,6 +409,7 @@ $sql_array = array(
 	'LEFT_JOIN'	=> array(),
 );
 
+evaluation_extend_sql(); // borislav: ideas
 $sql_approved = ($auth->acl_get('m_approve', $forum_id)) ? '' : 'AND t.topic_approved = 1';
 
 if ($user->data['is_registered'])
@@ -443,6 +445,7 @@ if ($forum_data['forum_type'] == FORUM_POST)
 			AND t.topic_type IN (' . POST_ANNOUNCE . ', ' . POST_GLOBAL . ')',
 
 		'ORDER_BY'	=> 't.topic_time DESC',
+		'GROUP_BY'  => evaluation_extend_sql_group(), // borislav: ideas
 	));
 	$result = $db->sql_query($sql);
 
@@ -492,6 +495,7 @@ else
 	$sql_start = $start;
 }
 
+evaluation_extend_sql_orderby(); // borislav: ideas
 if ($forum_data['forum_type'] == FORUM_POST || !sizeof($active_forum_ary))
 {
 	$sql_where = 't.forum_id = ' . $forum_id;
@@ -514,6 +518,7 @@ $sql = 'SELECT t.topic_id
 		$sql_approved
 		$sql_limit_time
 	ORDER BY t.topic_type " . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order;
+if($forum_data['forum_evaluation']) { $sql = evaluation_prepare_viewforum_topics_sql(); } // borislav: ideas
 $result = $db->sql_query_limit($sql, $sql_limit, $sql_start);
 
 while ($row = $db->sql_fetchrow($result))
@@ -534,6 +539,7 @@ if (sizeof($topic_list))
 		'LEFT_JOIN'		=> $sql_array['LEFT_JOIN'],
 
 		'WHERE'			=> $db->sql_in_set('t.topic_id', $topic_list),
+		'GROUP_BY'		=> evaluation_extend_sql_group(), // borislav: ideas
 	);
 
 	// If store_reverse, then first obtain topics, then stickies, else the other way around...
@@ -731,7 +737,7 @@ if (sizeof($topic_list))
 		}
 		// www.phpBB-SEO.com SEO TOOLKIT END -> no dupe
 		// Send vars to template
-		$template->assign_block_vars('topicrow', array(
+		$template->assign_block_vars('topicrow', evaluation_get_topic_data()/*borislav: ideas*/ + array(
 			'FORUM_ID'					=> $topic_forum_id,
 			'TOPIC_ID'					=> $topic_id,
 			'TOPIC_AUTHOR'				=> get_username_string('username', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),

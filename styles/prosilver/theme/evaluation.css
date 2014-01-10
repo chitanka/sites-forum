@@ -1,0 +1,79 @@
+.eval_box_viewforum {
+	float: left;
+	height: 40px;
+	margin-left: 2px;
+	min-width: 33px;
+	border-radius: 3px;
+}
+.eval_rate_head {
+	display: block;
+	padding: 3px 0 2px;
+	font-size: .7em;
+	line-height: 11px;
+	text-align: center;
+	border-radius: 3px;
+}
+.eval_rate_body {
+	display: block;
+	padding: 2px 2px 0 0;
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.eval_box_viewtopic {
+	float: left;
+	height: 58px;
+	margin-right: 1em;
+}
+.eval_box_viewtopic_inactive {
+	border-radius: 3px;
+}
+.eval_rate_topic_head {
+	display: block;
+	padding: 5px 0 2px;
+	font-size: 13px;
+	line-height: 12px;
+	border-radius: 3px;
+	text-align: center;
+}
+.eval_rate_topic_body {
+	display: block;
+	font-size: 18px;
+	text-align: center;
+}
+.vote-box {
+	display: block;
+	line-height: normal;
+	padding: 0 .5em;
+	text-align: center;
+	border-radius: 3px;
+}
+.eval_box_viewtopic_inactive .vote-box {
+	height: 5em;
+}
+a.vote-link {
+	display: block;
+	color: white;
+	text-decoration: none;
+	line-height: 100%;
+}
+a.vote-link:hover {
+	text-shadow: 1px 1px 2px #808080;
+}
+a.vote-up, a.vote-up-inactive {
+	padding: 5px 4px 3px;
+	border-radius: 3px 3px 0 0;
+	color: green;
+}
+a.vote-down, a.vote-down-inactive {
+	padding: 3px 4px 5px;
+	border-radius: 0 0 3px 3px;
+	color: red;
+}
+.vote-value {
+	display: block;
+	min-width: 36px;
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.2;
+}

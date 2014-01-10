@@ -16,6 +16,7 @@ if (!defined('IN_PHPBB'))
 	exit;
 }
 
+include($phpbb_root_path . 'includes/mods/ideas/acp_forums.' . $phpEx); // borislav: ideas
 /**
 * @package acp
 */
@@ -183,6 +184,7 @@ class acp_forums
 						generate_text_for_storage($forum_data['forum_desc'], $forum_data['forum_desc_uid'], $forum_data['forum_desc_bitfield'], $forum_data['forum_desc_options'], request_var('desc_parse_bbcode', false), request_var('desc_parse_urls', false), request_var('desc_parse_smilies', false));
 					}
 
+					evaluation_request_data($forum_data, true); // borislav: ideas
 					$errors = $this->update_forum_data($forum_data);
 
 					if (!sizeof($errors))
@@ -445,6 +447,7 @@ class acp_forums
 							'forum_password'		=> '',
 							'forum_password_confirm'=> '',
 						);
+						evaluation_request_data($forum_data, false); // borislav: ideas
 					}
 				}
 
@@ -576,6 +579,7 @@ class acp_forums
 				{
 					$errors[] = $user->lang['FORUM_PASSWORD_OLD'];
 				}
+				evaluation_extend_template($forum_data); // borislav: ideas
 
 				$template->assign_vars(array(
 					'S_EDIT_FORUM'		=> true,

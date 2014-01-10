@@ -17,15 +17,11 @@
 <!-- IF S_DISPLAY_ACTIVE -->
 	<table class="tablebg" width="100%" cellspacing="1">
 	<tr>
-		<td class="cat" colspan="<!-- IF S_TOPIC_ICONS -->7<!-- ELSE -->6<!-- ENDIF -->"><span class="nav">{L_ACTIVE_TOPICS}</span></td>
+		<td class="cat" colspan="7"><span class="nav">{L_ACTIVE_TOPICS}</span></td>
 	</tr>
 
 	<tr>
-		<!-- IF S_TOPIC_ICONS -->
-			<th colspan="3">&nbsp;{L_TOPICS}&nbsp;</th>
-		<!-- ELSE -->
-			<th colspan="2">&nbsp;{L_TOPICS}&nbsp;</th>
-		<!-- ENDIF -->
+		<th colspan="3">&nbsp;{L_TOPICS}&nbsp;</th>
 		<th>&nbsp;{L_AUTHOR}&nbsp;</th>
 		<th>&nbsp;{L_REPLIES}&nbsp;</th>
 		<th>&nbsp;{L_VIEWS}&nbsp;</th>
@@ -36,9 +32,15 @@
 
 		<tr>
 			<td class="row1" width="25" align="center">{topicrow.TOPIC_FOLDER_IMG}</td>
-			<!-- IF S_TOPIC_ICONS -->
-				<td class="row1" width="25" align="center"><!-- IF topicrow.TOPIC_ICON_IMG --><img src="{T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}" width="{topicrow.TOPIC_ICON_IMG_WIDTH}" height="{topicrow.TOPIC_ICON_IMG_HEIGHT}" alt="" title="" /><!-- ENDIF --></td>
-			<!-- ENDIF -->
+			<td class="row1" width="25" align="center">
+				<!-- borislav: ideas -->
+				<!-- IF topicrow.EVALUATION_TITLE and not topicrow.S_POST_GLOBAL -->
+					<div class="eval_box_viewforum">
+						<span class="eval_rate_body" title="{topicrow.EVALUATION_TITLE}">{topicrow.EVALUATION_CNT}</span>
+					</div>
+				<!-- ENDIF -->
+				<!-- IF topicrow.TOPIC_ICON_IMG --><img src="{T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}" width="{topicrow.TOPIC_ICON_IMG_WIDTH}" height="{topicrow.TOPIC_ICON_IMG_HEIGHT}" alt="" title="" /><!-- ENDIF -->
+			</td>
 			<td class="row1">
 				<!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}">{NEWEST_POST_IMG}</a><!-- ENDIF -->
 				{topicrow.ATTACH_ICON_IMG} <!-- IF topicrow.S_HAS_POLL or topicrow.S_TOPIC_MOVED --><b>{topicrow.TOPIC_TYPE}</b> <!-- ENDIF --><a title="{L_POSTED}: {topicrow.FIRST_POST_TIME}" href="{topicrow.U_VIEW_TOPIC}"class="topictitle">{topicrow.TOPIC_TITLE}</a>
@@ -66,16 +68,12 @@
 	<!-- BEGINELSE -->
 
 		<tr>
-			<!-- IF S_TOPIC_ICONS -->
-				<td class="row1" colspan="7" height="30" align="center" valign="middle"><span class="gen"><!-- IF not S_SORT_DAYS -->{L_NO_TOPICS}<!-- ELSE -->{L_NO_TOPICS_TIME_FRAME}<!-- ENDIF --></span></td>
-			<!-- ELSE -->
-				<td class="row1" colspan="6" height="30" align="center" valign="middle"><span class="gen"><!-- IF not S_SORT_DAYS -->{L_NO_TOPICS}<!-- ELSE -->{L_NO_TOPICS_TIME_FRAME}<!-- ENDIF --></span></td>
-			<!-- ENDIF -->
+			<td class="row1" colspan="7" height="30" align="center" valign="middle"><span class="gen"><!-- IF not S_SORT_DAYS -->{L_NO_TOPICS}<!-- ELSE -->{L_NO_TOPICS_TIME_FRAME}<!-- ENDIF --></span></td>
 		</tr>
 	<!-- END topicrow -->
 
 	<tr align="center">
-		<td class="cat" colspan="<!-- IF S_TOPIC_ICONS -->7<!-- ELSE -->6<!-- ENDIF -->">&nbsp;</td>
+		<td class="cat" colspan="7">&nbsp;</td>
 	</tr>
 	</table>
 
@@ -151,7 +149,7 @@
 	<!-- IF not S_DISPLAY_ACTIVE and (S_IS_POSTABLE or .topicrow) -->
 		<table class="tablebg" width="100%" cellspacing="1">
 		<tr>
-			<td class="cat" colspan="<!-- IF S_TOPIC_ICONS -->7<!-- ELSE -->6<!-- ENDIF -->">
+			<td class="cat" colspan="7">
 				<table width="100%" cellspacing="0">
 				<tr class="nav">
 					<td valign="middle">&nbsp;<!-- IF S_WATCH_FORUM_LINK and not S_IS_BOT --><a href="{S_WATCH_FORUM_LINK}">{S_WATCH_FORUM_TITLE}</a><!-- ENDIF --></td>
@@ -162,11 +160,7 @@
 		</tr>
 
 		<tr>
-			<!-- IF S_TOPIC_ICONS -->
-				<th colspan="3">&nbsp;{L_TOPICS}&nbsp;</th>
-			<!-- ELSE -->
-				<th colspan="2">&nbsp;{L_TOPICS}&nbsp;</th>
-			<!-- ENDIF -->
+			<th colspan="3">&nbsp;{L_TOPICS}&nbsp;</th>
 			<th>&nbsp;{L_AUTHOR}&nbsp;</th>
 			<th>&nbsp;{L_REPLIES}&nbsp;</th>
 			<th>&nbsp;{L_VIEWS}&nbsp;</th>
@@ -177,19 +171,25 @@
 
 			<!-- IF topicrow.S_TOPIC_TYPE_SWITCH eq 1 -->
 				<tr>
-					<td class="row3" colspan="<!-- IF S_TOPIC_ICONS -->7<!-- ELSE -->6<!-- ENDIF -->"><b class="gensmall">{L_ANNOUNCEMENTS}</b></td>
+					<td class="row3" colspan="7"><b class="gensmall">{L_ANNOUNCEMENTS}</b></td>
 				</tr>
 			<!-- ELSEIF topicrow.S_TOPIC_TYPE_SWITCH eq 0 -->
 				<tr>
-					<td class="row3" colspan="<!-- IF S_TOPIC_ICONS -->7<!-- ELSE -->6<!-- ENDIF -->"><b class="gensmall">{L_TOPICS}</b></td>
+					<td class="row3" colspan="7"><b class="gensmall">{L_TOPICS}</b></td>
 				</tr>
 			<!-- ENDIF -->
 
 			<tr>
 				<td class="row1" width="25" align="center">{topicrow.TOPIC_FOLDER_IMG}</td>
-				<!-- IF S_TOPIC_ICONS -->
-					<td class="row1" width="25" align="center"><!-- IF topicrow.TOPIC_ICON_IMG --><img src="{T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}" width="{topicrow.TOPIC_ICON_IMG_WIDTH}" height="{topicrow.TOPIC_ICON_IMG_HEIGHT}" alt="" title="" /><!-- ENDIF --></td>
-				<!-- ENDIF -->
+				<td class="row1" width="25" align="center">
+					<!-- borislav: ideas -->
+					<!-- IF topicrow.EVALUATION_TITLE and not topicrow.S_POST_GLOBAL -->
+						<div class="eval_box_viewforum">
+							<span class="eval_rate_body" title="{topicrow.EVALUATION_TITLE}">{topicrow.EVALUATION_CNT}</span>
+						</div>
+					<!-- ENDIF -->
+					<!-- IF topicrow.TOPIC_ICON_IMG --><img src="{T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}" width="{topicrow.TOPIC_ICON_IMG_WIDTH}" height="{topicrow.TOPIC_ICON_IMG_HEIGHT}" alt="" title="" /><!-- ENDIF -->
+				</td>
 				<td class="row1">
 					<!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}">{NEWEST_POST_IMG}</a><!-- ENDIF -->
 					{topicrow.ATTACH_ICON_IMG} <!-- IF topicrow.S_HAS_POLL or topicrow.S_TOPIC_MOVED --><b>{topicrow.TOPIC_TYPE}</b> <!-- ENDIF --><a title="{L_POSTED}: {topicrow.FIRST_POST_TIME}" href="{topicrow.U_VIEW_TOPIC}" class="topictitle">{topicrow.TOPIC_TITLE}</a>
@@ -217,24 +217,16 @@
 		<!-- BEGINELSE -->
 			<!-- IF S_IS_POSTABLE -->
 			<tr>
-				<!-- IF S_TOPIC_ICONS -->
-					<td class="row1" colspan="7" height="30" align="center" valign="middle"><span class="gen"><!-- IF not S_SORT_DAYS -->{L_NO_TOPICS}<!-- ELSE -->{L_NO_TOPICS_TIME_FRAME}<!-- ENDIF --></span></td>
-				<!-- ELSE -->
-					<td class="row1" colspan="6" height="30" align="center" valign="middle"><span class="gen"><!-- IF not S_SORT_DAYS -->{L_NO_TOPICS}<!-- ELSE -->{L_NO_TOPICS_TIME_FRAME}<!-- ENDIF --></span></td>
-				<!-- ENDIF -->
+				<td class="row1" colspan="7" height="30" align="center" valign="middle"><span class="gen"><!-- IF not S_SORT_DAYS -->{L_NO_TOPICS}<!-- ELSE -->{L_NO_TOPICS_TIME_FRAME}<!-- ENDIF --></span></td>
 			</tr>
 			<!-- ENDIF -->
 		<!-- END topicrow -->
 
 		<!-- IF not S_IS_BOT -->
 		<tr align="center">
-			<!-- IF S_TOPIC_ICONS -->
-				<td class="cat" colspan="7">
-			<!-- ELSE -->
-				<td class="cat" colspan="6">
-			<!-- ENDIF -->
-					<form method="post" action="{S_FORUM_ACTION}"><span class="gensmall">{L_DISPLAY_TOPICS}:</span>&nbsp;{S_SELECT_SORT_DAYS}&nbsp;<span class="gensmall">{L_SORT_BY}</span> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}&nbsp;<input class="btnlite" type="submit" name="sort" value="{L_GO}" /></form>
-				</td>
+			<td class="cat" colspan="7">
+				<form method="post" action="{S_FORUM_ACTION}"><span class="gensmall">{L_DISPLAY_TOPICS}:</span>&nbsp;{S_SELECT_SORT_DAYS}&nbsp;<span class="gensmall">{L_SORT_BY}</span> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}&nbsp;<input class="btnlite" type="submit" name="sort" value="{L_GO}" /></form>
+			</td>
 		</tr>
 		<!-- ENDIF -->
 		</table>

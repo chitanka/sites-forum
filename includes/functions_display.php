@@ -451,6 +451,8 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 			$folder_alt = ($forum_unread) ? 'UNREAD_POSTS' : 'NO_UNREAD_POSTS';
 		}
 
+		if($row['forum_evaluation']) { $folder_image = preg_match('/forum_unread/', $folder_image) ? 'ideas_unread' : 'ideas_read'; } // borislav: ideas
+
 		// Create last post link information, if appropriate
 		if ($row['forum_last_post_id'])
 		{

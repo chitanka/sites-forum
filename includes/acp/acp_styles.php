@@ -116,6 +116,7 @@ inherit_from = {INHERIT_FROM}
 				'icon_post_target', 'icon_post_target_unread', 'icon_topic_attach', 'icon_topic_latest', 'icon_topic_newest', 'icon_topic_reported', 'icon_topic_unapproved', 'icon_friend', 'icon_foe',
 			),
 			'forums'	=> array(
+				'ideas_read', 'ideas_unread', // borislav: ideas
 				'forum_link', 'forum_read', 'forum_read_locked', 'forum_read_subforum', 'forum_unread', 'forum_unread_locked', 'forum_unread_subforum', 'subforum_read', 'subforum_unread'
 			),
 			'folders'	=> array(
@@ -573,7 +574,7 @@ inherit_from = {INHERIT_FROM}
 			case 'imageset':
 				$sql_from = STYLES_IMAGESET_TABLE;
 			break;
-			
+
 			default:
 				trigger_error($user->lang['NO_MODE'] . adm_back_link($this->u_action), E_USER_WARNING);
 		}

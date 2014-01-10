@@ -168,6 +168,8 @@ $lang = array_merge($lang, array(
 	'IMG_FORUM_UNREAD'			=> 'Forum unread posts',
 	'IMG_FORUM_UNREAD_LOCKED'	=> 'Forum unread posts locked',
 	'IMG_FORUM_UNREAD_SUBFORUM'	=> 'Subforum unread posts',
+	'IMG_IDEAS_READ'	=> 'Ideas', // borislav: ideas
+	'IMG_IDEAS_UNREAD'	=> 'New Ideas', // borislav: ideas
 	'IMG_SUBFORUM_READ'			=> 'Legend subforum',
 	'IMG_SUBFORUM_UNREAD'		=> 'Legend subforum unread posts',
 

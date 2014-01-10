@@ -15,6 +15,7 @@ define('IN_PHPBB', true);
 $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : './';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx);
+include($phpbb_root_path . 'includes/mods/ideas/search.' . $phpEx); // borislav: ideas
 
 // Start session management
 $user->session_begin();
@@ -83,7 +84,7 @@ switch ($search_id)
 			login_box('', $user->lang['LOGIN_EXPLAIN_UNREADSEARCH']);
 		}
 	break;
-	
+
 	// The "new posts" search uses user_lastvisit which is user based, so it should require user to log in.
 	case 'newposts':
 		if ($user->data['user_id'] == ANONYMOUS)
@@ -91,7 +92,7 @@ switch ($search_id)
 			login_box('', $user->lang['LOGIN_EXPLAIN_NEWPOSTS']);
 		}
 	break;
-	
+
 	default:
 		// There's nothing to do here for now ;)
 	break;
@@ -770,6 +771,7 @@ if ($keywords || $author || $author_id || $search_id || $submit)
 				WHERE $sql_where";
 		}
 		$sql .= ' ORDER BY ' . $sort_by_sql[$sort_key] . ' ' . (($sort_dir == 'd') ? 'DESC' : 'ASC');
+		evaluation_extend_sql($sql, $show_results); // borislav: ideas
 		$result = $db->sql_query($sql);
 		$result_topic_id = 0;
 
@@ -1100,6 +1102,7 @@ if ($keywords || $author || $author_id || $search_id || $submit)
 				);
 			}
 
+			evaluation_extend_template($tpl_ary, $row); // borislav: ideas
 			$template->assign_block_vars('searchresults', array_merge($tpl_ary, array(
 				'FORUM_ID'			=> $forum_id,
 				'TOPIC_ID'			=> $result_topic_id,

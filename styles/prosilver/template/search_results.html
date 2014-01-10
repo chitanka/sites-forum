@@ -52,8 +52,15 @@
 
 		<!-- BEGIN searchresults -->
 			<li class="row<!-- IF searchresults.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
-				<dl class="icon" style="background-image: url({searchresults.TOPIC_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
-					<dt <!-- IF searchresults.TOPIC_ICON_IMG -->style="background-image: url({T_ICONS_PATH}{searchresults.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF -->>
+				<!-- borislav: ideas start -->
+				<!-- IF searchresults.EVALUATION_TITLE -->
+				<div style="float: left; height: 40px; margin-left: 2px; min-width: 33px; background-color: #905417; -moz-border-radius: 3px 3px 3px 3px;">
+					<span class="eval_rate_small" style="-moz-border-radius: 3px 3px 3px 3px; background-color: #6C3F11; color: #CCCCCC; padding: 3px 0 2px; text-align: center;">{searchresults.EVALUATION_RATE_LNG}</span>
+					<span title="{searchresults.EVALUATION_TITLE}" style="font-size: 12px; padding: 2px 2px 0 0; color: #FFFFFF; text-align: center; display: block;">{searchresults.EVALUATION_CNT}</span>
+				</div><!-- ENDIF -->
+				<dl class="icon" <!-- IF not searchresults.EVALUATION_TITLE --> style="background-image: url({searchresults.TOPIC_FOLDER_IMG_SRC}); background-repeat: no-repeat;"<!-- ENDIF -->>
+					<dt <!-- IF searchresults.EVALUATION_TITLE --> class="eval" <!-- ENDIF --> <!-- IF searchresults.TOPIC_ICON_IMG -->style="background-image: url({T_ICONS_PATH}{searchresults.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF -->>
+				<!-- borislav: ideas end -->
 						<!-- IF searchresults.S_UNREAD_TOPIC --><a href="{searchresults.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF -->
 						<a href="{searchresults.U_VIEW_TOPIC}" class="topictitle">{searchresults.TOPIC_TITLE}</a> {searchresults.ATTACH_ICON_IMG}
 						<!-- IF searchresults.S_TOPIC_UNAPPROVED or searchresults.S_POSTS_UNAPPROVED --><a href="{searchresults.U_MCP_QUEUE}">{searchresults.UNAPPROVED_IMG}</a> <!-- ENDIF -->
@@ -109,6 +116,11 @@
 			<!-- ELSE -->
 				<dd>{L_GLOBAL}: <a href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a></dd>
 			<!-- ENDIF -->
+			<!-- borislav: ideas start -->
+			<!-- IF searchresults.EVALUATION_RATE_LNG -->
+				<dd>{searchresults.EVALUATION_RATE_LNG}: {searchresults.EVALUATION_CNT}</dd>
+			<!-- ENDIF -->
+			<!-- borislav: ideas end -->
 			<dd>{L_REPLIES}: <strong>{searchresults.TOPIC_REPLIES}</strong></dd>
 			<dd>{L_VIEWS}: <strong>{searchresults.TOPIC_VIEWS}</strong></dd>
 		</dl>

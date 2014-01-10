@@ -17,6 +17,7 @@ $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx);
 include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
 include($phpbb_root_path . 'includes/bbcode.' . $phpEx);
+include($phpbb_root_path . 'includes/mods/ideas/viewtopic.' . $phpEx); // borislav: ideas
 // www.phpBB-SEO.com SEO TOOLKIT BEGIN
 if (empty($_REQUEST['f'])) {
 	$phpbb_seo->get_forum_id($session_forum_id);
@@ -432,6 +433,8 @@ if ($topic_data['forum_password'])
 	login_forum_box($topic_data);
 }
 
+evaluation_display(); // borislav: ideas
+
 // Redirect to login or to the correct post upon emailed notification links
 if (isset($_GET['e']))
 {
@@ -719,6 +722,7 @@ $template->assign_vars(array(
 	'FORUM_DESC'	=> generate_text_for_display($topic_data['forum_desc'], $topic_data['forum_desc_uid'], $topic_data['forum_desc_bitfield'], $topic_data['forum_desc_options']),
 	'TOPIC_ID' 		=> $topic_id,
 	'TOPIC_TITLE' 	=> $topic_data['topic_title'],
+	'TOPIC_TITLE_E' => strip_tags($topic_data['topic_title']),
 	'TOPIC_POSTER'	=> $topic_data['topic_poster'],
 
 	'TOPIC_AUTHOR_FULL'		=> get_username_string('full', $topic_data['topic_poster'], $topic_data['topic_first_poster_name'], $topic_data['topic_first_poster_colour']),

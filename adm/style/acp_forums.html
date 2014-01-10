@@ -241,6 +241,10 @@
 			<dt><label for="topics_per_page">{L_FORUM_TOPICS_PAGE}:</label><br /><span>{L_FORUM_TOPICS_PAGE_EXPLAIN}</span></dt>
 			<dd><input type="text" id="topics_per_page" name="topics_per_page" value="{TOPICS_PER_PAGE}" size="4" maxlength="4" /></dd>
 		</dl>
+		<dl><!-- borislav: ideas start -->
+			<dt><label for="evaluation">{L_ACP_EVALUATION}:</label><br /><span>{L_ACP_EVALUATION_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="evaluation" value="1"<!-- IF S_EVALUATION_ACTIVATED --> id="enable_evaluation" checked="checked"<!-- ENDIF --> /> {L_YES}</label><label><input type="radio" class="radio" name="evaluation" value="0"<!-- IF not S_EVALUATION_ACTIVATED --> id="enable_evaluation" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl><!-- borislav: ideas end -->
 		</fieldset>
 
 		<fieldset>
