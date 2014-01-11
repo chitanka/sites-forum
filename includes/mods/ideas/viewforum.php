@@ -82,9 +82,9 @@ function evaluation_extend_sql_orderby()
 
 	if(1 == $forum_data['forum_evaluation'])
 	{
-		$store_reverse = false;
-		$lastTwoWeeksOnTop = '(UNIX_TIMESTAMP() - topic_last_post_time < 1209600) DESC';
-		$sql_sort_order = "$lastTwoWeeksOnTop, evaluation_count DESC, $sql_sort_order";
+		$sort_dir = $store_reverse ? 'ASC' : 'DESC';
+		$lastTwoWeeksOnTop = "(UNIX_TIMESTAMP() - topic_last_post_time < 1209600) $sort_dir";
+		$sql_sort_order = "$lastTwoWeeksOnTop, evaluation_count $sort_dir, $sql_sort_order";
 	}
 }
 
