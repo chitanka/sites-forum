@@ -11,6 +11,7 @@ class StaticLogGenerator
 	public function __construct(PDO $db)
 	{
 		$this->db = $db;
+		$this->db->exec('SET NAMES utf8');
 	}
 
 	public function generateNewLogs(array $channels)
