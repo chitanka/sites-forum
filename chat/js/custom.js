@@ -361,12 +361,13 @@ $(function(){
 });
 
 jQuery.merge(ajaxChatConfig.emoticonCodes, [
-	':coffee:',
-	':beer:',
+	':boza:',
+	':green tea:',
 	':redwine:',
+	':beer:',
+	':coffee:',
 	':rakija:',
 	':bloodymary:',
-	':green tea:',
 	':agree:',
 	':disagree:',
 	':rose:',
@@ -394,12 +395,13 @@ jQuery.merge(ajaxChatConfig.emoticonCodes, [
 ]);
 
 jQuery.merge(ajaxChatConfig.emoticonFiles, [
-	'extra/coffee.gif',
-	'extra/beer.gif',
+	'extra/boza.png',
+	'extra/green_tea.png',
 	'extra/redwine.gif',
+	'extra/beer.gif',
+	'extra/coffee.gif',
 	'extra/rakija.png',
 	'extra/bloody_mary.png',
-	'extra/green_tea.png',
 	'extra/agree.gif',
 	'extra/disagree.gif',
 	'extra/rose.gif',
