@@ -1,4 +1,4 @@
-COMPRESSOR=${HOME}/bin/yuicompressor-2.4.7/build/yuicompressor-2.4.7.jar
+COMPRESSOR=${HOME}/bin/yuicompressor-2.4.8.jar
 ARGS=
 MINSUFFIX=.min
 SRCS=jquery.idle-timer.js lang/bg.js chat.js config.js custom.js FABridge.js
