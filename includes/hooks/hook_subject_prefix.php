@@ -410,13 +410,13 @@ abstract class sp_hook
 							{
 								trigger_error('PREFIX_NOT_ALLOWED');
 							}
-
+if ($pid) {
 							// Only have to add the prefix
 							$sql = 'UPDATE ' . TOPICS_TABLE . '
 								SET subject_prefix_id = ' . $pid . '
 								WHERE topic_id = ' . $data['topic_id'];
 							sp_phpbb::$db->sql_query($sql);
-
+}
 							// Done :)
 							return;
 						break;
