@@ -368,6 +368,7 @@ class StaticLogGenerator
 		':warning:' => 'warning.png',
 		':favorite:' => 'favorite.png',
 		':coffee:' => 'extra/coffee.gif',
+		':boza:' => 'extra/boza.png',
 		':beer:' => 'extra/beer.gif',
 		':redwine:' => 'extra/redwine.gif',
 		':rakija:' => 'extra/rakija.png',
