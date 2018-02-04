@@ -329,10 +329,10 @@ ajaxChat.replaceEmojis = function(text) {
 };
 ajaxChat.replaceEmojisCallback = function(text, code) {
 	if (ajaxChatConfig.emojis[code]) {
-		return '<span class="emoji">&#x' + ajaxChatConfig.emojis[code] + ';</span>';
+		return '<span class="emoji" title="'+code+'">&#x' + ajaxChatConfig.emojis[code] + ';</span>';
 	}
 	if (code.indexOf('fa-') === 0) {
-		return '<i class="fas '+code+' faicon"></i>';
+		return '<i class="fas '+code+' faicon" title="'+code+'"></i>';
 	}
 	return text;
 };
