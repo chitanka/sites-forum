@@ -325,7 +325,7 @@ ajaxChat.replaceCustomText = function(text)
 };
 
 ajaxChat.replaceEmojis = function(text) {
-	return text.replace(/:([^:]+):/g, this.replaceEmojisCallback);
+	return text.replace(/:([a-z_-]+):/g, this.replaceEmojisCallback);
 };
 ajaxChat.replaceEmojisCallback = function(text, code) {
 	if (ajaxChatConfig.emojis[code]) {
