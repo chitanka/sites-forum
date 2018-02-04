@@ -510,6 +510,24 @@
 	.statusContainerAlert {
 		background-image: url('../img/loading-trouble.png');
 	}
+
+	#content #statusIconContainer {
+		position:absolute;
+		right:20px;
+		top:50px;
+		width:22px;
+		height:22px;
+	}
+	/* Status Icon */
+	#content #statusIconContainer {
+		background: url('../img/loading-sprite.png') no-repeat 0px 0px;
+	}
+	#content #statusIconContainer.waiting {
+		background-position: 0px -22px;
+	}
+	#content #statusIconContainer.retrying {
+		background-position: 0px -44px;
+	}
 	#content #colorCodesContainer a {
 		border-color:black;
 	}
@@ -645,4 +663,7 @@
 		font-size: 1.1em;
 	}
 
+	.emoji, .faicon {
+		font-size: 1.2em;
+	}
 }

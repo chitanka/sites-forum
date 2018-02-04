@@ -1,9 +1,9 @@
-﻿<?php
+<?php
 /*
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -33,6 +33,7 @@ $lang['bbCodeLabelCode'] = 'კოდი';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'სურათი';
 $lang['bbCodeLabelColor'] = 'შრიფტის ფერი';
+$lang['bbCodeLabelEmoticon'] = 'Smilies';
 $lang['bbCodeTitleBold'] = 'მსხვილი ტექსტი: [b]ტექსტი[/b]';
 $lang['bbCodeTitleItalic'] = 'დახრილი ტექსტი: [i]ტექსტი[/i]';
 $lang['bbCodeTitleUnderline'] = 'ხაზგასმული ტექსტი: [u]ტექსტი[/u]';
@@ -41,6 +42,7 @@ $lang['bbCodeTitleCode'] = 'კოდის ჩვენება: [code]კო�
 $lang['bbCodeTitleURL'] = 'URL ბმულის ჩასმა: [url]http://example.org[/url] ან [url=http://example.org]ტექსტი[/url]';
 $lang['bbCodeTitleImg'] = 'ნახატის ჩასმა: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'შრიფტის ფერი: [color=red]ტექსტი[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Smilies list';
 $lang['help'] = 'დახმარება';
 $lang['helpItemDescJoin'] = 'შეუერთდი არხს:';
 $lang['helpItemCodeJoin'] = '/join არხის_სახელი';
@@ -97,6 +99,7 @@ $lang['settingsWordWrap'] = 'გრძელი სიტყვების გ�
 $lang['settingsMaxWordLength'] = 'სიტყვის მაქსიმალური სიგრძე, სანამ ახალ სტრიქონზე გადავა:';
 $lang['settingsDateFormat'] = 'თარიღისა და დროის ჩვენების ფორმატი:';
 $lang['settingsPersistFontColor'] = 'შრიფტის ფერის შენახვა:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'ხმის სიმაღლე:';
 $lang['settingsSoundReceive'] = 'შემავალი გზავნილის ხმა:';
 $lang['settingsSoundSend'] = 'გამავალი გზავნილის ხმა:';
@@ -104,6 +107,7 @@ $lang['settingsSoundEnter'] = 'ავტორიზაციისა და �
 $lang['settingsSoundLeave'] = 'გასვლის და არხის მიტოვების ხმა:';
 $lang['settingsSoundChatBot'] = 'ჩატბოტის გზავნილების ხმა:';
 $lang['settingsSoundError'] = 'შედომის გზავნილების ხმა:';
+$lang['settingsSoundPrivate'] = 'Sound for private messages:';
 $lang['settingsBlink'] = 'ახალ გზავნილზე ფანჯრის დასახელების ციმციმი:';
 $lang['settingsBlinkInterval'] = 'ციმციმის ინტერვალი მილიწამებში:';
 $lang['settingsBlinkIntervalNumber'] = 'ციმციმის ინტერვალების რაოდენობა:';
@@ -120,4 +124,3 @@ $lang['logsTime'] = 'დრო';
 $lang['logsSearch'] = 'ძიება';
 $lang['logsPrivateChannels'] = 'პირადი არხები';
 $lang['logsPrivateMessages'] = 'პირადი გზავნილები';
-?>

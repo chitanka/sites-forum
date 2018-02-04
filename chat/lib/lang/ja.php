@@ -3,7 +3,7 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -33,6 +33,7 @@ $lang['bbCodeLabelCode'] = 'Code';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'フォントカラー';
+$lang['bbCodeLabelEmoticon'] = 'Smilies';
 $lang['bbCodeTitleBold'] = 'ボールド（太字）: [b]text[/b]';
 $lang['bbCodeTitleItalic'] = 'イタリック（斜体）: [i]text[/i]';
 $lang['bbCodeTitleUnderline'] = 'アンダーライン: [u]text[/u]';
@@ -41,6 +42,7 @@ $lang['bbCodeTitleCode'] = 'コード表示: [code]code[/code]';
 $lang['bbCodeTitleURL'] = 'URLリンク: [url]http://example.org[/url] or [url=http://example.org]text[/url]';
 $lang['bbCodeTitleImg'] = '画像: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'フォントカラー: [color=red]text[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Smilies list';
 $lang['help'] = 'ヘルプ';
 $lang['helpItemDescJoin'] = 'チャンネルの変更 :';
 $lang['helpItemCodeJoin'] = '/join チャンネル名';
@@ -97,6 +99,7 @@ $lang['settingsWordWrap'] = '長い英数字の折り返しを有効にする :'
 $lang['settingsMaxWordLength'] = '折り返しされない英数字の最大字数 :';
 $lang['settingsDateFormat'] = '日付と表示時間のフォーマット :';
 $lang['settingsPersistFontColor'] = 'フォントカラーを保持する :';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'サウンドのボリューム :';
 $lang['settingsSoundReceive'] = 'サウンド - メッセージの到着 :';
 $lang['settingsSoundSend'] = 'サウンド - メッセージの送信 :';
@@ -104,6 +107,7 @@ $lang['settingsSoundEnter'] = 'サウンド - ログイン、チャンネル入�
 $lang['settingsSoundLeave'] = 'サウンド - ログアウト、チャンネル退室 :';
 $lang['settingsSoundChatBot'] = 'サウンド - チャットボットメッセージ :';
 $lang['settingsSoundError'] = 'サウンド - エラーメッセージ :';
+$lang['settingsSoundPrivate'] = 'Sound for private messages:';
 $lang['settingsBlink'] = '新着メッセージの到着時にウィンドウタイトルを点滅させる :';
 $lang['settingsBlinkInterval'] = '点滅の間隔（ミリ秒） :';
 $lang['settingsBlinkIntervalNumber'] = '点滅の回数 :';
@@ -120,4 +124,3 @@ $lang['logsTime'] = '時間';
 $lang['logsSearch'] = '検索';
 $lang['logsPrivateChannels'] = '二人きりモード';
 $lang['logsPrivateMessages'] = 'プライベートメッセージ';
-?>

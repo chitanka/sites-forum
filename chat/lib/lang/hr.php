@@ -3,7 +3,7 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -33,6 +33,7 @@ $lang['bbCodeLabelCode'] = 'Kôd';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Slika';
 $lang['bbCodeLabelColor'] = 'Boja';
+$lang['bbCodeLabelEmoticon'] = 'Emotikone';
 $lang['bbCodeTitleBold'] = 'Snažan tekst: [b]tekst[/b]';
 $lang['bbCodeTitleItalic'] = 'Kurziv: [i]tekst[/i]';
 $lang['bbCodeTitleUnderline'] = 'Podvučeni tekst: [u]tekst[/u]';
@@ -41,6 +42,7 @@ $lang['bbCodeTitleCode'] = 'Prikaz kôda: [code]kôd[/code]';
 $lang['bbCodeTitleURL'] = 'Umetanje URL: [url]http://primjer.org[/url] ili [url=http://primjer.org]tekst[/url]';
 $lang['bbCodeTitleImg'] = 'Umetanje slike: [img]http://primjer.org/slika.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Boja fonta: [color=red]tekst[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Emotikone popis';
 $lang['help'] = 'Pomoć';
 $lang['helpItemDescJoin'] = 'Pridruživanje kanalu:';
 $lang['helpItemCodeJoin'] = '/join kanal';
@@ -97,6 +99,7 @@ $lang['settingsWordWrap'] = 'Omogući obmatanje dugih riječi:';
 $lang['settingsMaxWordLength'] = 'Najveća duljina riječi prije njezinog obmatanja:';
 $lang['settingsDateFormat'] = 'Oblikovanje datuma i vremena:';
 $lang['settingsPersistFontColor'] = 'Dosljedna boja fonta:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Glasnoća zvuka:';
 $lang['settingsSoundReceive'] = 'Zvuk za dolazne poruke:';
 $lang['settingsSoundSend'] = 'Zvuk za odlazne poruke:';
@@ -104,6 +107,7 @@ $lang['settingsSoundEnter'] = 'Zvuk za prijavljivanje i poruke pristupanja kanal
 $lang['settingsSoundLeave'] = 'Zvuk za odjavljivanje i poruke napuštanja kanala:';
 $lang['settingsSoundChatBot'] = 'Zvuk za poruke brbljobota:';
 $lang['settingsSoundError'] = 'Zvuk za poruke pogreške:';
+$lang['settingsSoundPrivate'] = 'Zvuk za poruke privatni:';
 $lang['settingsBlink'] = 'Treptanje naslova prozora kod novih poruka:';
 $lang['settingsBlinkInterval'] = 'Trajanje treptanja (u milisekundama):';
 $lang['settingsBlinkIntervalNumber'] = 'Broj treptanja:';
@@ -120,4 +124,3 @@ $lang['logsTime'] = 'Vrijeme';
 $lang['logsSearch'] = 'Traži';
 $lang['logsPrivateChannels'] = 'Privatni kanali';
 $lang['logsPrivateMessages'] = 'Privatne poruke';
-?>

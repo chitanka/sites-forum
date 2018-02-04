@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author Borislav Manolov
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'Код';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Картинка';
 $lang['bbCodeLabelColor'] = 'Цвят на шрифта';
+$lang['bbCodeLabelEmoticon'] = 'Усмивки';
 $lang['bbCodeTitleBold'] = 'Получер текст: [b]текст[/b]';
 $lang['bbCodeTitleItalic'] = 'Курсивен текст: [i]текст[/i]';
 $lang['bbCodeTitleUnderline'] = 'Подчертан текст: [u]текст[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'Показване на код: [code]код[/code]'
 $lang['bbCodeTitleURL'] = 'URL: [url]http://example.org[/url] или [url=http://example.org]текст[/url]';
 $lang['bbCodeTitleImg'] = 'Вмъкване на картинка: [img]http://primer.org/kartinka.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Цвят на шрифта: [color=red]текст[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Списък с усмивки';
 $lang['help'] = 'Помощ';
 $lang['helpItemDescJoin'] = 'Присъединяване към канал:';
 $lang['helpItemCodeJoin'] = '/join име_на_канал';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap'] = 'Пренасяне на дълги думи:';
 $lang['settingsMaxWordLength'] = 'Максимална дължина на дума преди да бъде пренесена:';
 $lang['settingsDateFormat'] = 'Формат на датата и часа:';
 $lang['settingsPersistFontColor'] = 'Устойчив цвят на шрифта:';
+$lang['settingsAudioSupport'] = 'Звукова поддръжка:';
 $lang['settingsAudioVolume'] = 'Височина на звука:';
 $lang['settingsSoundReceive'] = 'Звук за входящи съобщения:';
 $lang['settingsSoundSend'] = 'Звук за изходящи съобщения:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter'] = 'Звук за съобщенията за вли�
 $lang['settingsSoundLeave'] = 'Звук за съобщенията за излизане от чата или от канала:';
 $lang['settingsSoundChatBot'] = 'Звук за съобщенията на чатбота:';
 $lang['settingsSoundError'] = 'Звук за съобщенията за грешки:';
+$lang['settingsSoundPrivate'] = 'Звук за личните съобщения:';
 $lang['settingsBlink'] = 'Примигване на прозоречното заглавие при нови съобщения:';
 $lang['settingsBlinkInterval'] = 'Интервал на примигване в милисекунди:';
 $lang['settingsBlinkIntervalNumber'] = 'Брой пъти на примигване:';
@@ -121,4 +125,3 @@ $lang['logsTime'] = 'Време';
 $lang['logsSearch'] = 'Търсене';
 $lang['logsPrivateChannels'] = 'Лични канали';
 $lang['logsPrivateMessages'] = 'Лични съобщения';
-?>

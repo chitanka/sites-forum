@@ -3,18 +3,19 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
 // Class to manage HTTP header
 class AJAXChatHTTPHeader {
 
-	var $_contentType;
-	var $_constant;
-	var $_noCache;
+	protected
+		$_contentType,
+		$_constant,
+		$_noCache;
 
-	function AJAXChatHTTPHeader($encoding='UTF-8', $contentType=null, $noCache=true) {
+	public function __construct($encoding='UTF-8', $contentType=null, $noCache=true) {
 		if($contentType) {
 			$this->_contentType = $contentType.'; charset='.$encoding;
 			$this->_constant = true;
@@ -30,7 +31,7 @@ class AJAXChatHTTPHeader {
 	}
 
 	// Method to send the HTTP header:
-	function send() {
+	public function send() {
 		// Prevent caching:
 		if($this->_noCache) {
 			header('Cache-Control: no-cache, must-revalidate');
@@ -45,12 +46,11 @@ class AJAXChatHTTPHeader {
 			header('Vary: Accept');
 		}
 	}
-    
+
 	// Method to return the content-type string:
-	function getContentType() {
+	public function getContentType() {
 		// Return the content-type string:
 		return $this->_contentType;
 	}
 
 }
-?>

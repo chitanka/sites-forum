@@ -3,26 +3,25 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
-// borislav: added static/visibility declarations for methods
 
 // Class to provide static encoding methods
 class AJAXChatEncoding {
 
 	// Helper function to store special chars as we cannot use static class members in PHP4:
-	private static function getSpecialChars() {
+	public static function getSpecialChars() {
 		static $specialChars;
 		if(!$specialChars) {
 			// As &apos; is not supported by IE, we use &#39; as replacement for "'":
-			$specialChars = array('&'=>'&amp;', '<'=>'&lt;', '>'=>'&gt;', "'"=>'&#39;', '"'=>'&quot;');
+			$specialChars = array('&'=>'&amp;', '<'=>'&lt;', '>'=>'&gt;', "'"=>'&#39;', '"'=>'&quot;');	
 		}
 		return $specialChars;
 	}
 
 	// Helper function to store Regular expression for NO-WS-CTL as we cannot use static class members in PHP4:
-	private static function getRegExp_NO_WS_CTL() {
+	public static function getRegExp_NO_WS_CTL() {
 		static $regExp_NO_WS_CTL;
 		if(!$regExp_NO_WS_CTL) {
 			// Regular expression for NO-WS-CTL, non-whitespace control characters (RFC 2822), decimal 1–8, 11–12, 14–31, and 127:
@@ -92,7 +91,7 @@ class AJAXChatEncoding {
 		}
 		// borislav: &nbsp; makes problems (with firefox at least)
 		return htmlspecialchars($str, ENT_QUOTES, $encoding);
-		return htmlentities($str, ENT_QUOTES, $encoding);
+		//return htmlentities($str, ENT_QUOTES, $encoding);
 	}
 
 	public static function decodeEntities($str, $encoding='UTF-8', $htmlEntitiesMap=null) {
@@ -138,4 +137,3 @@ class AJAXChatEncoding {
 	}
 
 }
-?>

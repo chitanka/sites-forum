@@ -3,10 +3,9 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
-// borislav: added static/visibility declarations for methods
 
 // Class to provide methods for file system access:
 class AJAXChatFileSystem {
@@ -20,4 +19,3 @@ class AJAXChatFileSystem {
 	}
 
 }
-?>

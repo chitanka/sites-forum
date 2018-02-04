@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author K.Z.
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'Cod';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'Culoare fontului';
+$lang['bbCodeLabelEmoticon'] = 'Emoticons';
 $lang['bbCodeTitleBold'] = 'Text îngroşat: [b]text[/b]';
 $lang['bbCodeTitleItalic'] = 'Text înclinat: [i]text[/i]';
 $lang['bbCodeTitleUnderline'] = 'Text subliniat: [u]text[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'Scrie cod: [code]code[/code]';
 $lang['bbCodeTitleURL'] = 'Introdu URL: [url]http://example.org[/url] or [url=http://example.org]text[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Culoarea fontului: [color=red]text[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Emoticons list';
 $lang['help'] = 'Ajutor';
 $lang['helpItemDescJoin'] = 'Alăturăte canalului:';
 $lang['helpItemCodeJoin'] = '/join Channelname';
@@ -98,13 +100,15 @@ $lang['settingsWordWrap'] = 'Enable wrapping of long words:';
 $lang['settingsMaxWordLength'] = 'Maximum length of a word before it gets wrapped:';
 $lang['settingsDateFormat'] = 'Format of date and time display:';
 $lang['settingsPersistFontColor'] = 'Persist font color:';
-$lang['settingsAudioVolume'] = 'Sound Volume:';
-$lang['settingsSoundReceive'] = 'Sound for incoming messages:';
-$lang['settingsSoundSend'] = 'Sound for outgoing messages:';
+$lang['settingsAudioSupport'] = 'Suport audio:';
+$lang['settingsAudioVolume'] = 'Volumul audio:';
+$lang['settingsSoundReceive'] = 'Sunet pentru mesajele primite:';
+$lang['settingsSoundSend'] = 'Sunet pentru mesajele trimise:';
 $lang['settingsSoundEnter'] = 'Sound for login and channel enter messages:';
 $lang['settingsSoundLeave'] = 'Sound for logout and channel leave messages:';
-$lang['settingsSoundChatBot'] = 'Sound for chatbot messages:';
-$lang['settingsSoundError'] = 'Sound for error messages:';
+$lang['settingsSoundChatBot'] = 'Sunet pentru mesajele de chatbot:';
+$lang['settingsSoundError'] = 'Sunet pentru mesaje de eroare:';
+$lang['settingsSoundPrivate'] = 'Sound for private messages:';
 $lang['settingsBlink'] = 'Blink window title on new messages:';
 $lang['settingsBlinkInterval'] = 'Blink interval in milliseconds:';
 $lang['settingsBlinkIntervalNumber'] = 'Number of blink intervals:';
@@ -121,4 +125,3 @@ $lang['logsTime'] = 'Ora';
 $lang['logsSearch'] = 'Caută';
 $lang['logsPrivateChannels'] = 'Canale private';
 $lang['logsPrivateMessages'] = 'Mesaje private';
-?>

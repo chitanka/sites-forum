@@ -2,13 +2,14 @@
 /*
  * @package AJAX_Chat
  * @author Sebastian Tschan
+ * @author Philip Nicolcev
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
-// Show all errors:
-error_reporting(E_ALL);
+// Suppress errors:
+ini_set('display_errors', 0);
 
 // Path to the chat directory:
 define('AJAX_CHAT_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
@@ -21,4 +22,3 @@ require(AJAX_CHAT_PATH.'lib/classes.php');
 
 // Initialize the chat:
 $ajaxChat = new CustomAJAXChat();
-?>

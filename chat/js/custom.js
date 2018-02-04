@@ -11,210 +11,228 @@
 // BEGIN OVERWRITTEN METHODS
 
 ajaxChat.initialize = function() {
-		this.setUnloadHandler();
-		this.initializeDocumentNodes();
-		this.loadPageAttributes();
-		//this.initEmoticons(); // borislav
-		this.initColorCodes();
-		this.initializeSettings();
-		this.setSelectedStyle();
-		this.customInitialize();
-		//preload the Alert icon (it can't display if there's no connection unless it's cached!)
-		this.setStatus('Alert');
-		if(typeof this.initializeFunction == 'function') {
-			this.initializeFunction();
-		}
-		if(!this.isCookieEnabled()) {
-			this.addChatBotMessageToChatList('/error CookiesRequired');
+	this.setUnloadHandler();
+	this.initializeDocumentNodes();
+	this.loadPageAttributes();
+	//this.initEmoticons();
+	this.initColorCodes();
+	this.initializeSettings();
+	this.setSelectedStyle();
+	this.customInitialize();
+	this.setStatus('retrying');
+	if(typeof this.initializeFunction === 'function') {
+		this.initializeFunction();
+	}
+	if(!this.isCookieEnabled()) {
+		this.addChatBotMessageToChatList('/error CookiesRequired');
+	} else {
+		if(this.startChatOnLoad) {
+			this.startChat();
 		} else {
-			if(this.startChatOnLoad) {
-				this.startChat();
-			} else {
-				this.setStartChatHandler();
-				this.requestTeaserContent();
-			}
+			this.setStartChatHandler();
+			this.requestTeaserContent();
 		}
-	};
+	}
+};
 
 ajaxChat.getUserNodeString = function(userID, userName, userRole) {
-		if(this.userNodeString && userID == this.userID) {
-			return this.userNodeString;
-		} else {
-			var encodedUserName = this.scriptLinkEncode(userName);
-			var str	= '<div id="'
-					+ this.getUserDocumentID(userID)
-					+ '"><a href="javascript:ajaxChat.toggleUserMenu(\''
-					+ this.getUserMenuDocumentID(userID)
-					+ '\', \''
-					+ encodedUserName
-					+ '\', '
-					+ userID
-					+ ');" class="'
-					+ this.getRoleClass(userRole)
-					+ ' ' + this.getUserNameClass(userName) // borislav
-					+ '" title="'
-					+ this.lang['toggleUserMenu'].replace(/%s/, userName)
-					+ '">'
-					+ this.getCustomUserName(userName) // borislav
-					+ '</a>'
-					+ '<ul class="userMenu" id="'
-					+ this.getUserMenuDocumentID(userID)
-					+ '"'
-					+ ((userID == this.userID) ?
-						'>'+this.getUserNodeStringItems(encodedUserName, userID, false) :
-						' style="display:none;">')
-					+ '</ul>'
-					+'</div>';
-			if(userID == this.userID) {
-				this.userNodeString = str;
-			}
-			return str;
+	var encodedUserName, str;
+	if(this.userNodeString && userID === this.userID) {
+		return this.userNodeString;
+	} else {
+		encodedUserName = this.scriptLinkEncode(userName);
+		str	= '<div id="'
+			+ this.getUserDocumentID(userID)
+			+ '"><a href="javascript:ajaxChat.toggleUserMenu(\''
+			+ this.getUserMenuDocumentID(userID)
+			+ '\', \''
+			+ encodedUserName
+			+ '\', '
+			+ userID
+			+ ');" class="'
+			+ this.getRoleClass(userRole)
+			+ ' ' + this.getUserNameClass(userName) // borislav
+			+ '" title="'
+			+ this.lang['toggleUserMenu'].replace(/%s/, userName)
+			+ '">'
+			+ this.getCustomUserName(userName) // borislav
+			+ '</a>'
+			+ '<ul class="userMenu" id="'
+			+ this.getUserMenuDocumentID(userID)
+			+ '"'
+			+ ((userID === this.userID) ?
+				'>'+this.getUserNodeStringItems(encodedUserName, userID, false) :
+				' style="display:none;">')
+			+ '</ul>'
+			+'</div>';
+		if(userID === this.userID) {
+			this.userNodeString = str;
 		}
-	};
+		return str;
+	}
+};
 
 
 ajaxChat.getChatListMessageString = function(dateObject, userID, userName, userRole, messageID, messageText, channelID, ip) {
-		var rowClass = this.DOMbufferRowClass;
-		var userClass = this.getRoleClass(userRole)
-			+ ' ' + this.getUserNameClass(userName); // borislav
-		var colon;
-		if(messageText.indexOf('/action') == 0 || messageText.indexOf('/me') == 0 || messageText.indexOf('/privaction') == 0) {
-			userClass += ' action';
-			colon = ' ';
-		} else {
-			colon = ': ';
-		}
-		var dateTime = this.settings['dateFormat'] ? '<span class="dateTime">'
-						+ this.formatDate(this.settings['dateFormat'], dateObject) + '</span> ' : '';
+	var rowClass = this.DOMbufferRowClass;
+	var userClass = this.getRoleClass(userRole)
+		+ ' ' + this.getUserNameClass(userName); // borislav
+	var colon;
+	if(messageText.indexOf('/action') === 0 || messageText.indexOf('/me') === 0 || messageText.indexOf('/privaction') === 0) {
+		userClass += ' action';
+		colon = ' ';
+	} else {
+		colon = ': ';
+	}
+	if (messageText.indexOf('/privmsg') === 0 || messageText.indexOf('/privmsgto') === 0 || messageText.indexOf('/privaction') === 0) {
+		rowClass += ' private';
+	}
+	var dateTime = this.settings['dateFormat'] ? '<span class="dateTime">'
+		+ this.formatDate(this.settings['dateFormat'], dateObject) + '</span> ' : '';
 
-		var privmsg = "";
-		if (this.userID != userID && this.chatBotID != userID) {
-			privmsg = '<span style="vertical-align: middle">'
-				+ '<img style="cursor:pointer" width="13" height="13" alt="@" title="'
-				+ this.lang['userMenuSendPrivateMessage']
-				+ '" src="'
-				+ this.settings.privmsgPng
-				+ '" onclick="ajaxChat.insertMessageWrapper(\'/msg '
-				+ userName
-				+ ' \'); return false">'
-				+ '</span> ';
-		}
+	var privmsg = "";
+	if (this.userID != userID && this.chatBotID != userID) {
+		privmsg = '<span style="vertical-align: middle">'
+			+ '<img style="cursor:pointer" width="13" height="13" alt="@" title="'
+			+ this.lang['userMenuSendPrivateMessage']
+			+ '" src="'
+			+ this.settings.privmsgPng
+			+ '" onclick="ajaxChat.insertMessageWrapper(\'/msg '
+			+ userName
+			+ ' \'); return false">'
+			+ '</span> ';
+	}
 
-		return	'<div id="'
-				+ this.getMessageDocumentID(messageID)
-				+ '" class="'
-				+ rowClass
-				+ '">'
-				+ this.getDeletionLink(messageID, userID, userRole, channelID)
-				+ dateTime
-				+ privmsg
-				+ '<span class="'
-				+ userClass
-				+ '"'
-				+ this.getChatListUserNameTitle(userID, userName, userRole, ip)
-				+ ' dir="'
-				+ this.baseDirection
-				+ '" onclick="ajaxChat.insertText(this.firstChild.nodeValue);">'
-				+ userName
-				+ '</span>'
-				+ colon
-				+ this.replaceText(messageText)
-				+ '</div>';
-	};
+	return '<div id="'
+		+ this.getMessageDocumentID(messageID)
+		+ '" class="'
+		+ rowClass
+		+ '">'
+		+ this.getDeletionLink(messageID, userID, userRole, channelID)
+		+ dateTime
+		+ privmsg
+		+ '<span class="'
+		+ userClass
+		+ '"'
+		+ this.getChatListUserNameTitle(userID, userName, userRole, ip)
+		+ ' dir="'
+		+ this.baseDirection
+		+ '" onclick="ajaxChat.insertText(this.firstChild.nodeValue);">'
+		+ userName
+		+ '</span>'
+		+ colon
+		+ this.replaceText(messageText)
+		+ '</div>';
+};
 
 
 ajaxChat.replaceText = function(text) {
-		try{
-			text = this.replaceLineBreaks(text);
-			if(text.charAt(0) == '/') {
-				text = this.replaceCommands(text);
-			} else {
-				text = this.replaceBBCode(text);
-				text = this.replaceHyperLinks(text);
-				text = " " + text; // some smiley codes start with a space
-				text = this.replaceEmoticons(text);
-			}
-			text = this.breakLongWords(text);
-			text = this.replaceCustomText(text);
-		} catch(e){
-			//alert(e);
+	try{
+		text = this.replaceLineBreaks(text);
+		if(text.charAt(0) === '/') {
+			text = this.replaceCommands(text);
+		} else {
+			text = this.replaceEmoticons(text);
+			text = this.replaceEmojis(text);
+			text = this.replaceBBCode(text);
+			text = this.replaceHyperLinks(text);
+			text = " " + text; // borislav: some smiley codes start with a space
 		}
-		return text;
-	};
+		text = this.breakLongWords(text);
+		text = this.replaceCustomText(text);
+	} catch(e){
+		this.debugMessage('replaceText', e);
+	}
+	return text;
+};
 
 ajaxChat.replaceCommandNick = function(textParts) {
-		return '<span class="chatBotMessage">'
-				// borislav
-				+ this.lang['nick'].replace(/%s/, this.getCustomUserName(textParts[1])).replace(/%s/, this.getCustomUserName(textParts[2]))
-				+ '</span>';
-	};
+	return '<span class="chatBotMessage">'
+		+ this.lang['nick'].replace(/%s/, textParts[1]).replace(/%s/, textParts[2])
+		+ '</span>';
+};
 
 
 ajaxChat.replaceBBCodeColor = function(content, attribute) {
-		if(this.settings['bbCodeColors']) {
-			// Only allow predefined color codes:
-			//if(!attribute || !this.inArray(ajaxChat.colorCodes, attribute))
-			if(!attribute) // borislav
-				return content;
-			return 	'<span style="color:'
-					+ attribute + ';">'
-					+ this.replaceBBCode(content)
-					+ '</span>';
-		}
-		return content;
-	};
+	if(this.settings['bbCodeColors']) {
+		// Only allow predefined color codes:
+		if(!attribute || !this.inArray(ajaxChat.colorCodes, attribute))
+			return content;
+		return 	'<span style="color:'
+			+ attribute + ';">'
+			+ this.replaceBBCode(content)
+			+ '</span>';
+	}
+	return content;
+};
 
 
 ajaxChat.playSoundOnNewMessage = function(dateObject, userID, userName, userRole, messageID, messageText, channelID, ip) {
-		if(this.settings['audio'] && this.sounds && this.lastID && !this.channelSwitch) {
-			switch(userID) {
-				case this.chatBotID:
-					var messageParts = messageText.split(' ', 1);
-					switch(messageParts[0]) {
-						case '/login':
-						case '/channelEnter':
-							this.playSound(this.settings['soundEnter']);
-							break;
-						case '/logout':
-						case '/channelLeave':
-						case '/kick':
-							this.playSound(this.settings['soundLeave']);
-							break;
-						case '/error':
-							this.playSound(this.settings['soundError']);
-							break;
-						default:
-							this.playSound(this.settings['soundChatBot']);
-					}
-					break;
-				case this.userID:
-					this.playSound(this.settings['soundSend']);
-					break;
-				default:
-					if ( this.isImportantMsg(messageText) ) {
-						this.playSound(this.settings['soundLeave']);
-					} else {
-						this.playSound(this.settings['soundReceive']);
-					}
-					break;
-			}
+	var messageParts;
+	if(this.settings['audio'] && this.sounds && this.lastID && !this.channelSwitch) {
+		if(this.customSoundOnNewMessage(dateObject, userID, userName, userRole, messageID, messageText, channelID, ip) === false) {
+			return;
 		}
-	};
+		messageParts = messageText.split(' ', 1);
+		switch(userID) {
+			case this.chatBotID:
+				switch(messageParts[0]) {
+					case '/login':
+					case '/channelEnter':
+						this.playSound(this.settings['soundEnter']);
+						break;
+					case '/logout':
+					case '/channelLeave':
+					case '/kick':
+						this.playSound(this.settings['soundLeave']);
+						break;
+					case '/error':
+						this.playSound(this.settings['soundError']);
+						break;
+					default:
+						this.playSound(this.settings['soundChatBot']);
+				}
+				break;
+			case this.userID:
+				switch(messageParts[0]) {
+					case '/privmsgto':
+						this.playSound(this.settings['soundPrivate']);
+						break;
+					default:
+						this.playSound(this.settings['soundSend']);
+				}
+				break;
+			default:
+				switch(messageParts[0]) {
+					case '/privmsg':
+						this.playSound(this.settings['soundPrivate']);
+						break;
+					default:
+						if ( this.isImportantMsg(messageText) ) {
+							this.playSound(this.settings['soundPrivate']);
+						} else {
+							this.playSound(this.settings['soundReceive']);
+						}
+				}
+				break;
+		}
+	}
+};
 
 
 ajaxChat.blinkOnNewMessage = function(dateObject, userID, userName, userRole, messageID, messageText, channelID, ip) {
-		if(this.settings['blink'] && this.lastID && !this.channelSwitch && userID != this.userID) {
-			clearInterval(this.blinkInterval);
-			this.blinkInterval = setInterval(
-				"ajaxChat.blinkUpdate('"
-					+ this.addSlashes(this.decodeSpecialChars(userName))
-					+ "', '"
-					+ ( this.isImportantMsg(messageText) ? "!!!" : "@" )
-					+ "')",
-				this.settings['blinkInterval']
-			);
-		}
-	};
+	if(this.settings['blink'] && this.lastID && !this.channelSwitch && userID !== this.userID) {
+		clearInterval(this.blinkInterval);
+		this.blinkInterval = setInterval(
+			"ajaxChat.blinkUpdate('"
+				+ this.addSlashes(this.decodeSpecialChars(userName))
+				+ "', '"
+				+ ( this.isImportantMsg(messageText) ? "!!!" : "@" )
+				+ "')",
+			this.settings['blinkInterval']
+		);
+	}
+};
 
 ajaxChat.blinkUpdate = function(blinkStr, marker) {
 		if(!this.originalDocumentTitle) {
@@ -237,22 +255,6 @@ ajaxChat.blinkUpdate = function(blinkStr, marker) {
 		}
 	};
 
-
-ajaxChat.playSound = function(soundID, loops) {
-		if(this.sounds && this.sounds[soundID]) {
-			try {
-				// play() parameters are
-				// startTime:Number (default = 0),
-				// loops:int (default = 0) and
-				// sndTransform:SoundTransform  (default = null)
-				loops = loops || 0;
-				return this.sounds[soundID].play(0, loops, this.soundTransform);
-			} catch(e) {
-				//alert(e);
-			}
-		}
-		return null;
-	};
 
 // END OVERWRITTEN METHODS
 
@@ -319,6 +321,19 @@ ajaxChat.replaceCustomText = function(text)
 			'$1<span class="myname">$2</span>');
 	}
 
+	return text;
+};
+
+ajaxChat.replaceEmojis = function(text) {
+	return text.replace(/:([^:]+):/g, this.replaceEmojisCallback);
+};
+ajaxChat.replaceEmojisCallback = function(text, code) {
+	if (ajaxChatConfig.emojis[code]) {
+		return '<span class="emoji">&#x' + ajaxChatConfig.emojis[code] + ';</span>';
+	}
+	if (code.indexOf('fa-') === 0) {
+		return '<i class="fas '+code+' faicon"></i>';
+	}
 	return text;
 };
 
@@ -438,6 +453,8 @@ ajaxChatConfig.emoticonCodes[10] = ' B)';
 ajaxChatConfig.emoticonCodes[15] = '}:-D';
 
 ajaxChatConfig.settings.privmsgPng = 'img/extra/chat_privmsg.png';
+
+ajaxChatConfig.emojis = {};
 
 
 $.idleTimer(1800000);

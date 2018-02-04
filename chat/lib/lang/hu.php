@@ -3,7 +3,7 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -33,6 +33,7 @@ $lang['bbCodeLabelCode'] = 'Kód';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Kép';
 $lang['bbCodeLabelColor'] = 'Szöveg szín';
+$lang['bbCodeLabelEmoticon'] = 'Hangulatjelek';
 $lang['bbCodeTitleBold'] = 'Félkövér szöveg: [b]szöveg[/b]';
 $lang['bbCodeTitleItalic'] = 'Dőlt szöveg: [i]szöveg[/i]';
 $lang['bbCodeTitleUnderline'] = 'Aláhúzott szöveg: [u]szöveg[/u]';
@@ -41,6 +42,7 @@ $lang['bbCodeTitleCode'] = 'Kód: [code]kód[/code]';
 $lang['bbCodeTitleURL'] = 'URL beszúrása: [url]http://example.org[/url] vagy [url=http://example.org]szöveg[/url]';
 $lang['bbCodeTitleImg'] = 'Kép beszúrása: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Szöveg szín: [color=red]szöveg[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Hangulatjelek lista';
 $lang['help'] = 'Segítség';
 $lang['helpItemDescJoin'] = 'Belépés a szobába:';
 $lang['helpItemCodeJoin'] = '/join Szobanév';
@@ -97,6 +99,7 @@ $lang['settingsWordWrap'] = 'Hosszú szavak tördelése:';
 $lang['settingsMaxWordLength'] = 'Maximális karakterszám egy szó tördelése előtt:';
 $lang['settingsDateFormat'] = 'Dátum és idő kijelzésének formátuma:';
 $lang['settingsPersistFontColor'] = 'Folyamatos betűszín használata:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Hangerő:';
 $lang['settingsSoundReceive'] = 'Bejövő üzenetek hangja:';
 $lang['settingsSoundSend'] = 'Kimenő üzenetek hangja:';
@@ -104,6 +107,7 @@ $lang['settingsSoundEnter'] = 'Belépés szobaüzenetek hangja:';
 $lang['settingsSoundLeave'] = 'Kilépés szobaüzenetek hangja:';
 $lang['settingsSoundChatBot'] = 'ChatBot üzenetek hangja:';
 $lang['settingsSoundError'] = 'Hibaüzenetek hangja:';
+$lang['settingsSoundPrivate'] = 'Privát üzenetek hangja:';
 $lang['settingsBlink'] = 'Ablak fejléce villogjon új üzenet esetén:';
 $lang['settingsBlinkInterval'] = 'A villogás intervallumának hossza századmásodpercekben:';
 $lang['settingsBlinkIntervalNumber'] = 'Villogási intervallumok száma:';
@@ -120,4 +124,3 @@ $lang['logsTime'] = 'Idő';
 $lang['logsSearch'] = 'Keresés';
 $lang['logsPrivateChannels'] = 'Privát szobák';
 $lang['logsPrivateMessages'] = 'Privát üzenetek';
-?>

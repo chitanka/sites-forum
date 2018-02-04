@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author mikespook
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = '代码';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = '文字颜色';
+$lang['bbCodeLabelEmoticon'] = 'Smilies';
 $lang['bbCodeTitleBold'] = '粗体：[b]文字[/b]';
 $lang['bbCodeTitleItalic'] = '斜体：[i]文字[/i]';
 $lang['bbCodeTitleUnderline'] = '下划线：[u]文字[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = '显示代码：[code]代码[/code]';
 $lang['bbCodeTitleURL'] = '插入 URL：[url]http://example.org[/url] 或者 [url=http://example.org]文字[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = '文字颜色：[color=red]文字[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Smilies list';
 $lang['help'] = '帮助';
 $lang['helpItemDescJoin'] = '加入频道';
 $lang['helpItemCodeJoin'] = '/join 频道名';
@@ -98,12 +100,14 @@ $lang['settingsWordWrap'] = '开启超宽换行：';
 $lang['settingsMaxWordLength'] = '行宽：';
 $lang['settingsDateFormat'] = '时间和日期显示格式：';
 $lang['settingsPersistFontColor'] = '字体颜色：';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = '音量：';
 $lang['settingsSoundReceive'] = '声音提示进入信息：';
 $lang['settingsSoundSend'] = '声音提示离开信息：';
 $lang['settingsSoundEnter'] = '声音提示登录或进入频道信息：';
 $lang['settingsSoundLeave'] = '声音提示退出或离开频道信息：';
 $lang['settingsSoundChatBot'] = '声音提示机器人信息：';
+$lang['settingsSoundPrivate'] = 'Sound for private messages:';
 $lang['settingsSoundError'] = '声音提示错误信息：';
 $lang['settingsBlink'] = '有新消息时闪烁窗口标题：';
 $lang['settingsBlinkInterval'] = '空闲间隔毫秒数：';
@@ -121,4 +125,3 @@ $lang['logsTime'] = '时间';
 $lang['logsSearch'] = '搜索';
 $lang['logsPrivateChannels'] = '私人频道';
 $lang['logsPrivateMessages'] = '私人消息';
-?>

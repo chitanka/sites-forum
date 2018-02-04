@@ -5,7 +5,7 @@
  * @author SkyKnight
  * @author Dmitry Plyonkin
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -35,6 +35,7 @@ $lang['bbCodeLabelCode'] = 'Код';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'Цвет шрифта';
+$lang['bbCodeLabelEmoticon'] = 'Смайли';
 $lang['bbCodeTitleBold'] = 'Жирный текст: [b]текст[/b]';
 $lang['bbCodeTitleItalic'] = 'Курсив: [i]текст[/i]';
 $lang['bbCodeTitleUnderline'] = 'Подчеркнутый текст: [u]текст[/u]';
@@ -43,6 +44,7 @@ $lang['bbCodeTitleCode'] = 'Код: [code]текст[/code]';
 $lang['bbCodeTitleURL'] = 'Вставить ссылку: [url]http://example.org[/url] или [url=http://example.org]текст[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Цвет шрифта: [color=red]текст[/color]';
+$lang['bbCodeTitleEmoticon'] = 'список Смайли';
 $lang['help'] = 'Помощь';
 $lang['helpItemDescJoin'] = 'Присоедениться к каналу:';
 $lang['helpItemCodeJoin'] = '/join имя_канала';
@@ -99,6 +101,7 @@ $lang['settingsWordWrap'] = 'Переносить длинные слова:';
 $lang['settingsMaxWordLength'] = 'Максимально допустимая длина слова, которе не будет разбито для переноса:';
 $lang['settingsDateFormat'] = 'Формат даты и времени:';
 $lang['settingsPersistFontColor'] = 'Постоянный цвет шрифта:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Громкость:';
 $lang['settingsSoundReceive'] = 'Звук для входящих сообщений:';
 $lang['settingsSoundSend'] = 'Звук для исходящих сообщений:';
@@ -106,6 +109,7 @@ $lang['settingsSoundEnter'] = 'Звук для оповещения о ново�
 $lang['settingsSoundLeave'] = 'Звук для оповещения об уходе участника из чата:';
 $lang['settingsSoundChatBot'] = 'Звук для сообщений бота:';
 $lang['settingsSoundError'] = 'Звук для оповещений об ошибках:';
+$lang['settingsSoundPrivate'] = 'Звук для личных сообщений:';
 $lang['settingsBlink'] = '"Моргать" заголовком окна при новом сообщении:';
 $lang['settingsBlinkInterval'] = 'Интервал "моргания" (в миллисекундах):';
 $lang['settingsBlinkIntervalNumber'] = 'Количество "морганий":';
@@ -122,4 +126,3 @@ $lang['logsTime'] = 'Время';
 $lang['logsSearch'] = 'Поиск';
 $lang['logsPrivateChannels'] = 'Приватные каналы';
 $lang['logsPrivateMessages'] = 'Приватные сообщения';
-?>

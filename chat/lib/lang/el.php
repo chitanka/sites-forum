@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author panas
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'Κώδικας';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'Χρώμα γραμματοσειράς';
+$lang['bbCodeLabelEmoticon'] = 'Smilies list';
 $lang['bbCodeTitleBold'] = 'Έντονο κείμενο: [b]κείμενο[/b]';
 $lang['bbCodeTitleItalic'] = 'Πλάγια γραφή: [i]κείμενο[/i]';
 $lang['bbCodeTitleUnderline'] = 'Υπογραμμισμένο κείμενο: [u]κείμενο[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'Εμφάνιση κώδικα: [code]code[/code]';
 $lang['bbCodeTitleURL'] = 'Εισαγωγή URL: [url]http://example.org[/url] ή [url=http://example.org]κείμενο[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Χρώμα γραμματοσειράς: [color=red]κείμενο[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Smilies list';
 $lang['help'] = 'Βοήθεια';
 $lang['helpItemDescJoin'] = 'Είσοδος σε ένα κανάλι:';
 $lang['helpItemCodeJoin'] = '/join όνομα_καναλιού';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap'] = 'Ενεργοποίηση καλύμματος με�
 $lang['settingsMaxWordLength'] = 'Μέγιστο μήκος μιας λέξης χωρίς κάλυμμα:';
 $lang['settingsDateFormat'] = 'Μορφή ημερομηνίας και ώρας που θα εμφανίζετε:';
 $lang['settingsPersistFontColor'] = 'Έντονο χρώμα γραμματοσειράς:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Ένταση ήχου:';
 $lang['settingsSoundReceive'] = 'Ήχος για εισερχόμενα μηνύματα:';
 $lang['settingsSoundSend'] = 'Ήχος για εξερχόμενα μηνύματα:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter'] = 'Ήχος για μηνύματα σύνδεσης
 $lang['settingsSoundLeave'] = 'Ήχος για μηνύματα αποχώρισης και αποσύνδεσης:';
 $lang['settingsSoundChatBot'] = 'Ήχος για μηνύματα του chatbot:';
 $lang['settingsSoundError'] = 'Ήχος για μηνύματα λάθους:';
+$lang['settingsSoundPrivate'] = 'Ήχος για προσωπικά μηνύματα:';
 $lang['settingsBlink'] = 'Αναβόσβημα τίτλου σε νέα μηνύματα:';
 $lang['settingsBlinkInterval'] = 'Ρυθμός αναβοσβήματος σε χιλιοστά του δευτερόλεπτου:';
 $lang['settingsBlinkIntervalNumber'] = 'Αριθμός αναβοσβήματος οθόνης:';
@@ -121,4 +125,3 @@ $lang['logsTime'] = 'Ώρα';
 $lang['logsSearch'] = 'Αναζήτηση';
 $lang['logsPrivateChannels'] = 'Πριβέ κανάλια';
 $lang['logsPrivateMessages'] = 'προσωπικά μηνύματα';
-?>

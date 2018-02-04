@@ -3,7 +3,7 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -33,6 +33,7 @@ $lang['bbCodeLabelCode'] = 'Code';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'Font Color';
+$lang['bbCodeLabelEmoticon'] = 'Emoticons';
 $lang['bbCodeTitleBold'] = 'Bold text: [b]text[/b]';
 $lang['bbCodeTitleItalic'] = 'Italic text: [i]text[/i]';
 $lang['bbCodeTitleUnderline'] = 'Underline text: [u]text[/u]';
@@ -41,6 +42,7 @@ $lang['bbCodeTitleCode'] = 'Code display: [code]code[/code]';
 $lang['bbCodeTitleURL'] = 'Insert URL: [url]http://example.org[/url] or [url=http://example.org]text[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Font Color: [color=red]text[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Emoticons list';
 $lang['help'] = 'Help';
 $lang['helpItemDescJoin'] = 'Join a channel:';
 $lang['helpItemCodeJoin'] = '/join Channelname';
@@ -97,6 +99,7 @@ $lang['settingsWordWrap'] = 'Enable wrapping of long words:';
 $lang['settingsMaxWordLength'] = 'Maximum length of a word before it gets wrapped:';
 $lang['settingsDateFormat'] = 'Format of date and time display:';
 $lang['settingsPersistFontColor'] = 'Persist font color:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Sound Volume:';
 $lang['settingsSoundReceive'] = 'Sound for incoming messages:';
 $lang['settingsSoundSend'] = 'Sound for outgoing messages:';
@@ -104,6 +107,7 @@ $lang['settingsSoundEnter'] = 'Sound for login and channel enter messages:';
 $lang['settingsSoundLeave'] = 'Sound for logout and channel leave messages:';
 $lang['settingsSoundChatBot'] = 'Sound for chatbot messages:';
 $lang['settingsSoundError'] = 'Sound for error messages:';
+$lang['settingsSoundPrivate'] = 'Sound for private messages:';
 $lang['settingsBlink'] = 'Blink window title on new messages:';
 $lang['settingsBlinkInterval'] = 'Blink interval in milliseconds:';
 $lang['settingsBlinkIntervalNumber'] = 'Number of blink intervals:';
@@ -120,4 +124,3 @@ $lang['logsTime'] = 'Time';
 $lang['logsSearch'] = 'Search';
 $lang['logsPrivateChannels'] = 'Private Channels';
 $lang['logsPrivateMessages'] = 'Private Messages';
-?>

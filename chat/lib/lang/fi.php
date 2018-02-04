@@ -5,7 +5,7 @@
  * @author Asmo Soinio
  * @author Saku Laukkanen
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -35,6 +35,7 @@ $lang['bbCodeLabelCode'] = 'Koodi';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Kuva';
 $lang['bbCodeLabelColor'] = 'Fontin väri';
+$lang['bbCodeLabelEmoticon'] = 'Hymiöt';
 $lang['bbCodeTitleBold'] = 'Lihavoitu teksti: [b]teksti[/b]';
 $lang['bbCodeTitleItalic'] = 'Kursivoitu teksti: [i]teksti[/i]';
 $lang['bbCodeTitleUnderline'] = 'Alleviivattu teksti: [u]teksti[/u]';
@@ -43,6 +44,7 @@ $lang['bbCodeTitleCode'] = 'Koodi: [code]koodi[/code]';
 $lang['bbCodeTitleURL'] = 'Lisää linkki: [url]http://example.org[/url] tai [url=http://example.org]teksti[/url]';
 $lang['bbCodeTitleImg'] = 'Lisää kuva: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Kirjaisimen väri: [color=red]teksti[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Hymiöt lista';
 $lang['help'] = 'Ohje';
 $lang['helpItemDescJoin'] = 'Liity kanavalle:';
 $lang['helpItemCodeJoin'] = '/join KanavanNimi';
@@ -99,6 +101,7 @@ $lang['settingsWordWrap'] = 'Salli pitkien sanojen rivinvaihto:';
 $lang['settingsMaxWordLength'] = 'Sanan enimmäispituus ennen kuin riviä vaihdetaan:';
 $lang['settingsDateFormat'] = 'Ajan ja päivämäärän muoto:';
 $lang['settingsPersistFontColor'] = 'Pysyvä fontin väri:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Äänenvoimakkuus:';
 $lang['settingsSoundReceive'] = 'Ääni tuleville viesteille:';
 $lang['settingsSoundSend'] = 'Ääni lähteville viesteille:';
@@ -106,6 +109,7 @@ $lang['settingsSoundEnter'] = 'Ääni sisäänkirjoittautumiseen ja kanavalle tu
 $lang['settingsSoundLeave'] = 'Ääni poistumiseen keskustelusta ja kanavalta:';
 $lang['settingsSoundChatBot'] = 'Ääni chatbotin viesteille:';
 $lang['settingsSoundError'] = 'Ääni virheilmoituksille:';
+$lang['settingsSoundPrivate'] = 'Ääni varten yksityiset viesteille:';
 $lang['settingsBlink'] = 'Vilkuta ikkunan nimeä uusista viesteistä:';
 $lang['settingsBlinkInterval'] = 'Vilkuttamisen aika millisekunneissa:';
 $lang['settingsBlinkIntervalNumber'] = 'Vilkutuksen viive:';
@@ -122,4 +126,3 @@ $lang['logsTime'] = 'Aika';
 $lang['logsSearch'] = 'Etsi';
 $lang['logsPrivateChannels'] = 'Näytä yksityiset kanavat';
 $lang['logsPrivateMessages'] = 'Yksityiset viestit';
-?>

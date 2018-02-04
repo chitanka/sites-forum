@@ -3,7 +3,7 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -33,6 +33,7 @@ $lang['bbCodeLabelCode'] = 'Kód';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Obrázek';
 $lang['bbCodeLabelColor'] = 'Barva písma';
+$lang['bbCodeLabelEmoticon'] = 'Smajlíky';
 $lang['bbCodeTitleBold'] = 'Tučně: [b]text[/b]';
 $lang['bbCodeTitleItalic'] = 'Kurzívou: [i]text[/i]';
 $lang['bbCodeTitleUnderline'] = 'Podtržené: [u]text[/u]';
@@ -41,6 +42,7 @@ $lang['bbCodeTitleCode'] = 'Zobrazit kód: [code]kód[/code]';
 $lang['bbCodeTitleURL'] = 'Vložit URL: [url]http://example.org[/url] nebo [url=http://example.org]text[/url]';
 $lang['bbCodeTitleImg'] = 'Vložit obrázek: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Barva písma: [color=red]text[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Smajlíky list';
 $lang['help'] = 'Nápověda';
 $lang['helpItemDescJoin'] = 'Vstup do místnosti:';
 $lang['helpItemCodeJoin'] = '/join Místnost';
@@ -97,6 +99,7 @@ $lang['settingsWordWrap'] = 'Povolit zalomení řádku u dlouhého slova:';
 $lang['settingsMaxWordLength'] = 'Maximální délka slova, než bude zalomeno:';
 $lang['settingsDateFormat'] = 'Formát zobrazení data a času:';
 $lang['settingsPersistFontColor'] = 'Neměnná barva textu:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Hlasitost:';
 $lang['settingsSoundReceive'] = 'Zvuk pro příchozí zprávy:';
 $lang['settingsSoundSend'] = 'Zvuk pro odchozí zprávy:';
@@ -104,6 +107,7 @@ $lang['settingsSoundEnter'] = 'Zvuk při přihlášení nebo vstupu do místnost
 $lang['settingsSoundLeave'] = 'Zvuk při odhlášení nebo odchodu z místnosti:';
 $lang['settingsSoundChatBot'] = 'Zvuk při zprávě chatbota:';
 $lang['settingsSoundError'] = 'Zvuk při chybové zprávě:';
+$lang['settingsSoundPrivate'] = 'Zvuk soukromých zpráv:';
 $lang['settingsBlink'] = 'Blikání titulku okna při příchozí zprávě:';
 $lang['settingsBlinkInterval'] = 'Interval blikání v milisekundách:';
 $lang['settingsBlinkIntervalNumber'] = 'Počet bliknutí:';
@@ -120,4 +124,3 @@ $lang['logsTime'] = 'Čas';
 $lang['logsSearch'] = 'Hledej';
 $lang['logsPrivateChannels'] = 'Soukromé místnosti';
 $lang['logsPrivateMessages'] = 'Soukromé zprávy';
-?>

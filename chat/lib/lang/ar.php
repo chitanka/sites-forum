@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author pepotiger (www.dd4bb.com)
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'كود';
 $lang['bbCodeLabelURL'] = 'رابط';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'لون الخط';
+$lang['bbCodeLabelEmoticon'] = 'Emoticons';
 $lang['bbCodeTitleBold'] = 'نص عريض: [b]نص[/b]';
 $lang['bbCodeTitleItalic'] = 'نص مائل: [i]نص[/i]';
 $lang['bbCodeTitleUnderline'] = 'نص تحته خط: [u]نص[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'عرض الكود: [code]كود[/code]';
 $lang['bbCodeTitleURL'] = 'ادحال رابط: [url]http://example.org[/url] او [url=http://example.org]نص[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'لون النص: [color=red]نص[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Emoticons list';
 $lang['help'] = 'مساعدة';
 $lang['helpItemDescJoin'] = 'دخول الغرفة:';
 $lang['helpItemCodeJoin'] = '/join اسم الغرفة';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap'] = 'Enable wrapping of long words:';
 $lang['settingsMaxWordLength'] = 'Maximum length of a word before it gets wrapped:';
 $lang['settingsDateFormat'] = 'Format of date and time display:';
 $lang['settingsPersistFontColor'] = 'Persist font color:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Sound Volume:';
 $lang['settingsSoundReceive'] = 'Sound for incoming messages:';
 $lang['settingsSoundSend'] = 'Sound for outgoing messages:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter'] = 'Sound for login and channel enter messages:';
 $lang['settingsSoundLeave'] = 'Sound for logout and channel leave messages:';
 $lang['settingsSoundChatBot'] = 'Sound for chatbot messages:';
 $lang['settingsSoundError'] = 'Sound for error messages:';
+$lang['settingsSoundPrivate'] = 'Sound for private messages:';
 $lang['settingsBlink'] = 'Blink window title on new messages:';
 $lang['settingsBlinkInterval'] = 'Blink interval in milliseconds:';
 $lang['settingsBlinkIntervalNumber'] = 'Number of blink intervals:';
@@ -121,4 +125,3 @@ $lang['logsTime'] = 'الوقت';
 $lang['logsSearch'] = 'بحث';
 $lang['logsPrivateChannels'] = 'القنوات الخاصة';
 $lang['logsPrivateMessages'] = 'الرسائل الخاصة';
-?>

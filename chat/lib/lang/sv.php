@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author Eric [June 7,2008]
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode']		= 'Kod';
 $lang['bbCodeLabelURL']			= 'URL';
 $lang['bbCodeLabelImg']			= 'Image';
 $lang['bbCodeLabelColor']		= 'Textfärg';
+$lang['bbCodeLabelEmoticon']	= 'Smileys';
 $lang['bbCodeTitleBold']		= 'Fet text: [b]text[/b]';
 $lang['bbCodeTitleItalic']		= 'Kursiv text: [i]text[/i]';
 $lang['bbCodeTitleUnderline']		= 'Understruken text: [u]text[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode']		= 'Visa kod: [code]code[/code]';
 $lang['bbCodeTitleURL']			= 'Lägg till URL: [url]http://www.example.org/[/url] or [url=http://www.example.org/]text[/url]';
 $lang['bbCodeTitleImg']			= 'Infoga bild: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor']		= 'Textfärg: [color=red]text[/color]';
+$lang['bbCodeTitleEmoticon']	= 'Smileys list';
 $lang['help']				= 'Hjälp';
 $lang['helpItemDescJoin']		= 'Anslut till kanal:';
 $lang['helpItemCodeJoin']		= '/join Kanalens namn';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap']		= 'Aktivera "wrapping" av långa ord:';
 $lang['settingsMaxWordLength']		= 'Maxlängd på ord innan det blir avdelat:';
 $lang['settingsDateFormat']		= 'Visningsformat av datum och tid:';
 $lang['settingsPersistFontColor']	= 'Behåll textfärg:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume']		= 'Volym:';
 $lang['settingsSoundReceive']		= 'Ljud för inkommande meddelanden:';
 $lang['settingsSoundSend']		= 'Ljud för utgående meddelanden:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter']		= 'Ljud för Logga in/Kanal meddelanden:';
 $lang['settingsSoundLeave']		= 'Ljud för Logga ut/lämna Kanal meddelanden:';
 $lang['settingsSoundChatBot']		= 'Ljud för Chatbot meddelanden:';
 $lang['settingsSoundError']		= 'Ljud för felmeddelanden:';
+$lang['settingsSoundPrivate'] = 'Ljud för privata meddelanden:';
 $lang['settingsBlink']			= 'Blinka fönstrets titel vid nya meddelanden:';
 $lang['settingsBlinkInterval']		= 'Blinkintervall i millisekunder:';
 $lang['settingsBlinkIntervalNumber']	= 'Antal blinkintervaller:';
@@ -121,4 +125,3 @@ $lang['logsTime']			= 'Tid';
 $lang['logsSearch']			= 'Sök';
 $lang['logsPrivateChannels']		= 'Privata Kanaler';
 $lang['logsPrivateMessages']		= 'Privata Meddelanden';
-?>

@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author Yuriy Smetana (yura@stryi.com.ua, http://joomla.org.ua)
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'Код';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'Колір шрифту';
+$lang['bbCodeLabelEmoticon'] = 'Smilies';
 $lang['bbCodeTitleBold'] = 'Жирний текст: [b]текст[/b]';
 $lang['bbCodeTitleItalic'] = 'Текст курсивом: [i]текст[/i]';
 $lang['bbCodeTitleUnderline'] = 'Підкреслений текст: [u]текст[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'Показати код: [code]код[/code]';
 $lang['bbCodeTitleURL'] = 'Показати URL: [url]http://example.org[/url] or [url=http://example.org]текст[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Колір шрифту: [color=red]текст[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Smilies list';
 $lang['help'] = 'Допомога';
 $lang['helpItemDescJoin'] = 'Зайти в кімнату:';
 $lang['helpItemCodeJoin'] = '/join Назва_Кімнати';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap'] = 'Розділювати довгі слова:';
 $lang['settingsMaxWordLength'] = 'Максимальна довжина слова після якої його буде розділено:';
 $lang['settingsDateFormat'] = 'Формат дати та часу:';
 $lang['settingsPersistFontColor'] = 'Колір для привернення уваги:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Гучність:';
 $lang['settingsSoundReceive'] = 'Звук для отриманих повідомлень:';
 $lang['settingsSoundSend'] = 'Звук для надісланих повідомлень:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter'] = 'Звук для події входу в Чат �
 $lang['settingsSoundLeave'] = 'Звук для події виходу з Чату чи кімнати:';
 $lang['settingsSoundChatBot'] = 'Звук для системних повідомлень:';
 $lang['settingsSoundError'] = 'Звук для помилок:';
+$lang['settingsSoundPrivate'] = 'Звук для особистих повідомлень:';
 $lang['settingsBlink'] = 'Сигналізувати при появі нових повідомлень (блимання заголовку вікна):';
 $lang['settingsBlinkInterval'] = 'Тривалість блимання заголовку вікна:';
 $lang['settingsBlinkIntervalNumber'] = 'Кількість блимань:';
@@ -121,4 +125,3 @@ $lang['logsTime'] = 'Час';
 $lang['logsSearch'] = 'Пошук';
 $lang['logsPrivateChannels'] = 'Приватні кімнати';
 $lang['logsPrivateMessages'] = 'Приватні повідомлення';
-?>

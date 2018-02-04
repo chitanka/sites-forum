@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author Manu Quintans
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'Codi';
 $lang['bbCodeLabelURL'] = 'Enllaç';
 $lang['bbCodeLabelImg'] = 'Imatge';
 $lang['bbCodeLabelColor'] = 'Color de la Font';
+$lang['bbCodeLabelEmoticon'] = 'Emoticons';
 $lang['bbCodeTitleBold'] = 'text en negreta: [b]text[/b]';
 $lang['bbCodeTitleItalic'] = 'text en cursiva: [i]text[/i]';
 $lang['bbCodeTitleUnderline'] = 'text subratllat: [u]text[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'Mostrar codi: [code]code[/code]';
 $lang['bbCodeTitleURL'] = 'Insertar enllaç: [url]http://example.org[/url] o [url=http://example.org]text[/url]';
 $lang['bbCodeTitleImg'] = 'Insertar imatge: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Color de la font: [color=red]text[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Emoticons llista';
 $lang['help'] = 'Ajuda';
 $lang['helpItemDescJoin'] = 'Entrar en canal:';
 $lang['helpItemCodeJoin'] = '/join nom del canal';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap'] = 'Habilitar partir paraules llargues';
 $lang['settingsMaxWordLength'] = 'Màxima llargada d\'una paraula abns de ser tallada:';
 $lang['settingsDateFormat'] = 'Format de dia i hora:';
 $lang['settingsPersistFontColor'] = 'Color de font persistent:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'So volum:';
 $lang['settingsSoundReceive'] = 'So per missatdes d\'entrada:';
 $lang['settingsSoundSend'] = 'So per missatges de sortida:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter'] = 'So per connectar i missatges d\'entrada del canal
 $lang['settingsSoundLeave'] = 'So per desconnectar i missatges de sortida del canal:';
 $lang['settingsSoundChatBot'] = 'So pels missatges del xat:';
 $lang['settingsSoundError'] = 'So per missatges d\'error:';
+$lang['settingsSoundPrivate'] = 'So per missatges personals:';
 $lang['settingsBlink'] = 'Notificació de finestra per als nous missatges:';
 $lang['settingsBlinkInterval'] = 'Interval de notificacions intermitents (milisegons):';
 $lang['settingsBlinkIntervalNumber'] = 'Nombre de notificacions intermitents:';
@@ -122,4 +126,3 @@ $lang['logsSearch'] = 'Buscar';
 $lang['logsPrivateChannels'] = 'Canals privats';
 $lang['logsPrivateMessages'] = 'Missatges privats';
 
-?>

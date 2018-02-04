@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author Peter
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'Kód';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'Farba písma';
+$lang['bbCodeLabelEmoticon'] = 'Emoticons';
 $lang['bbCodeTitleBold'] = 'Tučné: [b]text[/b]';
 $lang['bbCodeTitleItalic'] = 'Kurzívou: [i]text[/i]';
 $lang['bbCodeTitleUnderline'] = 'Podčiarknuté: [u]text[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'Zobraziť kód: [code]kód[/code]';
 $lang['bbCodeTitleURL'] = 'Vložiť URL: [url]http://www.example.org/[/url] alebo [url=http://www.example.org/]text[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Farba písma: [color=red]text[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Emoticons list';
 $lang['help'] = 'Nápoveda';
 $lang['helpItemDescJoin'] = 'Prihlásenie do kanálu:';
 $lang['helpItemCodeJoin'] = '/join Názov_kanálu';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap'] = 'Enable wrapping of long words:';
 $lang['settingsMaxWordLength'] = 'Maximum length of a word before it gets wrapped:';
 $lang['settingsDateFormat'] = 'Format of date and time display:';
 $lang['settingsPersistFontColor'] = 'Persist font color:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Sound Volume:';
 $lang['settingsSoundReceive'] = 'Sound for incoming messages:';
 $lang['settingsSoundSend'] = 'Sound for outgoing messages:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter'] = 'Sound for login and channel enter messages:';
 $lang['settingsSoundLeave'] = 'Sound for logout and channel leave messages:';
 $lang['settingsSoundChatBot'] = 'Sound for chatbot messages:';
 $lang['settingsSoundError'] = 'Sound for error messages:';
+$lang['settingsSoundPrivate'] = 'Sound for private messages:';
 $lang['settingsBlink'] = 'Blink window title on new messages:';
 $lang['settingsBlinkInterval'] = 'Blink interval in milliseconds:';
 $lang['settingsBlinkIntervalNumber'] = 'Number of blink intervals:';
@@ -121,4 +125,3 @@ $lang['logsTime'] = 'Čas';
 $lang['logsSearch'] = 'Vyhľadávanie';
 $lang['logsPrivateChannels'] = 'Súkromný kanál';
 $lang['logsPrivateMessages'] = 'Súkromná správa';
-?>

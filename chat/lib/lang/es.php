@@ -1,10 +1,10 @@
-﻿<?php
+<?php
 /*
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @author - Spanis Translation:  Manu Quintans / KeScI [www.e-nologia.com]
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'Código';
 $lang['bbCodeLabelURL'] = 'URL';
 $lang['bbCodeLabelImg'] = 'Imagen';
 $lang['bbCodeLabelColor'] = 'Color de Fuente';
+$lang['bbCodeLabelEmoticon'] = 'Emoticonos listo';
 $lang['bbCodeTitleBold'] = 'Texto Negrita: [b]texto[/b]';
 $lang['bbCodeTitleItalic'] = 'Texto Cursiva: [i]texto[/i]';
 $lang['bbCodeTitleUnderline'] = 'Texto Subrayado: [u]texto[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'Mostrar código: [code]código[/code]';
 $lang['bbCodeTitleURL'] = 'Insertar URL: [url]http://example.org[/url] or [url=http://example.org]texto[/url]';
 $lang['bbCodeTitleImg'] = 'Insertar imagen: [img]http://example.org/imagen.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'Color de Fuente: [color=red]texto[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Emoticonos list';
 $lang['help'] = 'Ayuda';
 $lang['helpItemDescJoin'] = 'Entrar en canal:';
 $lang['helpItemCodeJoin'] = '/join nombre del canal';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap'] = 'Permitir la separación del las palabras largas:';
 $lang['settingsMaxWordLength'] = 'Máximo tamaño de una palabara antes de que se separe:';
 $lang['settingsDateFormat'] = 'Formato de la fecha y hora a mostrar:';
 $lang['settingsPersistFontColor'] = 'Mantener el color de la fuente:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Volumen Sonido:';
 $lang['settingsSoundReceive'] = 'Sonido para mensajes entrantes:';
 $lang['settingsSoundSend'] = 'Sonido para mensajes salientes:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter'] = 'Sonido para mensajes de conexión y entradas al c
 $lang['settingsSoundLeave'] = 'Sonido para mensajes de desconexión y salidas del canal:';
 $lang['settingsSoundChatBot'] = 'Sonido para mensajes del Chatbot:';
 $lang['settingsSoundError'] = 'Sonido para mensajes de error:';
+$lang['settingsSoundPrivate'] = 'Sonido para mensajes privados:';
 $lang['settingsBlink'] = 'Parpadeo del título de la ventana con nuevos mensajes:';
 $lang['settingsBlinkInterval'] = 'Intervalo de parpadeo en milisegundos:';
 $lang['settingsBlinkIntervalNumber'] = 'Número de intervalos de parpadeo:';
@@ -121,4 +125,3 @@ $lang['logsTime'] = 'Hora';
 $lang['logsSearch'] = 'Buscar';
 $lang['logsPrivateChannels'] = 'Canales Privados';
 $lang['logsPrivateMessages'] = 'Mensajes Privados';
-?>

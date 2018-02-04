@@ -3,19 +3,20 @@
  * @package AJAX_Chat
  * @author Sebastian Tschan
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
 // Class to initialize the MySQL DataBase connection:
 class AJAXChatDataBaseMySQL {
 
-	var $_connectionID;
-	var $_errno = 0;
-	var $_error = '';
-	var $_dbName;
+	protected
+		$_connectionID,
+		$_errno = 0,
+		$_error = '',
+		$_dbName;
 
-	function AJAXChatDataBaseMySQL(&$dbConnectionConfig) {
+	function __construct(&$dbConnectionConfig) {
 		$this->_connectionID = $dbConnectionConfig['link'];
 		$this->_dbName = $dbConnectionConfig['name'];
 	}
@@ -89,4 +90,3 @@ class AJAXChatDataBaseMySQL {
 	}
 
 }
-?>

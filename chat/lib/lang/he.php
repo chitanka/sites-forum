@@ -4,7 +4,7 @@
  * @author Sebastian Tschan
  * @author Smiley Barry
  * @copyright (c) Sebastian Tschan
- * @license GNU Affero General Public License
+ * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
 
@@ -34,6 +34,7 @@ $lang['bbCodeLabelCode'] = 'קוד';
 $lang['bbCodeLabelURL'] = 'כתובת אינטרנט';
 $lang['bbCodeLabelImg'] = 'Image';
 $lang['bbCodeLabelColor'] = 'צבע גופן';
+$lang['bbCodeLabelEmoticon'] = 'Emoticons';
 $lang['bbCodeTitleBold'] = 'טקסט מודגש: [b]טקסט[/b]';
 $lang['bbCodeTitleItalic'] = 'טקסט נטוי: [i]טקסט[/i]';
 $lang['bbCodeTitleUnderline'] = 'טקסט מודגש קו: [u]טקסט[/u]';
@@ -42,6 +43,7 @@ $lang['bbCodeTitleCode'] = 'הראה קוד: [code]קוד[/code]';
 $lang['bbCodeTitleURL'] = 'הכנס כתובת: [url]http://www.example.org[/url] או[url=http://www.example.org]טקסט[/url]';
 $lang['bbCodeTitleImg'] = 'Insert image: [img]http://example.org/image.jpg[/img]';
 $lang['bbCodeTitleColor'] = 'צבע גופן: [color=צבע]טקסט[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Emoticons list';
 $lang['help'] = 'עזרה';
 $lang['helpItemDescJoin'] = 'הצטרף לערוץ:';
 $lang['helpItemCodeJoin'] = '/join שם ערוץ';
@@ -98,6 +100,7 @@ $lang['settingsWordWrap'] = 'Enable wrapping of long words:';
 $lang['settingsMaxWordLength'] = 'Maximum length of a word before it gets wrapped:';
 $lang['settingsDateFormat'] = 'Format of date and time display:';
 $lang['settingsPersistFontColor'] = 'Persist font color:';
+$lang['settingsAudioSupport'] = 'Audio Support:';
 $lang['settingsAudioVolume'] = 'Sound Volume:';
 $lang['settingsSoundReceive'] = 'Sound for incoming messages:';
 $lang['settingsSoundSend'] = 'Sound for outgoing messages:';
@@ -105,6 +108,7 @@ $lang['settingsSoundEnter'] = 'Sound for login and channel enter messages:';
 $lang['settingsSoundLeave'] = 'Sound for logout and channel leave messages:';
 $lang['settingsSoundChatBot'] = 'Sound for chatbot messages:';
 $lang['settingsSoundError'] = 'Sound for error messages:';
+$lang['settingsSoundPrivate'] = 'Sound for private messages:';
 $lang['settingsBlink'] = 'Blink window title on new messages:';
 $lang['settingsBlinkInterval'] = 'Blink interval in milliseconds:';
 $lang['settingsBlinkIntervalNumber'] = 'Number of blink intervals:';
@@ -121,4 +125,3 @@ $lang['logsTime'] = 'זמן';
 $lang['logsSearch'] = 'חיפוש';
 $lang['logsPrivateChannels'] = 'ערוצים פרטיים';
 $lang['logsPrivateMessages'] = 'הודעות פרטיות';
-?>
