@@ -167,6 +167,7 @@ ajaxChatConfig.emojis = {
 	"person_gesturing_ok": "1f646",
 	"person_raising_hand": "1f64b",
 	"person_facepalming": "1f926",
+	"facepalm": "1f926",
 	"person_shrugging": "1f937",
 	"person_pouting": "1f64e",
 	"person_frowning": "1f64d",
