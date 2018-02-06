@@ -1,0 +1,79 @@
+/* AutoComplete styles for Emoji One */
+.dropdown-menu-emoji {
+	list-style: none;
+	padding: .3em 0 0;
+	margin: 0;
+	border: 1px solid silver;
+	background-color: white;
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: inherit;
+	letter-spacing: .025em;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+	bottom: 0 !important;
+}
+
+.dropdown-menu-emoji a:hover {
+	cursor: pointer;
+}
+
+.dropdown-menu-emoji li {
+	letter-spacing: 0;
+	display: block;
+	float: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.dropdown-menu-emoji li:before {
+	display: none;
+}
+
+.dropdown-menu-emoji .textcomplete-footer {
+	margin-top: .3em;
+	background: #e6e6e6;
+}
+
+.dropdown-menu-emoji .textcomplete-footer a {
+	color: #999999;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	line-height: 2.1818em;
+	padding-left: 1.8181em;
+	font-size: .84em;
+}
+
+.dropdown-menu-emoji .textcomplete-footer .arrow {
+	margin-left: .8em;
+	font-size: 1.3em;
+}
+
+.dropdown-menu-emoji li .emojione {
+	vertical-align: middle;
+	font-size: 1.23em;
+	width: 1em;
+	height: 1em;
+	top: -1px;
+	margin: 0 .3em 0 0;
+}
+
+.dropdown-menu-emoji li a {
+	display: block;
+	height: 100%;
+	line-height: 1.8em;
+	padding: 0 1.54em 0 .615em;
+	color: #4f4f4f;
+}
+
+.dropdown-menu-emoji .active,
+.dropdown-menu-emoji li:hover {
+	background: #FCEA9B;
+	color: black;
+}
+
+.dropdown-menu-emoji .active a,
+.dropdown-menu-emoji li:hover a {
+	color: inherit;
+}

@@ -325,16 +325,11 @@ ajaxChat.replaceCustomText = function(text)
 };
 
 ajaxChat.replaceEmojis = function(text) {
-	return text.replace(/:([a-z_-]+):/g, this.replaceEmojisCallback);
+	text = text.replace(/:(fa[sr]?)-([a-z\d_-]+):/g, this.replaceFontAwesomeCallback);
+	return emojione.shortnameToImage(text);
 };
-ajaxChat.replaceEmojisCallback = function(text, code) {
-	if (ajaxChatConfig.emojis[code]) {
-		return '<span class="emoji" title="'+code+'">&#x' + ajaxChatConfig.emojis[code] + ';</span>';
-	}
-	if (code.indexOf('fa-') === 0) {
-		return '<i class="fas '+code+' faicon" title="'+code+'"></i>';
-	}
-	return text;
+ajaxChat.replaceFontAwesomeCallback = function(text, family, code) {
+	return '<i class="'+family+' fa-'+code+' faicon" title="'+family+'-'+code+'"></i>';
 };
 
 // does not work
@@ -391,14 +386,11 @@ jQuery.merge(ajaxChatConfig.emoticonCodes, [
 	':bzgf:',
 	':confused:',
 	':flowers:',
-	//':happy:',
 	':hih:',
 	':melancholy:',
 	':ou:',
 	':pc:',
 	':closedeyes:',
-	//':pfff:',
-	//':priapos:',
 	':shame:',
 	':wub:',
 	':bow:',
@@ -413,26 +405,23 @@ jQuery.merge(ajaxChatConfig.emoticonFiles, [
 	'extra/boza.png',
 	'extra/green_tea.png',
 	'extra/redwine.gif',
-	'extra/beer.gif',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f37a.png',
 	'extra/coffee.gif',
 	'extra/rakija.png',
 	'extra/bloody_mary.png',
-	'extra/agree.gif',
-	'extra/disagree.gif',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f44d.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f44e.png',
 	'extra/rose.gif',
 	'extra/violet.gif',
 	'extra/apathe.gif',
 	'extra/bzgf0.gif',
 	'extra/confused.gif',
 	'extra/flowers.gif',
-	//'extra/happy.gif',
 	'extra/hih.gif',
 	'extra/melancholy.gif',
 	'extra/ou.gif',
 	'extra/pc1.gif',
 	'extra/closedeyes.gif',
-	//'extra/pfff.gif',
-	//'extra/priapos.gif',
 	'extra/shame.gif',
 	'extra/wub.gif',
 	'extra/bow.gif',

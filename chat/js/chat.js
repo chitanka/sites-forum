@@ -384,8 +384,7 @@ var ajaxChat = {
 						+ '<a href="javascript:ajaxChat.insertText(\''
 						+ this.scriptLinkEncode(this.emoticonCodes[i])
 						+ '\');"><img src="'
-						+ this.dirs['emoticons']
-						+ this.emoticonFiles[i]
+						+ this.createEmoticonPath(this.emoticonFiles[i])
 						+ '" alt="'
 						+ this.emoticonCodes[i]
 						+ '" title="'
@@ -1720,6 +1719,11 @@ var ajaxChat = {
 
 		// Enter key without shift should send messages
 		if(event.keyCode === 13 && !event.shiftKey) {
+			// borislav
+			if ($('.dropdown-menu-emoji').is(':visible')) {
+				// the emoji dropdown is active, so nothing should be posted
+				return false;
+			}
 			this.sendMessage();
 			try {
 				event.preventDefault();
@@ -2858,9 +2862,8 @@ var ajaxChat = {
 		if(p2) {
 			var index = ajaxChat.arraySearch(p2, ajaxChat.emoticonCodes);
 			return 	ajaxChat.replaceEmoticons(p1)
-				+	'<img src="'
-				+	ajaxChat.dirs['emoticons']
-				+	ajaxChat.emoticonFiles[index]
+				+	'<img class="emoticon" src="'
+				+	ajaxChat.createEmoticonPath(ajaxChat.emoticonFiles[index])
 				+	'" alt="'
 				+	p2.replace(/:/g, '')
 				+	'" />'
@@ -3084,6 +3087,13 @@ var ajaxChat = {
 	// Return true to use the default sound handler, else false
 	customSoundOnNewMessage: function(dateObject, userID, userName, userRole, messageID, messageText, channelID, ip) {
 		return true;
+	},
+
+	createEmoticonPath: function(file) {
+		if (file.indexOf('//') !== -1) {
+			return file;
+		}
+		return this.dirs['emoticons'] + file;
 	},
 
 	debugMessage: function(msg, e) {
