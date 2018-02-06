@@ -130,6 +130,7 @@ ajaxChat.replaceText = function(text) {
 	try{
 		text = this.replaceLineBreaks(text);
 		if(text.charAt(0) === '/') {
+			text = this.replaceEmojis(text);
 			text = this.replaceCommands(text);
 		} else {
 			text = this.replaceEmoticons(text);
