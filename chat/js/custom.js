@@ -197,7 +197,7 @@ ajaxChat.playSoundOnNewMessage = function(dateObject, userID, userName, userRole
 			case this.userID:
 				switch(messageParts[0]) {
 					case '/privmsgto':
-						this.playSound(this.settings['soundPrivate']);
+						this.playSound(this.settings['soundSend']);
 						break;
 					default:
 						this.playSound(this.settings['soundSend']);
