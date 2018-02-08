@@ -133,11 +133,11 @@ ajaxChat.replaceText = function(text) {
 			text = this.replaceEmojis(text);
 			text = this.replaceCommands(text);
 		} else {
-			text = this.replaceEmoticons(text);
 			text = this.replaceEmojis(text);
+			text = " " + text; // borislav: some smiley codes start with a space
+			text = this.replaceEmoticons(text);
 			text = this.replaceBBCode(text);
 			text = this.replaceHyperLinks(text);
-			text = " " + text; // borislav: some smiley codes start with a space
 		}
 		text = this.breakLongWords(text);
 		text = this.replaceCustomText(text);
@@ -327,6 +327,7 @@ ajaxChat.replaceCustomText = function(text)
 
 ajaxChat.replaceEmojis = function(text) {
 	text = text.replace(/:(fa[sr]?)-([a-z\d_-]+):/g, this.replaceFontAwesomeCallback);
+	emojione.ascii = true;
 	return emojione.shortnameToImage(text);
 };
 ajaxChat.replaceFontAwesomeCallback = function(text, family, code) {
@@ -433,14 +434,45 @@ jQuery.merge(ajaxChatConfig.emoticonFiles, [
 	'extra/choco.png'
 ]);
 
-ajaxChatConfig.emoticonCodes[3] = ' :P';
-ajaxChatConfig.emoticonCodes[4] = ' :D';
-ajaxChatConfig.emoticonCodes[5] = ' :|';
-ajaxChatConfig.emoticonCodes[6] = ' :O';
-ajaxChatConfig.emoticonCodes[7] = ' :?';
-ajaxChatConfig.emoticonCodes[8] = ' 8)';
-ajaxChatConfig.emoticonCodes[10] = ' B)';
-ajaxChatConfig.emoticonCodes[15] = '}:-D';
+ajaxChatConfig.emoticonCodes[4] = ':grin:';
+ajaxChatConfig.emoticonCodes[5] = ':neutral_face:';
+ajaxChatConfig.emoticonCodes[7] = ':thinking:';
+ajaxChatConfig.emoticonCodes[8] = ':nerd:';
+ajaxChatConfig.emoticonCodes[9] = ':astonished:';
+ajaxChatConfig.emoticonCodes[11] = ':sweat_smile:';
+ajaxChatConfig.emoticonCodes[12] = ':cry:';
+ajaxChatConfig.emoticonCodes[14] = ':innocent:';
+ajaxChatConfig.emoticonCodes[15] = ':smiling_imp:';
+ajaxChatConfig.emoticonCodes[16] = ':monkey_face:';
+ajaxChatConfig.emoticonCodes[17] = ':bulb:';
+ajaxChatConfig.emoticonCodes[18] = ':ballot_box_with_check:';
+ajaxChatConfig.emoticonCodes[19] = ':question:';
+ajaxChatConfig.emoticonCodes[20] = ':no_entry:';
+ajaxChatConfig.emoticonCodes[22] = ':heart:';
+
+ajaxChatConfig.emoticonFiles[0] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f642.png';
+ajaxChatConfig.emoticonFiles[1] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f61e.png';
+ajaxChatConfig.emoticonFiles[2] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f609.png';
+ajaxChatConfig.emoticonFiles[3] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f61b.png';
+ajaxChatConfig.emoticonFiles[4] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f601.png';
+ajaxChatConfig.emoticonFiles[5] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f610.png';
+ajaxChatConfig.emoticonFiles[6] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f62e.png';
+ajaxChatConfig.emoticonFiles[7] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f914.png';
+ajaxChatConfig.emoticonFiles[8] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f913.png';
+ajaxChatConfig.emoticonFiles[9] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f632.png';
+ajaxChatConfig.emoticonFiles[10] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f60e.png';
+ajaxChatConfig.emoticonFiles[11] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f605.png';
+ajaxChatConfig.emoticonFiles[12] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f622.png';
+ajaxChatConfig.emoticonFiles[13] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f618.png';
+ajaxChatConfig.emoticonFiles[14] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f607.png';
+ajaxChatConfig.emoticonFiles[15] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f608.png';
+ajaxChatConfig.emoticonFiles[16] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f435.png';
+ajaxChatConfig.emoticonFiles[17] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f4a1.png';
+ajaxChatConfig.emoticonFiles[18] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2611.png';
+ajaxChatConfig.emoticonFiles[19] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2753.png';
+ajaxChatConfig.emoticonFiles[20] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/26d4.png';
+ajaxChatConfig.emoticonFiles[21] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/26a0.png';
+ajaxChatConfig.emoticonFiles[22] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2764.png';
 
 ajaxChatConfig.settings.privmsgPng = 'img/extra/chat_privmsg.png';
 
