@@ -372,68 +372,6 @@ $(function(){
 		.prependTo("#bbCodeContainer");
 });
 
-jQuery.merge(ajaxChatConfig.emoticonCodes, [
-	':boza:',
-	':green tea:',
-	':redwine:',
-	':beer:',
-	':coffee:',
-	':rakija:',
-	':bloodymary:',
-	':agree:',
-	':disagree:',
-	':rose:',
-	':violet:',
-	':apathe:',
-	':bzgf:',
-	':confused:',
-	':flowers:',
-	':hih:',
-	':melancholy:',
-	':ou:',
-	':pc:',
-	':closedeyes:',
-	':shame:',
-	':wub:',
-	':bow:',
-	':pirate:',
-	':metalhorns:',
-	':lol:',
-	':trophy:',
-	':choco:'
-]);
-
-jQuery.merge(ajaxChatConfig.emoticonFiles, [
-	'extra/boza.png',
-	'extra/green_tea.png',
-	'extra/redwine.gif',
-	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f37a.png',
-	'extra/coffee.gif',
-	'extra/rakija.png',
-	'extra/bloody_mary.png',
-	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f44d.png',
-	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f44e.png',
-	'extra/rose.gif',
-	'extra/violet.gif',
-	'extra/apathe.gif',
-	'extra/bzgf0.gif',
-	'extra/confused.gif',
-	'extra/flowers.gif',
-	'extra/hih.gif',
-	'extra/melancholy.gif',
-	'extra/ou.gif',
-	'extra/pc1.gif',
-	'extra/closedeyes.gif',
-	'extra/shame.gif',
-	'extra/wub.gif',
-	'extra/bow.gif',
-	'extra/pirate2.gif',
-	'extra/metalhorns.png',
-	'extra/lol.gif',
-	'extra/trophy.gif',
-	'extra/choco.png'
-]);
-
 ajaxChatConfig.emoticonCodes[4] = ':grin:';
 ajaxChatConfig.emoticonCodes[5] = ':neutral_face:';
 ajaxChatConfig.emoticonCodes[7] = ':thinking:';
@@ -473,6 +411,48 @@ ajaxChatConfig.emoticonFiles[19] = 'https://cdn.jsdelivr.net/emojione/assets/3.1
 ajaxChatConfig.emoticonFiles[20] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/26d4.png';
 ajaxChatConfig.emoticonFiles[21] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/26a0.png';
 ajaxChatConfig.emoticonFiles[22] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2764.png';
+
+jQuery.merge(ajaxChatConfig.emoticonCodes, [
+	':boza:',
+	':green tea:',
+	':beer:',
+	':coffee:',
+	':redwine:',
+	':rakija:',
+	':bloodymary:',
+	':agree:',
+	':disagree:',
+	':rose:',
+	':confused:',
+	':bow:',
+	':trophy:',
+	':apathe:',
+	':lol:',
+	':pirate:',
+	':melancholy:',
+	':choco:'
+]);
+
+jQuery.merge(ajaxChatConfig.emoticonFiles, [
+	'extra/boza.png',
+	'extra/green_tea.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f37a.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2615.png',
+	'extra/redwine.gif',
+	'extra/rakija.png',
+	'extra/bloody_mary.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f44d.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f44e.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f339.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f615.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f647.png',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f3c6.png',
+	'extra/apathe.gif',
+	'extra/lol.gif',
+	'extra/pirate2.gif',
+	'extra/melancholy.gif',
+	'extra/choco.png'
+]);
 
 ajaxChatConfig.settings.privmsgPng = 'img/extra/chat_privmsg.png';
 
