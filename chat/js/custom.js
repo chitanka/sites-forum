@@ -470,3 +470,7 @@ $(document).bind("idle.idleTimer", function(){
 $(document).bind("active.idleTimer", function(){
 	ajaxChat.sendMessageWrapper('/back');
 });
+
+$(document).on('click', 'img.emojione', function() {
+	ajaxChat.insertText(' ' + $(this).attr('title'));
+});

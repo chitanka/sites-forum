@@ -645,3 +645,8 @@
 	}
 
 }
+img.emoticon,
+img.emojione {
+	max-height: 24px;
+	cursor: pointer;
+}
