@@ -426,9 +426,10 @@ jQuery.merge(ajaxChatConfig.emoticonCodes, [
 	':confused:',
 	':bow:',
 	':trophy:',
-	':apathe:',
-	':lol:',
+	':metal:',
 	':pirate:',
+	':lol:',
+	':apathe:',
 	':melancholy:',
 	':choco:'
 ]);
@@ -447,9 +448,10 @@ jQuery.merge(ajaxChatConfig.emoticonFiles, [
 	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f615.png',
 	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f647.png',
 	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f3c6.png',
-	'extra/apathe.gif',
-	'extra/lol.gif',
+	'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f918.png',
 	'extra/pirate2.gif',
+	'extra/lol.gif',
+	'extra/apathe.gif',
 	'extra/melancholy.gif',
 	'extra/choco.png'
 ]);
