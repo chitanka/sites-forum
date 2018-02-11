@@ -133,9 +133,9 @@ ajaxChat.replaceText = function(text) {
 			text = this.replaceEmojis(text);
 			text = this.replaceCommands(text);
 		} else {
-			text = this.replaceEmojis(text);
 			text = " " + text; // borislav: some smiley codes start with a space
 			text = this.replaceEmoticons(text);
+			text = this.replaceEmojis(text);
 			text = this.replaceBBCode(text);
 			text = this.replaceHyperLinks(text);
 		}
@@ -359,7 +359,7 @@ window.onbeforeunload = function(event)
 $(function(){
 	var _toggler = null;
 	$('<button/>')
-		.html('<img src="./img/emoticons/smile.png" alt=":-)" style="vertical-align:bottom" />')
+		.html('<img src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f642.png" alt=":-)" style="vertical-align:bottom; height: 1rem"/>')
 		.click(function(){
 			if ( _toggler ) {
 				_toggler.toggle();
@@ -372,6 +372,8 @@ $(function(){
 		.prependTo("#bbCodeContainer");
 });
 
+delete emojione.asciiList[':D'];
+
 ajaxChatConfig.emoticonCodes[4] = ':grin:';
 ajaxChatConfig.emoticonCodes[5] = ':neutral_face:';
 ajaxChatConfig.emoticonCodes[7] = ':thinking:';
@@ -381,7 +383,7 @@ ajaxChatConfig.emoticonCodes[11] = ':sweat_smile:';
 ajaxChatConfig.emoticonCodes[12] = ':cry:';
 ajaxChatConfig.emoticonCodes[14] = ':innocent:';
 ajaxChatConfig.emoticonCodes[15] = ':smiling_imp:';
-ajaxChatConfig.emoticonCodes[16] = ':monkey_face:';
+ajaxChatConfig.emoticonCodes[16] = ' :D';
 ajaxChatConfig.emoticonCodes[17] = ':bulb:';
 ajaxChatConfig.emoticonCodes[18] = ':ballot_box_with_check:';
 ajaxChatConfig.emoticonCodes[19] = ':question:';
@@ -404,7 +406,7 @@ ajaxChatConfig.emoticonFiles[12] = 'https://cdn.jsdelivr.net/emojione/assets/3.1
 ajaxChatConfig.emoticonFiles[13] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f618.png';
 ajaxChatConfig.emoticonFiles[14] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f607.png';
 ajaxChatConfig.emoticonFiles[15] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f608.png';
-ajaxChatConfig.emoticonFiles[16] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f435.png';
+ajaxChatConfig.emoticonFiles[16] = 'grin.png';
 ajaxChatConfig.emoticonFiles[17] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f4a1.png';
 ajaxChatConfig.emoticonFiles[18] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2611.png';
 ajaxChatConfig.emoticonFiles[19] = 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2753.png';
@@ -471,6 +473,6 @@ $(document).bind("active.idleTimer", function(){
 	ajaxChat.sendMessageWrapper('/back');
 });
 
-$(document).on('click', 'img.emojione', function() {
-	ajaxChat.insertText(' ' + $(this).attr('title'));
+$(document).on('click', 'img.emojione,img.emoticon', function() {
+	ajaxChat.insertText(' ' + $(this).attr('title').replace(/&#58;/g, ':'));
 });

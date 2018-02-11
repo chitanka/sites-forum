@@ -2862,11 +2862,10 @@ var ajaxChat = {
 		if(p2) {
 			var index = ajaxChat.arraySearch(p2, ajaxChat.emoticonCodes);
 			return 	ajaxChat.replaceEmoticons(p1)
-				+	'<img class="emoticon" src="'
-				+	ajaxChat.createEmoticonPath(ajaxChat.emoticonFiles[index])
-				+	'" alt="'
-				+	p2.replace(/:/g, '')
-				+	'" />'
+				+	'<img class="emoticon" src="' +	ajaxChat.createEmoticonPath(ajaxChat.emoticonFiles[index]) + '"'
+				+	' alt="' + p2.replace(/:/g, '&#58;') + '"'
+				+	' title="' + p2.replace(/:/g, '&#58;') + '"'
+				+	'>'
 				+ 	ajaxChat.replaceEmoticons(p3);
 		}
 		return str;
