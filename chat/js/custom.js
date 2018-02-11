@@ -328,6 +328,7 @@ ajaxChat.replaceCustomText = function(text)
 ajaxChat.replaceEmojis = function(text) {
 	text = text.replace(/:(fa[sr]?)-([a-z\d_-]+):/g, this.replaceFontAwesomeCallback);
 	emojione.ascii = true;
+	//emojione.emojiSize = '64';
 	return emojione.shortnameToImage(text);
 };
 ajaxChat.replaceFontAwesomeCallback = function(text, family, code) {
@@ -372,7 +373,9 @@ $(function(){
 		.prependTo("#bbCodeContainer");
 });
 
-delete emojione.asciiList[':D'];
+if (window.emojione) {
+	delete window.emojione.asciiList[':D'];
+}
 
 ajaxChatConfig.emoticonCodes[4] = ':grin:';
 ajaxChatConfig.emoticonCodes[5] = ':neutral_face:';
