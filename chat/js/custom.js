@@ -462,6 +462,10 @@ jQuery.merge(ajaxChatConfig.emoticonFiles, [
 ]);
 
 ajaxChatConfig.settings.privmsgPng = 'img/extra/chat_privmsg.png';
+ajaxChatConfig.settings.bbCodeImages = false;
+$(function() {
+	ajaxChat.settings.bbCodeImages = false; // this does the job
+});
 
 ajaxChatConfig.emojis = {};
 
