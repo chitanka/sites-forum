@@ -35,7 +35,7 @@ $(document).ready(function() {
 			callback(allResults);
 		},
 		template: function (basename) {
-			return '<img class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/' + basename + '.png"> ' + window.emojis[basename].s;
+			return '<img class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/' + basename + '.png"><span class="emojicode" title="'+window.emojis[basename].s+' ('+window.emojis[basename].k+')">' + window.emojis[basename].s + '</span>';
 		},
 		replace: function (basename) {
 			return window.emojis[basename].s + ' ';
@@ -43,7 +43,7 @@ $(document).ready(function() {
 		index: 1
 	}
 	], {
-		maxCount: 25,
+		maxCount: 250,
 		placement: 'top',
 		dropdownClassName: 'dropdown-menu-emoji'
 	});
