@@ -52,6 +52,6 @@ $usernameClean = $user->data['user_id'] == ANONYMOUS
 	? (empty($post_data['username']) ? 'гост' : $post_data['username'])
 	: $user->data['username'];
 $postForRocketChat = ($mode == 'edit' ? 'Променено мнение' : 'Ново мнение') . ': '
-	. "[{$clean_title}](".generate_board_url()."/post{$data['post_id']}html#p{$data['post_id']})"
+	. "[{$clean_title}](".generate_board_url()."/post{$data['post_id']}.html#p{$data['post_id']})"
 	. ' от **'. $usernameClean .'**';
 $rocketchatClient->postMessage($postForRocketChat);
