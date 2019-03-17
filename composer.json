@@ -1,0 +1,7 @@
+{
+    "name": "chitanka/phpbb-forum",
+    "description": "An installation of phpbb",
+    "require": {
+        "chitanka/rocket-chat-client": "^0.1.0"
+    }
+}

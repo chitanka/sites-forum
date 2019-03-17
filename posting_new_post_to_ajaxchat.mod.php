@@ -45,8 +45,8 @@ $db->sql_freeresult($chat_sql);
 
 // now post the message to rocketchat too
 $rcCfg = require __DIR__.'/rocketchat.config.php';
-require __DIR__.'/RocketChatClient.php';
-$rocketchatClient = new \App\Service\RocketChatClient($rcCfg['url'], $rcCfg['auth_token'], $rcCfg['user_id'], $rcCfg['notifications_channel']);
+require __DIR__.'/vendor/chitanka/rocket-chat-client/src/Chitanka/RocketChatClient.php';
+$rocketchatClient = new \Chitanka\RocketChatClient($rcCfg['url'], $rcCfg['username'], $rcCfg['password'], $rcCfg['notifications_channel']);
 
 $usernameClean = $user->data['user_id'] == ANONYMOUS
 	? (empty($post_data['username']) ? 'гост' : $post_data['username'])

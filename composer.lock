@@ -1,0 +1,49 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "3f42804a48140a6f283da7d8816bc079",
+    "packages": [
+        {
+            "name": "chitanka/rocket-chat-client",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chitanka/rocket-chat-client.git",
+                "reference": "ddc6ac1fa290178d41a05965c2cc9b109fa68ee9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chitanka/rocket-chat-client/zipball/ddc6ac1fa290178d41a05965c2cc9b109fa68ee9",
+                "reference": "ddc6ac1fa290178d41a05965c2cc9b109fa68ee9",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Chitanka\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple PHP client for Rocket.Chat",
+            "homepage": "https://github.com/chitanka/rocket-chat-client",
+            "keywords": [
+                "rocket.chat"
+            ],
+            "time": "2019-03-17T07:39:05+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

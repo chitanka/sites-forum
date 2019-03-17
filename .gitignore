@@ -11,3 +11,4 @@ chat/css/usercolors.css
 chat/socket/server.log
 chat/socket/server.pid
 /rocketchat.config.php
+/vendor
