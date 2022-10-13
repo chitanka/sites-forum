@@ -74,8 +74,8 @@ class bbcode
 			return;
 		}
 
-		$str = array('search' => array(), 'replace' => array());
-		$preg = array('search' => array(), 'replace' => array());
+		$pattern_struct = ['search' => [], 'replace' => []];
+		$patterns = array_fill_keys(['str', 'preg', 'preg_callback'], $pattern_struct);
 
 		$bitfield = new bitfield($this->bbcode_bitfield);
 		$bbcodes_set = $bitfield->get_all_set();
@@ -89,17 +89,18 @@ class bbcode
 				{
 					foreach ($array as $search => $replace)
 					{
-						${$type}['search'][] = str_replace('$uid', $this->bbcode_uid, $search);
-						${$type}['replace'][] = $replace;
+						$var_search_replace = is_callable($replace) ? $type.'_callback' : $type;
+						$patterns[$var_search_replace]['search'][] = str_replace('$uid', $this->bbcode_uid, $search);
+						$patterns[$var_search_replace]['replace'][] = $replace;
 					}
 
-					if (sizeof($str['search']))
+					if ($patterns['str']['search'])
 					{
-						$message = str_replace($str['search'], $str['replace'], $message);
-						$str = array('search' => array(), 'replace' => array());
+						$message = str_replace($patterns['str']['search'], $patterns['str']['replace'], $message);
+						$patterns['str'] = $pattern_struct;
 					}
 
-					if (sizeof($preg['search']))
+					if ($patterns['preg']['search'] || $patterns['preg_callback']['search'])
 					{
 						// we need to turn the entities back into their original form to allow the
 						// search patterns to work properly
@@ -109,8 +110,14 @@ class bbcode
 							$undid_bbcode_specialchars = true;
 						}
 
-						$message = preg_replace($preg['search'], $preg['replace'], $message);
-						$preg = array('search' => array(), 'replace' => array());
+						if ($patterns['preg']['search']) {
+							$message = preg_replace($patterns['preg']['search'], $patterns['preg']['replace'], $message);
+						}
+						if ($patterns['preg_callback']['search']) {
+							$message = preg_replace_callback_array(array_combine($patterns['preg_callback']['search'], $patterns['preg_callback']['replace']), $message);
+						}
+						$patterns['preg'] = $pattern_struct;
+						$patterns['preg_callback'] = $pattern_struct;
 					}
 				}
 			}
@@ -203,7 +210,7 @@ class bbcode
 							'[/quote:$uid]'	=> $this->bbcode_tpl('quote_close', $bbcode_id)
 						),
 						'preg' => array(
-							'#\[quote(?:=&quot;(.*?)&quot;)?:$uid\]((?!\[quote(?:=&quot;.*?&quot;)?:$uid\]).)?#ise'	=> "\$this->bbcode_second_pass_quote('\$1', '\$2')"
+							'#\[quote(?:=&quot;(.*?)&quot;)?:$uid\]((?!\[quote(?:=&quot;.*?&quot;)?:$uid\]).)?#is'	=> fn($m) => $this->bbcode_second_pass_quote($m[1], $m[2])
 						)
 					);
 				break;
@@ -282,7 +289,7 @@ class bbcode
 				case 8:
 					$this->bbcode_cache[$bbcode_id] = array(
 						'preg' => array(
-							'#\[code(?:=([a-z]+))?:$uid\](.*?)\[/code:$uid\]#ise'	=> "\$this->bbcode_second_pass_code('\$1', '\$2')",
+							'#\[code(?:=([a-z]+))?:$uid\](.*?)\[/code:$uid\]#is'	=> fn($m) => $this->bbcode_second_pass_code($m[1], $m[2]),
 						)
 					);
 				break;
@@ -292,7 +299,7 @@ class bbcode
 						'preg' => array(
 							'#(\[\/?(list|\*):[mou]?:?$uid\])[\n]{1}#'	=> "\$1",
 							'#(\[list=([^\[]+):$uid\])[\n]{1}#'			=> "\$1",
-							'#\[list=([^\[]+):$uid\]#e'					=> "\$this->bbcode_list('\$1')",
+							'#\[list=([^\[]+):$uid\]#'					=> fn($m) => $this->bbcode_list($m[1]),
 						),
 						'str' => array(
 							'[list:$uid]'		=> $this->bbcode_tpl('ulist_open_default', $bbcode_id),
