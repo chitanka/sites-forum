@@ -235,7 +235,7 @@ class ucp_profile
 					}
 
 					// Replace "error" strings with their real, localised form
-					$error = preg_replace('#^([A-Z_]+)$#e', "(!empty(\$user->lang['\\1'])) ? \$user->lang['\\1'] : '\\1'", $error);
+					$error = preg_replace_callback('#^([A-Z_]+)$#', fn($m) => (!empty($user->lang[$m[1]])) ? $user->lang[$m[1]] : $m[1], $error);
 				}
 
 				$template->assign_vars(array(
@@ -386,7 +386,7 @@ class ucp_profile
 					}
 
 					// Replace "error" strings with their real, localised form
-					$error = preg_replace('#^([A-Z_]+)$#e', "(!empty(\$user->lang['\\1'])) ? \$user->lang['\\1'] : '\\1'", $error);
+					$error = preg_replace_callback('#^([A-Z_]+)$#', fn($m) => (!empty($user->lang[$m[1]])) ? $user->lang[$m[1]] : $m[1], $error);
 				}
 
 				if ($config['allow_birthdays'])
@@ -512,7 +512,7 @@ class ucp_profile
 					}
 
 					// Replace "error" strings with their real, localised form
-					$error = preg_replace('#^([A-Z_]+)$#e', "(!empty(\$user->lang['\\1'])) ? \$user->lang['\\1'] : '\\1'", $error);
+					$error = preg_replace_callback('#^([A-Z_]+)$#', fn($m) => (!empty($user->lang[$m[1]])) ? $user->lang[$m[1]] : $m[1], $error);
 				}
 
 				$signature_preview = '';
@@ -583,7 +583,7 @@ class ucp_profile
 						$error[] = 'FORM_INVALID';
 					}
 					// Replace "error" strings with their real, localised form
-					$error = preg_replace('#^([A-Z_]+)$#e', "(!empty(\$user->lang['\\1'])) ? \$user->lang['\\1'] : '\\1'", $error);
+					$error = preg_replace_callback('#^([A-Z_]+)$#', fn($m) => (!empty($user->lang[$m[1]])) ? $user->lang[$m[1]] : $m[1], $error);
 				}
 
 				if (!$config['allow_avatar'] && $user->data['user_avatar_type'])
