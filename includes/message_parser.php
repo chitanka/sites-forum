@@ -68,7 +68,9 @@ class bbcode_firstpass extends bbcode
 					// it should not demand recompilation
 					if (preg_match($regexp, $this->message))
 					{
-						$this->message = preg_replace($regexp, $replacement, $this->message);
+						$this->message = is_callable($replacement)
+							? preg_replace_callback($regexp, $replacement, $this->message)
+							: preg_replace($regexp, $replacement, $this->message);
 						$bitfield->set($bbcode_data['bbcode_id']);
 					}
 				}
@@ -112,19 +114,19 @@ class bbcode_firstpass extends bbcode
 		// To parse multiline URL we enable dotall option setting only for URL text
 		// but not for link itself, thus [url][/url] is not affected.
 		$this->bbcodes = array(
-			'code'			=> array('bbcode_id' => 8,	'regexp' => array('#\[code(?:=([a-z]+))?\](.+\[/code\])#uise' => "\$this->bbcode_code('\$1', '\$2')")),
-			'quote'			=> array('bbcode_id' => 0,	'regexp' => array('#\[quote(?:=&quot;(.*?)&quot;)?\](.+)\[/quote\]#uise' => "\$this->bbcode_quote('\$0')")),
-			'attachment'	=> array('bbcode_id' => 12,	'regexp' => array('#\[attachment=([0-9]+)\](.*?)\[/attachment\]#uise' => "\$this->bbcode_attachment('\$1', '\$2')")),
-			'b'				=> array('bbcode_id' => 1,	'regexp' => array('#\[b\](.*?)\[/b\]#uise' => "\$this->bbcode_strong('\$1')")),
-			'i'				=> array('bbcode_id' => 2,	'regexp' => array('#\[i\](.*?)\[/i\]#uise' => "\$this->bbcode_italic('\$1')")),
-			'url'			=> array('bbcode_id' => 3,	'regexp' => array('#\[url(=(.*))?\](?(1)((?s).*(?-s))|(.*))\[/url\]#uiUe' => "\$this->validate_url('\$2', ('\$3') ? '\$3' : '\$4')")),
-			'img'			=> array('bbcode_id' => 4,	'regexp' => array('#\[img\](.*)\[/img\]#uiUe' => "\$this->bbcode_img('\$1')")),
-			'size'			=> array('bbcode_id' => 5,	'regexp' => array('#\[size=([\-\+]?\d+)\](.*?)\[/size\]#uise' => "\$this->bbcode_size('\$1', '\$2')")),
-			'color'			=> array('bbcode_id' => 6,	'regexp' => array('!\[color=(#[0-9a-f]{3}|#[0-9a-f]{6}|[a-z\-]+)\](.*?)\[/color\]!uise' => "\$this->bbcode_color('\$1', '\$2')")),
-			'u'				=> array('bbcode_id' => 7,	'regexp' => array('#\[u\](.*?)\[/u\]#uise' => "\$this->bbcode_underline('\$1')")),
-			'list'			=> array('bbcode_id' => 9,	'regexp' => array('#\[list(?:=(?:[a-z0-9]|disc|circle|square))?].*\[/list]#uise' => "\$this->bbcode_parse_list('\$0')")),
-			'email'			=> array('bbcode_id' => 10,	'regexp' => array('#\[email=?(.*?)?\](.*?)\[/email\]#uise' => "\$this->validate_email('\$1', '\$2')")),
-			'flash'			=> array('bbcode_id' => 11,	'regexp' => array('#\[flash=([0-9]+),([0-9]+)\](.*?)\[/flash\]#uie' => "\$this->bbcode_flash('\$1', '\$2', '\$3')"))
+			'code'			=> array('bbcode_id' => 8,	'regexp' => array('#\[code(?:=([a-z]+))?\](.+\[/code\])#uis' => fn($m) => $this->bbcode_code($m[1], $m[2]))),
+			'quote'			=> array('bbcode_id' => 0,	'regexp' => array('#\[quote(?:=&quot;(.*?)&quot;)?\](.+)\[/quote\]#uis' => fn($m) => $this->bbcode_quote($m[0]))),
+			'attachment'	=> array('bbcode_id' => 12,	'regexp' => array('#\[attachment=([0-9]+)\](.*?)\[/attachment\]#uis' => fn($m) => $this->bbcode_attachment($m[1], $m[2]))),
+			'b'				=> array('bbcode_id' => 1,	'regexp' => array('#\[b\](.*?)\[/b\]#uis' => fn($m) => $this->bbcode_strong($m[1]))),
+			'i'				=> array('bbcode_id' => 2,	'regexp' => array('#\[i\](.*?)\[/i\]#uis' => fn($m) => $this->bbcode_italic($m[1]))),
+			'url'			=> array('bbcode_id' => 3,	'regexp' => array('#\[url(=(.*))?\](?(1)((?s).*(?-s))|(.*))\[/url\]#uiU' => fn($m) => $this->validate_url($m[2], $m[3] ?: $m[4]))),
+			'img'			=> array('bbcode_id' => 4,	'regexp' => array('#\[img\](.*)\[/img\]#uiU' => fn($m) => $this->bbcode_img($m[1]))),
+			'size'			=> array('bbcode_id' => 5,	'regexp' => array('#\[size=([\-\+]?\d+)\](.*?)\[/size\]#uis' => fn($m) => $this->bbcode_size($m[1], $m[2]))),
+			'color'			=> array('bbcode_id' => 6,	'regexp' => array('!\[color=(#[0-9a-f]{3}|#[0-9a-f]{6}|[a-z\-]+)\](.*?)\[/color\]!uis' => fn($m) => $this->bbcode_color($m[1], $m[2]))),
+			'u'				=> array('bbcode_id' => 7,	'regexp' => array('#\[u\](.*?)\[/u\]#uis' => fn($m) => $this->bbcode_underline($m[1]))),
+			'list'			=> array('bbcode_id' => 9,	'regexp' => array('#\[list(?:=(?:[a-z0-9]|disc|circle|square))?].*\[/list]#uis' => fn($m) => $this->bbcode_parse_list($m[0]))),
+			'email'			=> array('bbcode_id' => 10,	'regexp' => array('#\[email=?(.*?)?\](.*?)\[/email\]#uis' => fn($m) => $this->validate_email($m[1], $m[2]))),
+			'flash'			=> array('bbcode_id' => 11,	'regexp' => array('#\[flash=([0-9]+),([0-9]+)\](.*?)\[/flash\]#ui' => fn($m) => $this->bbcode_flash($m[1], $m[2], $m[3])))
 		);
 
 		// Zero the parsed items array
@@ -158,9 +160,24 @@ class bbcode_firstpass extends bbcode
 
 		foreach ($rowset as $row)
 		{
+			$replace = function(array $matches) use ($row) {
+				unset($matches[0]);
+				$result = str_replace('$uid', $this->bbcode_uid, $row['first_pass_replace']);
+				foreach ($matches as $idx => $match) {
+					$match = strtr($match, [
+						"\r\n" => "\n",
+						'\"' => '"',
+						'\'' => '&#39;',
+						'(' => '&#40;',
+						')' => '&#41;',
+					]);
+					$result = str_replace('${'.$idx.'}', $match, $result);
+				}
+				return $result;
+			};
 			$this->bbcodes[$row['bbcode_tag']] = array(
 				'bbcode_id'	=> (int) $row['bbcode_id'],
-				'regexp'	=> array($row['first_pass_match'] => str_replace('$uid', $this->bbcode_uid, $row['first_pass_replace']))
+				'regexp'	=> array($row['first_pass_match'] => $replace)
 			);
 		}
 	}
