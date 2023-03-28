@@ -1,42 +1,42 @@
-Subject: Welcome to "{SITENAME}"
+Subject: Добре дошли в "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Според разпоредбите COPPA в момента Вашият акаунт е неактивен.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Моля разпечатайте това съобщение и помолете Вашия родител или настойник да го разпише и постави дата на него. След това го изпратете по факс до:
 
 {FAX_INFO}
 
-OR mail it to:
+или го пратете по пощата до:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ СРЕЖИ ТУК ------------------------------
+Разрешение за участие в сайта {SITENAME} - {U_BOARD}
 
-Username: {USERNAME}
+Потребител: {USERNAME}
 E-mail: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+ПРЕГЛЕДАХ ИНФОРМАЦИЯТА, ДАДЕНА ОТ ДЕТЕТО МИ И ДАВАМ РАЗРЕШЕНИЕ НА {SITENAME} ДА ЗАПИШЕ ТАЗИ ИНФОРМАЦИЯ.
+РАЗБИРАМ, ЧЕ ТАЗИ ИНФОРМАЦИЯ МОЖЕ ДА БЪДЕ ПРОМЕНЯНА ПО ВСЯКО ВРЕМЕ С ПОМОЩТА НА ПАРОЛАТА.
+РАЗБИРАМ, ЧЕ МОГА ДА ИЗИСКАМ ПРЕМАХВАНЕТО НА ТАЗИ ИНФОРМАЦИЯ ОТ {SITENAME} ПО ВСЯКО ВРЕМЕ.
 
 
-Parent or guardian 
-(print your name here): _____________________
+Родител или Настойник
+(напишете вашето тук): _____________________
 
-(sign here): __________________ 
+(подпис): __________________
 
-Date: _______________
+Дата: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ СРЕЖИ ТУК ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+След като администраторите получат горния формуляр по факс или по пощата, акаунта Ви ще бъде активиран.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Моля не забравяйте Вашата парола, защото тя е криптирана и ние не можем да Ви я пратим. Но в случай че я забравите, можете да поискате нова, която ще Ви бъде пратена по същия начин като тази.
 
-Thank you for registering.
+Благодарим Ви, че се регистрирахте.
 
 {EMAIL_SIG}

@@ -1,10 +1,13 @@
 <?php
 /**
 *
-* @package acp
-* @version $Id$
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* This file is part of the phpBB Forum Software package.
+*
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -16,100 +19,70 @@ if (!defined('IN_PHPBB'))
 	exit;
 }
 
-/**
-* @package acp
-*/
 class acp_update
 {
 	var $u_action;
 
 	function main($id, $mode)
 	{
-		global $config, $db, $user, $auth, $template, $cache;
-		global $phpbb_root_path, $phpbb_admin_path, $phpEx;
+		global $config, $user, $template, $request;
+		global $phpbb_root_path, $phpEx, $phpbb_container;
 
 		$user->add_lang('install');
 
 		$this->tpl_name = 'acp_update';
 		$this->page_title = 'ACP_VERSION_CHECK';
 
-		// Get current and latest version
-		$errstr = '';
-		$errno = 0;
-
-		$info = obtain_latest_version_info(request_var('versioncheck_force', false));
-
-		if (empty($info))
+		/* @var $version_helper \phpbb\version_helper */
+		$version_helper = $phpbb_container->get('version_helper');
+		try
 		{
-			trigger_error('VERSIONCHECK_FAIL', E_USER_WARNING);
-		}
-
-		$info = explode("\n", $info);
-		$latest_version = trim($info[0]);
-
-		$announcement_url = trim($info[1]);
-		$announcement_url = (strpos($announcement_url, '&amp;') === false) ? str_replace('&', '&amp;', $announcement_url) : $announcement_url;
-		$update_link = append_sid($phpbb_root_path . 'install/index.' . $phpEx, 'mode=update');
-		// www.phpBB-SEO.com SEO TOOLKIT BEGIN
-		// moved a little bellow
-		// next feature release
-		/*$next_feature_version = $next_feature_announcement_url = false;
-		if (isset($info[2]) && trim($info[2]) !== '')
-		{
-			$next_feature_version = trim($info[2]);
-			$next_feature_announcement_url = trim($info[3]);
-		}*/
-		// www.phpBB-SEO.com SEO TOOLKIT BEGIN
-
-		// Determine automatic update...
-		$sql = 'SELECT config_value
-			FROM ' . CONFIG_TABLE . "
-			WHERE config_name = 'version_update_from'";
-		$result = $db->sql_query($sql);
-		$version_update_from = (string) $db->sql_fetchfield('config_value');
-		$db->sql_freeresult($result);
-
-		$current_version = (!empty($version_update_from)) ? $version_update_from : $config['version'];
-
-		// www.phpBB-SEO.com SEO TOOLKIT BEGIN
-		$phpbb_seo_update = '';
-		$up_to_date = phpbb_version_compare($latest_version, $config['version'], '<=');
-		if ($up_to_date) {
-			$phpbb_seo_update = trim(str_replace($current_version, '', $latest_version));
-		}
-		$update_instruction = sprintf($user->lang['UPDATE_INSTRUCTIONS'], $announcement_url, $update_link);
-		if (!empty($phpbb_seo_update)) {
-			$auto_package = trim($info[2]);
-			$auto_update = $auto_package === 'auto_update:yes' ? true : false;
-			$up_to_date = ($latest_version === @$config['seo_premod_version']) ? true : false;
-			if (!$auto_update) {
-				$update_instruction = '<br/><br/><hr/>' . sprintf($user->lang['ACP_PREMOD_UPDATE'], $latest_version, $announcement_url) . '<br/><hr/>';
+			$recheck = $request->variable('versioncheck_force', false);
+			$updates_available = $version_helper->get_update_on_branch($recheck);
+			$upgrades_available = $version_helper->get_suggested_updates();
+			if (!empty($upgrades_available))
+			{
+				$upgrades_available = array_pop($upgrades_available);
 			}
 		}
-		// next feature release
-		$next_feature_version = $next_feature_announcement_url = false;
-		if (isset($info[3]) && trim($info[3]) !== '')
+		catch (\RuntimeException $e)
 		{
-			$next_feature_version = trim($info[3]);
-			$next_feature_announcement_url = trim($info[4]);
+			$template->assign_var('S_VERSIONCHECK_FAIL', true);
+
+			$updates_available = array();
 		}
-		// www.phpBB-SEO.com SEO TOOLKIT END
-		$template->assign_vars(array(
-			'S_UP_TO_DATE'		=> phpbb_version_compare($latest_version, $config['version'], '<='),
-			'S_UP_TO_DATE_AUTO'	=> phpbb_version_compare($latest_version, $current_version, '<='),
-			'S_VERSION_CHECK'	=> true,
-			'U_ACTION'			=> $this->u_action,
-			'U_VERSIONCHECK_FORCE' => append_sid($this->u_action . '&amp;versioncheck_force=1'),
 
-			'LATEST_VERSION'	=> $latest_version,
-			'CURRENT_VERSION'	=> $config['version'],
-			'AUTO_VERSION'		=> $version_update_from,
-			'NEXT_FEATURE_VERSION'	=> $next_feature_version,
+		if (!empty($updates_available))
+		{
+			$template->assign_block_vars('updates_available', $updates_available);
+		}
 
-			'UPDATE_INSTRUCTIONS'	=> sprintf($user->lang['UPDATE_INSTRUCTIONS'], $announcement_url, $update_link),
-			'UPGRADE_INSTRUCTIONS'	=> $next_feature_version ? $user->lang('UPGRADE_INSTRUCTIONS', $next_feature_version, $next_feature_announcement_url) : false,
-		));
+		$update_link = $phpbb_root_path . 'install/app.' . $phpEx;
+
+		$template_ary = [
+			'S_UP_TO_DATE'				=> empty($updates_available),
+			'U_ACTION'					=> $this->u_action,
+			'U_VERSIONCHECK_FORCE'		=> append_sid($this->u_action . '&amp;versioncheck_force=1'),
+
+			'CURRENT_VERSION'			=> $config['version'],
+
+			'UPDATE_INSTRUCTIONS'		=> $user->lang('UPDATE_INSTRUCTIONS', $update_link),
+			'S_VERSION_UPGRADEABLE'		=> !empty($upgrades_available),
+			'UPGRADE_INSTRUCTIONS'		=> !empty($upgrades_available) ? $user->lang('UPGRADE_INSTRUCTIONS', $upgrades_available['current'], $upgrades_available['announcement']) : false,
+		];
+
+		$template->assign_vars($template_ary);
+
+		// Incomplete update?
+		if (phpbb_version_compare($config['version'], PHPBB_VERSION, '<'))
+		{
+			$database_update_link = $phpbb_root_path . 'install/app.php/update';
+
+			$template->assign_vars(array(
+				'S_UPDATE_INCOMPLETE'		=> true,
+				'FILES_VERSION'				=> PHPBB_VERSION,
+				'INCOMPLETE_INSTRUCTIONS'	=> $user->lang('UPDATE_INCOMPLETE_EXPLAIN', $database_update_link),
+			));
+		}
 	}
 }
-
-?>

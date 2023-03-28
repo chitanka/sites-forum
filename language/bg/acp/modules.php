@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* acp_modules [English]
+* acp_modules [Bulgarian]
 *
 * @package language
-* @version $Id$
+* @version $Id: modules.php 8479 2008-03-29 00:22:48Z nacholibre $
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -36,49 +36,47 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACP_MODULE_MANAGEMENT_EXPLAIN'	=> 'Here you are able to manage all kind of modules. Please note that the ACP has a three-level menu structure (Category -> Category -> Module) whereby the others having a two-level menu structure (Category -> Module) which must be kept. Please also be aware that you may lock out yourself if you disable or delete the modules responsible for the module management itself.',
-	'ADD_MODULE'					=> 'Add module',
-	'ADD_MODULE_CONFIRM'			=> 'Are you sure you want to add the selected module with the selected mode?',
-	'ADD_MODULE_TITLE'				=> 'Add module',
+	'ACP_MODULE_MANAGEMENT_EXPLAIN'	=> 'От тук можете да управлявате всички видове модули. Този админ панел има три-структурна навигация (Категория -> Категория -> Модул) всички останали имат две-структурна навигация. При триене или промяна на някой модул можете да премахнете дори себе си от форума.',
+	'ADD_MODULE'					=> 'Добави модул',
+	'ADD_MODULE_CONFIRM'			=> 'Сигурен ли сте, че искате да добавите избрания модул?',
+	'ADD_MODULE_TITLE'				=> 'Добавяне на модул',
 
-	'CANNOT_REMOVE_MODULE'	=> 'Unable to remove module, it has assigned children. Please remove or move all children before performing this action.',
-	'CATEGORY'				=> 'Category',
-	'CHOOSE_MODE'			=> 'Choose module mode',
-	'CHOOSE_MODE_EXPLAIN'	=> 'Choose the modules mode being used.',
-	'CHOOSE_MODULE'			=> 'Choose module',
-	'CHOOSE_MODULE_EXPLAIN'	=> 'Choose the file being called by this module.',
-	'CREATE_MODULE'			=> 'Create new module',
+	'CANNOT_REMOVE_MODULE'	=> 'Модула не може да бъде изтрит. Изтрийте всички модули свързани с избрания.',
+	'CATEGORY'				=> 'Категория',
+	'CHOOSE_MODE'			=> 'Избери тип',
+	'CHOOSE_MODE_EXPLAIN'	=> '.',
+	'CHOOSE_MODULE'			=> 'Избери модул',
+	'CHOOSE_MODULE_EXPLAIN'	=> '',
+	'CREATE_MODULE'			=> 'Създай нов модул',
 
-	'DEACTIVATED_MODULE'	=> 'Deactivated module',
-	'DELETE_MODULE'			=> 'Delete module',
-	'DELETE_MODULE_CONFIRM'	=> 'Are you sure you want to remove this module?',
+	'DEACTIVATED_MODULE'	=> 'Деактивирай модула',
+	'DELETE_MODULE'			=> 'Изтрий модула',
+	'DELETE_MODULE_CONFIRM'	=> 'Сигурен ли сте, че искате да изтриете модула?',
 
-	'EDIT_MODULE'			=> 'Edit module',
-	'EDIT_MODULE_EXPLAIN'	=> 'Here you are able to enter module specific settings.',
+	'EDIT_MODULE'			=> 'Промени модула',
+	'EDIT_MODULE_EXPLAIN'	=> '',
 
-	'HIDDEN_MODULE'			=> 'Hidden module',
+	'HIDDEN_MODULE'			=> 'Скрий модула',
 
-	'MODULE'					=> 'Module',
-	'MODULE_ADDED'				=> 'Module successfully added.',
-	'MODULE_DELETED'			=> 'Module successfully removed.',
-	'MODULE_DISPLAYED'			=> 'Module displayed',
-	'MODULE_DISPLAYED_EXPLAIN'	=> 'If you do not wish to display this module, but want to use it, set this to no.',
-	'MODULE_EDITED'				=> 'Module successfully edited.',
-	'MODULE_ENABLED'			=> 'Module enabled',
-	'MODULE_LANGNAME'			=> 'Module language name',
-	'MODULE_LANGNAME_EXPLAIN'	=> 'Enter the displayed module name. Use language constant if name is served from language file.',
-	'MODULE_TYPE'				=> 'Module type',
+	'MODULE'					=> 'Модул',
+	'MODULE_ADDED'				=> 'Модула е успешно добавен.',
+	'MODULE_DELETED'			=> 'Модула е успешно изтрит.',
+	'MODULE_DISPLAYED'			=> 'Показвай модула',
+	'MODULE_DISPLAYED_EXPLAIN'	=> 'Ако искаш да не показваш модула, но да го използваш избери Не.',
+	'MODULE_EDITED'				=> 'Модула е успешно променен.',
+	'MODULE_ENABLED'			=> 'Включен',
+	'MODULE_LANGNAME'			=> 'Име',
+	'MODULE_LANGNAME_EXPLAIN'	=> 'Въведи име на модула.',
+	'MODULE_TYPE'				=> 'Тип на модула',
 
-	'NO_CATEGORY_TO_MODULE'	=> 'Unable to turn category into module. Please remove/move all children before performing this action.',
-	'NO_MODULE'				=> 'No module found.',
-	'NO_MODULE_ID'			=> 'No module id specified.',
-	'NO_MODULE_LANGNAME'	=> 'No module language name specified.',
-	'NO_PARENT'				=> 'No Parent',
+	'NO_CATEGORY_TO_MODULE'	=> 'Грешка. Изтрий/премести всички модули свързани с избрания.',
+	'NO_MODULE'				=> 'Няма намерен модул.',
+	'NO_MODULE_ID'			=> 'Няма избрано ID.',
+	'NO_MODULE_LANGNAME'	=> 'Няма избран език на модула.',
+	'NO_PARENT'				=> 'Без родител',
 
-	'PARENT'				=> 'Parent',
-	'PARENT_NO_EXIST'		=> 'Parent does not exist.',
+	'PARENT'				=> 'Родител',
+	'PARENT_NO_EXIST'		=> 'Родителя не съществува',
 
-	'SELECT_MODULE'			=> 'Select a module',
+	'SELECT_MODULE'			=> 'Избери модул',
 ));
-
-?>

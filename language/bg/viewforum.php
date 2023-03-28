@@ -4,7 +4,7 @@
 * viewforum [Bulgarian]
 *
 * @package language
-* @version $Id$
+* @version $Id: viewforum.php 8479 2008-03-29 00:22:48Z nacholibre $
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -37,33 +37,36 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 	'ACTIVE_TOPICS'			=> 'Активни теми',
-	'ANNOUNCEMENTS'			=> 'Важни съобщения',
+	'ANNOUNCEMENTS'			=> 'Съобщения',
 
-	'FORUM_PERMISSIONS'		=> 'Права за форума',
+	'FORUM_PERMISSIONS'		=> 'Права на форума',
 
-	'ICON_ANNOUNCEMENT'		=> 'Важно съобщение',
-	'ICON_STICKY'			=> 'Важна тема',
+	'ICON_ANNOUNCEMENT'		=> 'Важна тема',
+	'ICON_STICKY'			=> 'Закачена',
 
-	'LOGIN_NOTIFY_FORUM'	=> 'You have been notified about this forum, please login to view it.',
+	'LOGIN_NOTIFY_FORUM'	=> 'Трябва да влезете в акаунта си.',
 
-	'MARK_TOPICS_READ'		=> 'Отбелязване на темите като прочетени',
+	'MARK_TOPICS_READ'		=> 'Маркирайте темите като прочетени',
 
-	'NEW_POSTS_HOT'			=> 'Има нови мнения [ популярна ]',	// Not used anymore
-	'NEW_POSTS_LOCKED'		=> 'Има нови мнения [ заключена ]',	// Not used anymore
-	'NO_NEW_POSTS_HOT'		=> 'Няма нови мнения [ популярна ]',	// Not used anymore
-	'NO_NEW_POSTS_LOCKED'	=> 'Няма нови мнения [ заключена ]',	// Not used anymore
-	'NO_READ_ACCESS'		=> 'Нямате права да четете темите в този форум.',
-	'NO_UNREAD_POSTS_HOT'		=> 'Няма непрочетени мнения [ популярна ]',
-	'NO_UNREAD_POSTS_LOCKED'	=> 'Няма непрочетени мнения [ заключена ]',
+	'NEW_POSTS_HOT'			=> 'Нови мнения [ Популярна ]',
+	'NEW_POSTS_LOCKED'		=> 'Нови мнения [ Заключена ]',
+	'NO_NEW_POSTS_HOT'		=> 'Няма непрочтени мнения [ Популярна ]',
+	'NO_NEW_POSTS_LOCKED'	=> 'Няма непрочтени мнения [ Заключена ]',
+	'NO_READ_ACCESS'		=> 'Вия нямате нужните права за да четете този форум',
 
-	'POST_FORUM_LOCKED'		=> 'Форумът е заключен',
+	'NO_FORUMS_IN_CATEGORY'	=> 'Тази категория няма форуми.',
+	'NO_UNREAD_POSTS_HOT'   => 'Няма непрочетени мнения [ Популярни ]',
+    'NO_UNREAD_POSTS_LOCKED' => 'Няма непрочетени мнения [ Заключени ]',
+    'UNREAD_POSTS_HOT'       => 'Непрочетени мняния [ Популярни ]',
+    'UNREAD_POSTS_LOCKED'    => 'Непрочетени мняния [ Заключени ]',
 
-	'TOPICS_MARKED'			=> 'Темите във форума бяха отбелязани като прочетени.',
+	'POST_FORUM_LOCKED'		=> 'Форума е заключен',
 
-	'UNREAD_POSTS_HOT'		=> 'Непрочетени мнения [ популярна ]',
-	'UNREAD_POSTS_LOCKED'	=> 'Непрочетени мнения [ заключена ]',
+	'TOPICS_MARKED'			=> 'Темите са маркирани като прочетени',
 
-	'VIEW_FORUM'			=> 'Преглед на форума',
-	'VIEW_FORUM_TOPIC'		=> 'Една тема',
-	'VIEW_FORUM_TOPICS'		=> '%d теми',
+	'VIEW_FORUM'			=> 'Прегледай форум',
+	'VIEW_FORUM_TOPICS'		=> array(
+		1	=> '%d тема',
+		2	=> '%d теми',
+	),
 ));

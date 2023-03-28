@@ -1,19 +1,19 @@
-Subject: Welcome to "{SITENAME}"
+Subject: Добре дошли в форумите на {SITENAME}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Запазете това писмо, то съдържа важна информация.
 
 ----------------------------
-Username: {USERNAME}
+Потребителско име: {USERNAME}
 
-Board URL: {U_BOARD}
+Адрес на форума: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occured.
+Вашият акаунт в момента е неактивен, трябва да бъде одобрен от администратор. Когато това стане ще получите уведомително писмо.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Не забравяйте Вашата парола, защото тя е криптирана и ние не можем да ви я пратим. В случай че я забравите, можете да поискате нова, която ще ви бъде пратена по същия начин както тази.
 
-Thank you for registering.
+Благодаря Ви, че се регистрирахте!
 
 {EMAIL_SIG}

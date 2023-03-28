@@ -1,11 +1,11 @@
-Subject: Inactive account reminder
+Subject: Неактивен акаунт
 
-Hello {USERNAME},
+Здравейте {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Вашият акаунт "{SITENAME}", създаден на {REGISTER_DATE} е неактивен. Ако искате да активирате акаунта си посетете следният линк:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Благодарим Ви, че се регистрирахте в "{SITENAME}".
 
 {EMAIL_SIG}

@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* captcha_qa [Bulgarian]
+* captcha_qa [English]
 *
 * @package language
-* @version $Id$
+* @version $Id: captcha_qa.php 9966 2009-08-12 15:12:03Z Kellanved $
 * @copyright (c) 2009 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -36,28 +36,29 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'CAPTCHA_QA'				=> 'Въпроси и отговори',
-	'CONFIRM_QUESTION_EXPLAIN'	=> 'Този въпрос служи за улавяне на ботове и предотвратяване на спама.',
-	'CONFIRM_QUESTION_WRONG'	=> 'Дадохте грешен отговор на въпроса.',
+	'CAPTCHA_QA'				=> 'CAPTCHA',
+	'CONFIRM_QUESTION_EXPLAIN'	=> 'С помощта на CAPTCHA се убеждаваме, че сте човек, а не робот.',
+	'CONFIRM_QUESTION_WRONG'	=> 'Въведеният CAPTCHA код е грешен.',
+	'CONFIRM_QUESTION_MISSING'	=> 'Въпросите за кептчата не могат да се заредят. Моля свържете се с администратора.',
 
 	'QUESTION_ANSWERS'			=> 'Отговори',
-	'ANSWERS_EXPLAIN'			=> 'Въведете правилните отговори, по един на ред.',
+	'ANSWERS_EXPLAIN'			=> 'Въведете валидни отговори на въпроса (по един отговор на ред)',
 	'CONFIRM_QUESTION'			=> 'Въпрос',
 
-	'ANSWER'					=> 'Отговор',
-	'EDIT_QUESTION'				=> 'Промяна на въпроса',
+	'ANSWER'					=> 'Отовор',
+	'EDIT_QUESTION'				=> 'Промени въпрос',
 	'QUESTIONS'					=> 'Въпроси',
-	'QUESTIONS_EXPLAIN'			=> 'For every form submission where you have enabled the Q&amp;A plugin, users will be asked one of the questions specified here. To use this plugin at least one question must be set in the default language. These questions should be easy for your target audience to answer but beyond the ability of a bot capable of running a Google™ search. Using a large and regularly changed set of questions will yield the best results. Enable the strict setting if your question relies on mixed case, punctuation or whitespace.',
-	'QUESTION_DELETED'			=> 'Въпросът беше изтрит',
+	'QUESTIONS_EXPLAIN'			=> 'По време на регистрацията към потребителите ще бъде зададен специален въпрос/и (те се избират от вас). Целта на тази функция е да ограничи досадните ботове, които се регистрират във форума ви и пускат нежелани съобщения.',
+	'QUESTION_DELETED'			=> 'Изтрит въпрос',
 	'QUESTION_LANG'				=> 'Език',
-	'QUESTION_LANG_EXPLAIN'		=> 'Езикък, на който са написани въпросът и неговите отговори.',
-	'QUESTION_STRICT'			=> 'Стриктна проверка',
-	'QUESTION_STRICT_EXPLAIN'	=> 'Ако е включена, ще се прави разлика между главни и малки букви, като броят на интервалите също ще е от значение.',
+	'QUESTION_LANG_EXPLAIN'		=> 'Езика на който е написан въпроса и отговора.',
+	'QUESTION_STRICT'			=> 'Малки и главни букви',
+	'QUESTION_STRICT_EXPLAIN'	=> 'Ако функцията е включена ще се взема под внимание и капитализацията (малки и главни) на буквите.',
 
 	'QUESTION_TEXT'				=> 'Въпрос',
-	'QUESTION_TEXT_EXPLAIN'		=> 'Въпросът, зададен на потребителя.',
+	'QUESTION_TEXT_EXPLAIN'		=> 'Въпроса, който ще се задава на потребителите при регистрация.',
 
-	'QA_ERROR_MSG'				=> 'Please fill in all fields and enter at least one answer.',
-	'QA_LAST_QUESTION'			=> 'You cannot delete all questions while the plugin is active.',
-
+	'QA_ERROR_MSG'				=> 'Попълнете полетата и въведете поне по един отговор.',
+	'QA_LAST_QUESTION'			=> 'Не може да изтриете всички въпроси, докато плъгина все още е активен.',
+	
 ));
