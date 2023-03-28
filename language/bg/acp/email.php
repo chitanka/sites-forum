@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* acp_email [Bulgarian]
+* acp_email [English]
 *
 * @package language
-* @version $Id: email.php 8479 2008-03-29 00:22:48Z nacholibre $
+* @version $Id$
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -37,31 +37,31 @@ if (empty($lang) || !is_array($lang))
 
 // Email settings
 $lang = array_merge($lang, array(
-	'ACP_MASS_EMAIL_EXPLAIN'		=> 'От тук можете да изпращате съобщение до всички потребители на форума. Един email ще бъде копиран на всичките потребители. Ако изпращате съобщения до голяма група бъдете търпеливи при изпращането, може да отнеме малко време.',
-	'ALL_USERS'						=> 'Всички потребители',
+	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Here you can e-mail a message to either all of your users or all users of a specific group <strong>having the option to receive mass e-mails enabled</strong>. To achieve this an e-mail will be sent out to the administrative e-mail address supplied, with a blind carbon copy sent to all recipients. The default setting is to only include 50 recipients in such an e-mail, for more recipients more e-mails will be sent. If you are emailing a large group of people please be patient after submitting and do not stop the page halfway through. It is normal for a mass emailing to take a long time, you will be notified when the script has completed.',
+	'ALL_USERS'						=> 'All users',
 
-	'COMPOSE'				=> 'Напиши ново',
+	'COMPOSE'				=> 'Compose',
 
-	'EMAIL_SEND_ERROR'		=> 'Появи се грешка при изпращането на съобщението. Проверете %sЛога с грешките%s за информация.',
-	'EMAIL_SENT'			=> 'Съобщението е изпратено.',
-	'EMAIL_SENT_QUEUE'		=> 'Съобщението не беше изпратено.',
+	'EMAIL_SEND_ERROR'		=> 'There were one or more errors while sending the e-mail. Please check the %sError log%s for detailed error messages.',
+	'EMAIL_SENT'			=> 'This message has been sent.',
+	'EMAIL_SENT_QUEUE'		=> 'This message has been queued for sending.',
 
-	'LOG_SESSION'			=> 'Лог на сесията',
+	'LOG_SESSION'			=> 'Log mail session to critical log',
 
-	'SEND_IMMEDIATELY'		=> 'Изпрати незабавно',
-	'SEND_TO_GROUP'			=> 'Изпрати на група',
-	'SEND_TO_USERS'			=> 'Изпрати на потребители',
-	'SEND_TO_USERS_EXPLAIN'	=> 'Въведете всяко име на нов ред',
+	'SEND_IMMEDIATELY'		=> 'Send immediately',
+	'SEND_TO_GROUP'			=> 'Send to group',
+	'SEND_TO_USERS'			=> 'Send to users',
+	'SEND_TO_USERS_EXPLAIN'	=> 'Entering names here will override any group selected above. Enter each username on a new line.',
 	
-    'MAIL_BANNED'         => 'Прати и до баннати потребители',
-    'MAIL_BANNED_EXPLAIN'   => 'Когато изпращате масово съобщение, можете да изберете дали то да стигне и до баннатите потребилите във форума.',
-	'MAIL_HIGH_PRIORITY'	=> 'Висок',
-	'MAIL_LOW_PRIORITY'		=> 'Нисък',
-	'MAIL_NORMAL_PRIORITY'	=> 'Нормален',
-	'MAIL_PRIORITY'			=> 'Приоритет',
-	'MASS_MESSAGE'			=> 'Вашето съобщение',
-	'MASS_MESSAGE_EXPLAIN'	=> 'Можете да въвеждате само текст без BBCode или HTML.',
+	'MAIL_HIGH_PRIORITY'	=> 'High',
+	'MAIL_LOW_PRIORITY'		=> 'Low',
+	'MAIL_NORMAL_PRIORITY'	=> 'Normal',
+	'MAIL_PRIORITY'			=> 'Mail priority',
+	'MASS_MESSAGE'			=> 'Your message',
+	'MASS_MESSAGE_EXPLAIN'	=> 'Please note that you may enter only plain text. All markup will be removed before sending.',
 	
-	'NO_EMAIL_MESSAGE'		=> 'Трябва да въведете съобщение.',
-	'NO_EMAIL_SUBJECT'		=> 'Трябва да въведете заглавие на съобщението си.',
+	'NO_EMAIL_MESSAGE'		=> 'You must enter a message.',
+	'NO_EMAIL_SUBJECT'		=> 'You must specify a subject for your message.',
 ));
+
+?>

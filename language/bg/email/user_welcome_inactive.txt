@@ -1,21 +1,21 @@
-Subject: Добре дошли в "{SITENAME}"
+Subject: Welcome to "{SITENAME}"
 
 {WELCOME_MSG}
 
-Пазете това съобщение, то съдържа важна информация.
+Please keep this e-mail for your records. Your account information is as follows:
 
 ----------------------------
-Потребителско име: {USERNAME}
+Username: {USERNAME}
 
-Адрес на форума: {U_BOARD}
+Board URL: {U_BOARD}
 ----------------------------
 
-Акаунтът Ви е неактивен, за да го активирате натиснете тук
+Please visit the following link in order to activate your account:
 
 {U_ACTIVATE}
 
-Не забравяйте паролата си, тя е криптирана в базата данни и не може да бъде възстановявана.
+Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
-Благодарим Ви, че се регистрирахте.
+Thank you for registering.
 
 {EMAIL_SIG}

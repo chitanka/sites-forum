@@ -1,17 +1,17 @@
-Subject: Добре дошли в "{SITENAME}"
+Subject: Welcome to "{SITENAME}"
 
 {WELCOME_MSG}
 
-Пазете това съобщение, то съдържа важна информация.
+Please keep this e-mail for your records. Your account information is as follows:
 
 ----------------------------
-Потребителско име: {USERNAME}
+Username: {USERNAME}
 
-Адрес на форума: {U_BOARD}
+Board URL: {U_BOARD}
 ----------------------------
 
-Моля не забравяйте Вашата парола, защото тя е криптирана и ние не можем да Ви я пратим. Но в случай че я забравите, можете да поискате нова, която ще Ви бъде пратена по същия начин като тази.
+Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
-Благодарим Ви, че се регистрирахте!
+Thank you for registering.
 
 {EMAIL_SIG}

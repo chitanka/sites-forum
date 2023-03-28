@@ -1,8 +1,8 @@
-Subject: Препреактивиране на акаунт
+Subject: Reactivate your account
 
-Здравейте {USERNAME},
+Hello {USERNAME},
 
-Акаунта Ви "{SITENAME}" беше деактивиран, може би заради промените направени в профила. За да активирате акаунта натиснете на връзката долу
+Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
 
 {U_ACTIVATE}
 

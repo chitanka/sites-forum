@@ -1,10 +1,10 @@
-Subject: Одобрена тема - "{TOPIC_TITLE}"
+Subject: Topic approved - "{TOPIC_TITLE}"
 
-Здравейте {USERNAME},
+Hello {USERNAME},
 
-Вие получавате това съобщение защото темата Ви "{TOPIC_TITLE}" в "{SITENAME}" беше одобрена.
+You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
 
-Ако искате да я прегледате натиснете долу
+If you want to view the topic, click the following link:
 {U_VIEW_TOPIC}
 
 

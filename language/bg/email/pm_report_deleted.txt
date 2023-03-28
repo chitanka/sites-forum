@@ -1,8 +1,8 @@
-Subject: Изтрит доклад - "{PM_SUBJECT}"
+Subject: Report deleted - "{PM_SUBJECT}"
 
-Здравейте {USERNAME},
+Hello {USERNAME},
 
-Вие получавате това съобщение, защото сте докладвали съобщението "{PM_SUBJECT}" в "{SITENAME}". Въпросното съобщение вече е изтрито от администратор или модератор на форума.
+You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
 
 
 {EMAIL_SIG}

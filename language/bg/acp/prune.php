@@ -4,7 +4,7 @@
 * acp_prune [English]
 *
 * @package language
-* @version $Id: prune.php 8479 2008-03-29 00:22:48Z nacholibre $
+* @version $Id$
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -37,57 +37,55 @@ if (empty($lang) || !is_array($lang))
 
 // User pruning
 $lang = array_merge($lang, array(
-	'DEACTIVATE_DELETE'			=> 'Деактивирай или изтрий',
-	'CRITERIA'				=> 'Критерии',
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Тук можете да изтривата (или деактивирате) потребители от форума. Това може да стане по няколко начина - последна активност и други. Всеки един от тези критерии може да бъде комбинират. Веднъж изтрит потребител не може да бъде върнат.',
-	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Избери дали да се деактивира или изтрие потребителя. Изтритите потребители не могат да бъдат върнати!',
-	'DELETE_USERS'				=> 'Изтрий',
-	'DELETE_USER_POSTS'			=> 'Изтрий мненията на изчистените потребители',
-	'DELETE_USER_POSTS_EXPLAIN' => 'Изтрий мненията публикувани от изтритите потребители.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
 
-	'JOINED_EXPLAIN'			=> 'Въвеждай датата в <kbd>YYYY-MM-DD</kbd> формат.',
+	'DEACTIVATE_DELETE'			=> 'Deactivate or delete',
+	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Choose whether to deactivate users or delete them entirely. Please note that deleted users cannot be restored!',
+	'DELETE_USERS'				=> 'Delete',
+	'DELETE_USER_POSTS'			=> 'Delete pruned user posts',
+	'DELETE_USER_POSTS_EXPLAIN' => 'Removes posts made by deleted users, has no effect if users are deactivated.',
 
-	'LAST_ACTIVE_EXPLAIN'		=> 'Въведете дата <kbd>ГГГГ-ММ-ДД</kbd> формат. Въведете <kbd>0000-00-00</kbd> за да изтриете потребителите, които са регистрирали и не са влезли в акаунта си, <em>Преди</em> и <em>След</em> правата ще се игнорират.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format.',
 
-	'POSTS_ON_QUEUE'			=> 'Мнения изчакващи одобрение',
-	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Ограничаване действието до потребители от следната група.',
-	'PRUNE_USERS_GROUP_NONE'	=> 'Всички групи',
+	'LAST_ACTIVE_EXPLAIN'		=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. Enter <kbd>0000-00-00</kbd> to prune users who never logged in, <em>Before</em> and <em>After</em> conditions will be ignored.',
 
-	'PRUNE_USERS_LIST'				=> 'Потребители за премахване',
-	'PRUNE_USERS_LIST_DELETE'		=> 'По избрания критерии ще бъде изтрити акаунти.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'По избрания критерии ще бъдат деактивирани акаунти.',
+	'PRUNE_USERS_LIST'				=> 'Users to be pruned',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Въведи потребителските имена тук.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here, they will be used in preference to the criteria above. Founders cannot be pruned.',
 
-	'USER_DEACTIVATE_SUCCESS'	=> 'Избраните потребители бяха деактивирани успешно.',
-	'USER_DELETE_SUCCESS'		=> 'Избраните потребители бяха изтрити успешно.',
-	'USER_PRUNE_FAILURE'		=> 'Няма потребители отговарящи на критерия.',
+	'USER_DEACTIVATE_SUCCESS'	=> 'The selected users have been deactivated successfully.',
+	'USER_DELETE_SUCCESS'		=> 'The selected users have been deleted successfully.',
+	'USER_PRUNE_FAILURE'		=> 'No users fit the selected criteria.',
 
-	'WRONG_ACTIVE_JOINED_DATE'	=> 'Въведената дата е грешна, трябва да използвате <kbd>YYYY-MM-DD</kbd> формат.',
+	'WRONG_ACTIVE_JOINED_DATE'	=> 'The date entered is wrong, it is expected in <kbd>YYYY-MM-DD</kbd> format.',
 ));
 
 // Forum Pruning
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_FORUMS_EXPLAIN'	=> 'Това ще изтрие всяка тема която не е прегледана или не е писано в нея. Ако не въведеш номер (дни) всичките теми ще бъдат изтрити.',
+	'ACP_PRUNE_FORUMS_EXPLAIN'	=> 'This will delete any topic which has not been posted to or viewed within the number of days you select. If you do not enter a number then all topics will be deleted. By default, it will not remove topics in which polls are still running nor will it remove stickies and announcements.',
 
-	'FORUM_PRUNE'		=> 'Изчистване на форум',
+	'FORUM_PRUNE'		=> 'Forum prune',
 
-	'NO_PRUNE'			=> 'Няма изчистени форуми',
+	'NO_PRUNE'			=> 'No forums pruned.',
 
-	'SELECTED_FORUM'	=> 'Избран форум',
-	'SELECTED_FORUMS'	=> 'Избрани форуми',
+	'SELECTED_FORUM'	=> 'Selected forum',
+	'SELECTED_FORUMS'	=> 'Selected forums',
 
-	'POSTS_PRUNED'					=> 'Изчистени мнения',
-	'PRUNE_ANNOUNCEMENTS'			=> 'Изчисти Важните теми',
-	'PRUNE_FINISHED_POLLS'			=> 'Изчисти приключилите анкети',
-	'PRUNE_FINISHED_POLLS_EXPLAIN'	=> 'Изтрива теми в които анкетата е завършила.',
-	'PRUNE_FORUM_CONFIRM'			=> 'Сигурен ли сте, че искате да изчистите форумите с избраните настройки? Веднъж изтрити, не могат да се върнат отново.',
-	'PRUNE_NOT_POSTED'				=> 'Дни от когато не е писано',
-	'PRUNE_NOT_VIEWED'				=> 'Дни от когато не е преглеждано',
-	'PRUNE_OLD_POLLS'				=> 'Изчисти старите анкети',
-	'PRUNE_OLD_POLLS_EXPLAIN'		=> 'Изтрива теми с анкети в които не е гласувано отдавна.',
-	'PRUNE_STICKY'					=> 'Изчисти Закачените теми',
-	'PRUNE_SUCCESS'					=> 'Изчистването на форумите беше успешно',
+	'POSTS_PRUNED'					=> 'Posts pruned',
+	'PRUNE_ANNOUNCEMENTS'			=> 'Prune announcements',
+	'PRUNE_FINISHED_POLLS'			=> 'Prune closed polls',
+	'PRUNE_FINISHED_POLLS_EXPLAIN'	=> 'Removes topics with polls which have ended.',
+	'PRUNE_FORUM_CONFIRM'			=> 'Are you sure you want to prune the selected forums with the settings specified? Once removed, there is no way to recover the pruned posts and topics.',
+	'PRUNE_NOT_POSTED'				=> 'Days since last posted',
+	'PRUNE_NOT_VIEWED'				=> 'Days since last viewed',
+	'PRUNE_OLD_POLLS'				=> 'Prune old polls',
+	'PRUNE_OLD_POLLS_EXPLAIN'		=> 'Removes topics with polls not voted in for post age days.',
+	'PRUNE_STICKY'					=> 'Prune stickies',
+	'PRUNE_SUCCESS'					=> 'Pruning of forums was successful.',
 
-	'TOPICS_PRUNED'		=> 'Изчистени теми',
+	'TOPICS_PRUNED'		=> 'Topics pruned',
 ));
+
+?>

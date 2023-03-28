@@ -1,7 +1,7 @@
-Subject: Акаунта Ви беше деактивиран
+Subject: Your account has been deactivated
 
-Здравейте {USERNAME},
+Hello {USERNAME},
 
-Вашият акаунт "{SITENAME}" беше деактивиран. За да можете да влезете отново, администраторът на форума трябва да го активира. Ще получите известие когато това стане.
+Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
 
 {EMAIL_SIG}

@@ -1,9 +1,9 @@
 <?php
 /**
-* acp_permissions_phpbb (phpBB Permission Set) [Bulgarian]
+* acp_permissions_phpbb (phpBB Permission Set) [English]
 *
 * @package language
-* @version $Id: permissions_phpbb.php 8911 2008-09-23 13:03:33Z nacholibre $
+* @version $Id$
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 */
@@ -33,170 +33,209 @@ if (empty($lang) || !is_array($lang))
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
+/**
+*	MODDERS PLEASE NOTE
+*
+*	You are able to put your permission sets into a separate file too by
+*	prefixing the new file with permissions_ and putting it into the acp
+*	language folder.
+*
+*	An example of how the file could look like:
+*
+*	<code>
+*
+*	if (empty($lang) || !is_array($lang))
+*	{
+*		$lang = array();
+*	}
+*
+*	// Adding new category
+*	$lang['permission_cat']['bugs'] = 'Bugs';
+*
+*	// Adding new permission set
+*	$lang['permission_type']['bug_'] = 'Bug Permissions';
+*
+*	// Adding the permissions
+*	$lang = array_merge($lang, array(
+*		'acl_bug_view'		=> array('lang' => 'Can view bug reports', 'cat' => 'bugs'),
+*		'acl_bug_post'		=> array('lang' => 'Can post bugs', 'cat' => 'post'), // Using a phpBB category here
+*	));
+*
+*	</code>
+*/
+
+// Define categories and permission types
 $lang = array_merge($lang, array(
-	'ACL_CAT_ACTIONS'		=> 'Действия',
-	'ACL_CAT_CONTENT'		=> 'Съдържание',
-	'ACL_CAT_FORUMS'		=> 'Форуми',
-	'ACL_CAT_MISC'			=> 'Други',
-	'ACL_CAT_PERMISSIONS'	=> 'Права',
-	'ACL_CAT_PM'			=> 'Лични съобщения',
-	'ACL_CAT_POLLS'			=> 'Анкети',
-	'ACL_CAT_POST'			=> 'Мнения',
-	'ACL_CAT_POST_ACTIONS'	=> 'Мнения действия',
-	'ACL_CAT_POSTING'		=> 'Публикуване',
-	'ACL_CAT_PROFILE'		=> 'Профил',
-	'ACL_CAT_SETTINGS'		=> 'Настройки',
-	'ACL_CAT_TOPIC_ACTIONS'	=> 'Теми действия',
-	'ACL_CAT_USER_GROUP'	=> 'Потребители и Групи',
+	'permission_cat'	=> array(
+		'actions'		=> 'Actions',
+		'content'		=> 'Content',
+		'forums'		=> 'Forums',
+		'misc'			=> 'Misc',
+		'permissions'	=> 'Permissions',
+		'pm'			=> 'Private messages',
+		'polls'			=> 'Polls',
+		'post'			=> 'Post',
+		'post_actions'	=> 'Post actions',
+		'posting'		=> 'Posting',
+		'profile'		=> 'Profile',
+		'settings'		=> 'Settings',
+		'topic_actions'	=> 'Topic actions',
+		'user_group'	=> 'Users &amp; Groups',
+	),
+
+	// With defining 'global' here we are able to specify what is printed out if the permission is within the global scope.
+	'permission_type'	=> array(
+		'u_'			=> 'User permissions',
+		'a_'			=> 'Admin permissions',
+		'm_'			=> 'Moderator permissions',
+		'f_'			=> 'Forum permissions',
+		'global'		=> array(
+			'm_'			=> 'Global moderator permissions',
+		),
+	),
 ));
 
 // User Permissions
 $lang = array_merge($lang, array(
-	'ACL_U_VIEWPROFILE'	=>'Може да преглежда профили',
-	'ACL_U_CHGNAME'		=>'Може да променя потребителско име',
-	'ACL_U_CHGPASSWD'	=>'Може да променя паролата си',
-	'ACL_U_CHGEMAIL'	=>'Може да променя email адреса си',
-	'ACL_U_CHGAVATAR'	=>'Може да сменя аватара си',
-	'ACL_U_CHGGRP'		=>'Може да променя групата по подразбиране',
-	'ACL_U_CHGPROFILEINFO'	=> 'Може да променя профилна информация',
+	'acl_u_viewprofile'	=> array('lang' => 'Can view profiles, memberlist and online list', 'cat' => 'profile'),
+	'acl_u_chgname'		=> array('lang' => 'Can change username', 'cat' => 'profile'),
+	'acl_u_chgpasswd'	=> array('lang' => 'Can change password', 'cat' => 'profile'),
+	'acl_u_chgemail'	=> array('lang' => 'Can change e-mail address', 'cat' => 'profile'),
+	'acl_u_chgavatar'	=> array('lang' => 'Can change avatar', 'cat' => 'profile'),
+	'acl_u_chggrp'		=> array('lang' => 'Can change default usergroup', 'cat' => 'profile'),
 
-	'ACL_U_ATTACH'		=>'Може да прикачва файлове',
-	'ACL_U_DOWNLOAD'	=>'Може да сваля файлове',
-	'ACL_U_SAVEDRAFTS'	=>'Може да записва чернови',
-	'ACL_U_CHGCENSORS'	=>'Може да изключва цензурата на думи',
-	'ACL_U_SIG'			=>'Може да използва сигнатура',
-	'ACL_U_EMOJI'		=> 'Може да използва емоджи и богат текст в заглавието на теми',
+	'acl_u_attach'		=> array('lang' => 'Can attach files', 'cat' => 'post'),
+	'acl_u_download'	=> array('lang' => 'Can download files', 'cat' => 'post'),
+	'acl_u_savedrafts'	=> array('lang' => 'Can save drafts', 'cat' => 'post'),
+	'acl_u_chgcensors'	=> array('lang' => 'Can disable word censors', 'cat' => 'post'),
+	'acl_u_sig'			=> array('lang' => 'Can use signature', 'cat' => 'post'),
 
-	'ACL_U_SENDPM'		=>'Може да изпраща лични съобщения',
-	'ACL_U_MASSPM'		=>'Може да изпраща лични съобщения до много потребители или цяла група',
-	'ACL_U_MASSPM_GROUP'=> 'Може да изпраща съобщения до групи',
-	'ACL_U_READPM'		=>'Може да чете лични съобщения',
-	'ACL_U_PM_EDIT'		=>'Може да променя собствените си лични съобщения',
-	'ACL_U_PM_DELETE'	=>'Може да изтрива личните си съобщения',
-	'ACL_U_PM_FORWARD'	=>'Може да пренасочва личните си съобщения',
-	'ACL_U_PM_EMAILPM'	=>'Може да праща лични съобщения (email)',
-	'ACL_U_PM_PRINTPM'	=>'Може да принтира лични съобщения',
-	'ACL_U_PM_ATTACH'	=>'Може да прикачва файлове към лични съобщения',
-	'ACL_U_PM_DOWNLOAD'	=>'Може да сваля файлове от лични съобщения',
-	'ACL_U_PM_BBCODE'	=>'Може да използва BBCode в лични съобщения',
-	'ACL_U_PM_SMILIES'	=>'Може да използва усмивки в лични съобщения',
-	'ACL_U_PM_IMG'		=>'Може да използва [img] BBCode таг в лични съобщения',
-	'ACL_U_PM_FLASH'	=>'Може да използва  [flash] BBCode таг в лични съобщения',
+	'acl_u_sendpm'		=> array('lang' => 'Can send private messages', 'cat' => 'pm'),
+	'acl_u_masspm'		=> array('lang' => 'Can send messages to multiple users', 'cat' => 'pm'),
+	'acl_u_masspm_group'=> array('lang' => 'Can send messages to groups', 'cat' => 'pm'),
+	'acl_u_readpm'		=> array('lang' => 'Can read private messages', 'cat' => 'pm'),
+	'acl_u_pm_edit'		=> array('lang' => 'Can edit own private messages', 'cat' => 'pm'),
+	'acl_u_pm_delete'	=> array('lang' => 'Can remove private messages from own folder', 'cat' => 'pm'),
+	'acl_u_pm_forward'	=> array('lang' => 'Can forward private messages', 'cat' => 'pm'),
+	'acl_u_pm_emailpm'	=> array('lang' => 'Can e-mail private messages', 'cat' => 'pm'),
+	'acl_u_pm_printpm'	=> array('lang' => 'Can print private messages', 'cat' => 'pm'),
+	'acl_u_pm_attach'	=> array('lang' => 'Can attach files in private messages', 'cat' => 'pm'),
+	'acl_u_pm_download'	=> array('lang' => 'Can download files in private messages', 'cat' => 'pm'),
+	'acl_u_pm_bbcode'	=> array('lang' => 'Can use BBCode in private messages', 'cat' => 'pm'),
+	'acl_u_pm_smilies'	=> array('lang' => 'Can use smilies in private messages', 'cat' => 'pm'),
+	'acl_u_pm_img'		=> array('lang' => 'Can use [img] BBCode tag in private messages', 'cat' => 'pm'),
+	'acl_u_pm_flash'	=> array('lang' => 'Can use [flash] BBCode tag in private messages', 'cat' => 'pm'),
 
-	'ACL_U_SENDEMAIL'	=>'Може да изпраща email адреси',
-	'ACL_U_SENDIM'		=>'Може да изпраща моментални съобщения',
-	'ACL_U_IGNOREFLOOD'	=>'Може да игнорира flood лимита',
-	'ACL_U_HIDEONLINE'	=>'Може да се скрива от он-лайн статуса',
-	'ACL_U_VIEWONLINE'	=>'Може да вижда кой е на линия',
-	'ACL_U_SEARCH'		=>'Може да използва търсенето',
+	'acl_u_sendemail'	=> array('lang' => 'Can send e-mails', 'cat' => 'misc'),
+	'acl_u_sendim'		=> array('lang' => 'Can send instant messages', 'cat' => 'misc'),
+	'acl_u_ignoreflood'	=> array('lang' => 'Can ignore flood limit', 'cat' => 'misc'),
+	'acl_u_hideonline'	=> array('lang' => 'Can hide online status', 'cat' => 'misc'),
+	'acl_u_viewonline'	=> array('lang' => 'Can view hidden online users', 'cat' => 'misc'),
+	'acl_u_search'		=> array('lang' => 'Can search board', 'cat' => 'misc'),
 ));
 
 // Forum Permissions
 $lang = array_merge($lang, array(
-	'ACL_F_LIST'		=>'Може да преглежда форум',
-	'ACL_F_LIST_TOPICS' => 'Може да чете теми',
-	'ACL_F_READ'		=>'Може да чете форум',
-	'ACL_F_POST'		=>'Може да публикува нова тема',
-	'ACL_F_REPLY'		=>'Може да отговаря в теми',
-	'ACL_F_ICONS'		=>'Може да използва икони в мнение/тема',
-	'ACL_F_ANNOUNCE'	=>'Може да публикува Важни теми',
-	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Може да публикува глобални Важни теми',
-	'ACL_F_STICKY'		=>'Може да публикува Закачени теми',
+	'acl_f_list'		=> array('lang' => 'Can see forum', 'cat' => 'post'),
+	'acl_f_read'		=> array('lang' => 'Can read forum', 'cat' => 'post'),
+	'acl_f_post'		=> array('lang' => 'Can start new topics', 'cat' => 'post'),
+	'acl_f_reply'		=> array('lang' => 'Can reply to topics', 'cat' => 'post'),
+	'acl_f_icons'		=> array('lang' => 'Can use topic/post icons', 'cat' => 'post'),
+	'acl_f_announce'	=> array('lang' => 'Can post announcements', 'cat' => 'post'),
+	'acl_f_sticky'		=> array('lang' => 'Can post stickies', 'cat' => 'post'),
 
-	'ACL_F_POLL'		=>'Може да създава анкети',
-	'ACL_F_VOTE'		=>'Може да гласува в анкети',
-	'ACL_F_VOTECHG'		=>'Може да променя съществуващи анкети',
+	'acl_f_poll'		=> array('lang' => 'Can create polls', 'cat' => 'polls'),
+	'acl_f_vote'		=> array('lang' => 'Can vote in polls', 'cat' => 'polls'),
+	'acl_f_votechg'		=> array('lang' => 'Can change existing vote', 'cat' => 'polls'),
 
-	'ACL_F_ATTACH'		=>'Може да прикачва файлове',
-	'ACL_F_DOWNLOAD'	=>'Може да сваля файлове',
-	'ACL_F_SIGS'		=>'Може да използва подпис',
-	'ACL_F_BBCODE'		=>'Може да използва BBCode',
-	'ACL_F_SMILIES'		=>'Може да използва усмивки',
-	'ACL_F_IMG'			=>'Може да използва [img] BBCode таг',
-	'ACL_F_FLASH'		=>'Може да използва [flash] BBCode таг',
+	'acl_f_attach'		=> array('lang' => 'Can attach files', 'cat' => 'content'),
+	'acl_f_download'	=> array('lang' => 'Can download files', 'cat' => 'content'),
+	'acl_f_sigs'		=> array('lang' => 'Can use signatures', 'cat' => 'content'),
+	'acl_f_bbcode'		=> array('lang' => 'Can use BBCode', 'cat' => 'content'),
+	'acl_f_smilies'		=> array('lang' => 'Can use smilies', 'cat' => 'content'),
+	'acl_f_img'			=> array('lang' => 'Can use [img] BBCode tag', 'cat' => 'content'),
+	'acl_f_flash'		=> array('lang' => 'Can use [flash] BBCode tag', 'cat' => 'content'),
 
-	'ACL_F_EDIT'		=>'Може да променя собствените си мнения',
-	'ACL_F_DELETE'		=>'Може да изтрива собствените си мнения',
-	'ACL_F_SOFTDELETE'	=> 'Може да изтрива собствените си мнения (с опция за връщане)<br /><em>Модератори, които имат права за одобрение на мнения, могат да възстановяват такива изтрити мнения.</em>',
-	'ACL_F_USER_LOCK'	=>'Може да заключва собствените си мнения',
-	'ACL_F_BUMP'		=>'Може да избутва теми',
-	'ACL_F_REPORT'		=>'Може да сигнализира за мнения/теми',
-	'ACL_F_SUBSCRIBE'	=>'Може да се абонира',
-	'ACL_F_PRINT'		=>'Може да принтира теми',
-	'ACL_F_EMAIL'		=>'Може да изпраща теми (email)',
+	'acl_f_edit'		=> array('lang' => 'Can edit own posts', 'cat' => 'actions'),
+	'acl_f_delete'		=> array('lang' => 'Can delete own posts', 'cat' => 'actions'),
+	'acl_f_user_lock'	=> array('lang' => 'Can lock own topics', 'cat' => 'actions'),
+	'acl_f_bump'		=> array('lang' => 'Can bump topics', 'cat' => 'actions'),
+	'acl_f_report'		=> array('lang' => 'Can report posts', 'cat' => 'actions'),
+	'acl_f_subscribe'	=> array('lang' => 'Can subscribe forum', 'cat' => 'actions'),
+	'acl_f_print'		=> array('lang' => 'Can print topics', 'cat' => 'actions'),
+	'acl_f_email'		=> array('lang' => 'Can e-mail topics', 'cat' => 'actions'),
 
-	'ACL_F_SEARCH'		=>'Може да търси във форума',
-	'ACL_F_IGNOREFLOOD' =>'Може да игнорира flood лимита',
-	'ACL_F_POSTCOUNT'	=>'Брояч на мнения<br /><em>Настройките ще повлияят на новите мнения.</em>',
-	'ACL_F_NOAPPROVE'	=>'Може да пише без одобрение',
+	'acl_f_search'		=> array('lang' => 'Can search the forum', 'cat' => 'misc'),
+	'acl_f_ignoreflood' => array('lang' => 'Can ignore flood limit', 'cat' => 'misc'),
+	'acl_f_postcount'	=> array('lang' => 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>', 'cat' => 'misc'),
+	'acl_f_noapprove'	=> array('lang' => 'Can post without approval', 'cat' => 'misc'),
 ));
 
 // Moderator Permissions
 $lang = array_merge($lang, array(
-	'ACL_M_EDIT'		=>'Може да променя мнения',
-	'ACL_M_DELETE'		=>'Може да изтрива мнения',
-	'ACL_M_SOFTDELETE'	=> 'Може да изтрива мнения (с възможност за връщане)<br /><em>Модератори, които имат права за одобрение на мнения, могат да възстановяват такива изтрити мнения.</em>',
-	'ACL_M_APPROVE'		=>'Може да одобрява мнения',
-	'ACL_M_REPORT'		=>'Може да затваря и изтрива сигнали',
-	'ACL_M_CHGPOSTER'	=>'Може да променя автор на тема',
+	'acl_m_edit'		=> array('lang' => 'Can edit posts', 'cat' => 'post_actions'),
+	'acl_m_delete'		=> array('lang' => 'Can delete posts', 'cat' => 'post_actions'),
+	'acl_m_approve'		=> array('lang' => 'Can approve posts', 'cat' => 'post_actions'),
+	'acl_m_report'		=> array('lang' => 'Can close and delete reports', 'cat' => 'post_actions'),
+	'acl_m_chgposter'	=> array('lang' => 'Can change post author', 'cat' => 'post_actions'),
 
-	'ACL_M_MOVE'	=>'Може да премества теми',
-	'ACL_M_LOCK'	=>'Може да заключва теми',
-	'ACL_M_SPLIT'	=>'Може да разделя теми',
-	'ACL_M_MERGE'	=>'Може да съединява теми',
+	'acl_m_move'	=> array('lang' => 'Can move topics', 'cat' => 'topic_actions'),
+	'acl_m_lock'	=> array('lang' => 'Can lock topics', 'cat' => 'topic_actions'),
+	'acl_m_split'	=> array('lang' => 'Can split topics', 'cat' => 'topic_actions'),
+	'acl_m_merge'	=> array('lang' => 'Can merge topics', 'cat' => 'topic_actions'),
 
-	'ACL_M_INFO'	=>'Може да преглежда детайли на мнение',
-	'ACL_M_WARN'	=>'Може да слага предупреждения',
-	'ACL_M_PM_REPORT'	=> 'Може да затваря и изтрива доклади за лични съобщения<br /><em>Тази опция се настройва глобално, не е форум базирана..</em>', // This moderator setting is only global (and not local)
-	'ACL_M_BAN'		=>'Може да управлява бановете',
+	'acl_m_info'	=> array('lang' => 'Can view post details', 'cat' => 'misc'),
+	'acl_m_warn'	=> array('lang' => 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', 'cat' => 'misc'), // This moderator setting is only global (and not local)
+	'acl_m_ban'		=> array('lang' => 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', 'cat' => 'misc'), // This moderator setting is only global (and not local)
 ));
 
 // Admin Permissions
 $lang = array_merge($lang, array(
-	'ACL_A_BOARD'		=> 'Може да променя настройките на форума/проверява за нови версии',
-	'ACL_A_SERVER'		=> 'Може да променя сървър/комуникационните настройки',
-	'ACL_A_JABBER'		=> 'Може да променя Jabber настройките',
-	'ACL_A_PHPINFO'		=> 'Може да преглежда php настройките',
+	'acl_a_board'		=> array('lang' => 'Can alter board settings/check for updates', 'cat' => 'settings'),
+	'acl_a_server'		=> array('lang' => 'Can alter server/communication settings', 'cat' => 'settings'),
+	'acl_a_jabber'		=> array('lang' => 'Can alter Jabber settings', 'cat' => 'settings'),
+	'acl_a_phpinfo'		=> array('lang' => 'Can view php settings', 'cat' => 'settings'),
 
-	'ACL_A_FORUM'		=> 'Може да управлява форуми',
-	'ACL_A_FORUMADD'	=> 'Може да добавя форуми',
-	'ACL_A_FORUMDEL'	=> 'Може да изтрива форуми',
-	'ACL_A_PRUNE'		=> 'Може да изчиства форуми',
+	'acl_a_forum'		=> array('lang' => 'Can manage forums', 'cat' => 'forums'),
+	'acl_a_forumadd'	=> array('lang' => 'Can add new forums', 'cat' => 'forums'),
+	'acl_a_forumdel'	=> array('lang' => 'Can delete forums', 'cat' => 'forums'),
+	'acl_a_prune'		=> array('lang' => 'Can prune forums', 'cat' => 'forums'),
 
-	'ACL_A_ICONS'		=> 'Може да промяна иконите и усмивките в теми',
-	'ACL_A_WORDS'		=> 'Може да променя цензура',
-	'ACL_A_BBCODE'		=> 'Може да добавя нови BBCode тагове',
-	'ACL_A_ATTACH'		=> 'Може да промяна настройките за прикачените файлове',
+	'acl_a_icons'		=> array('lang' => 'Can alter topic/post icons and smilies', 'cat' => 'posting'),
+	'acl_a_words'		=> array('lang' => 'Can alter word censors', 'cat' => 'posting'),
+	'acl_a_bbcode'		=> array('lang' => 'Can define BBCode tags', 'cat' => 'posting'),
+	'acl_a_attach'		=> array('lang' => 'Can alter attachment related settings', 'cat' => 'posting'),
 
-	'ACL_A_USER'		=> 'Може да управлява потребители',
-	'ACL_A_USERDEL'		=> 'Може да изтрива/изчиства потребители',
-	'ACL_A_GROUP'		=> 'Може да управлява групи',
-	'ACL_A_GROUPADD'	=> 'Може да създава групи',
-	'ACL_A_GROUPDEL'	=> 'Може да изтрива групи',
-	'ACL_A_RANKS'		=> 'Може да управлява рангове',
-	'ACL_A_PROFILE'		=> 'Може да добавя нови полета',
-	'ACL_A_NAMES'		=> 'Може да управлява забранените имена',
-	'ACL_A_BAN'			=> 'Може да контролира бановете',
+	'acl_a_user'		=> array('lang' => 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>', 'cat' => 'user_group'),
+	'acl_a_userdel'		=> array('lang' => 'Can delete/prune users', 'cat' => 'user_group'),
+	'acl_a_group'		=> array('lang' => 'Can manage groups', 'cat' => 'user_group'),
+	'acl_a_groupadd'	=> array('lang' => 'Can add new groups', 'cat' => 'user_group'),
+	'acl_a_groupdel'	=> array('lang' => 'Can delete groups', 'cat' => 'user_group'),
+	'acl_a_ranks'		=> array('lang' => 'Can manage ranks', 'cat' => 'user_group'),
+	'acl_a_profile'		=> array('lang' => 'Can manage custom profile fields', 'cat' => 'user_group'),
+	'acl_a_names'		=> array('lang' => 'Can manage disallowed names', 'cat' => 'user_group'),
+	'acl_a_ban'			=> array('lang' => 'Can manage bans', 'cat' => 'user_group'),
 
-	'ACL_A_VIEWAUTH'	=> 'Може да преглежда правата',
-	'ACL_A_AUTHGROUPS'	=> 'Може да променя правата за индивидуални групи',
-	'ACL_A_AUTHUSERS'	=> 'Може да променя правата за индивидуални потребители',
-	'ACL_A_FAUTH'		=> 'Може да променя форум клас правата',
-	'ACL_A_MAUTH'		=> 'Може да променя модератор клас правата ',
-	'ACL_A_AAUTH'		=> 'Може да променя админ клас правата',
-	'ACL_A_UAUTH'		=> 'Може да променя потребител клас правата',
-	'ACL_A_ROLES'		=> 'Може да управлява ролите',
-	'ACL_A_SWITCHPERM'	=> 'Може да използва други права',
+	'acl_a_viewauth'	=> array('lang' => 'Can view permission masks', 'cat' => 'permissions'),
+	'acl_a_authgroups'	=> array('lang' => 'Can alter permissions for individual groups', 'cat' => 'permissions'),
+	'acl_a_authusers'	=> array('lang' => 'Can alter permissions for individual users', 'cat' => 'permissions'),
+	'acl_a_fauth'		=> array('lang' => 'Can alter forum permission class', 'cat' => 'permissions'),
+	'acl_a_mauth'		=> array('lang' => 'Can alter moderator permission class', 'cat' => 'permissions'),
+	'acl_a_aauth'		=> array('lang' => 'Can alter admin permission class', 'cat' => 'permissions'),
+	'acl_a_uauth'		=> array('lang' => 'Can alter user permission class', 'cat' => 'permissions'),
+	'acl_a_roles'		=> array('lang' => 'Can manage roles', 'cat' => 'permissions'),
+	'acl_a_switchperm'	=> array('lang' => 'Can use others permissions', 'cat' => 'permissions'),
 
-	'ACL_A_STYLES'		=> 'Може да управлява стиловете',
-	'ACL_A_EXTENSIONS'	=> 'Може да управлява разширения',
-	'ACL_A_VIEWLOGS'	=> 'Може да преглежда логовете',
-	'ACL_A_CLEARLOGS'	=> 'Може да изчиства логовете',
-	'ACL_A_MODULES'		=> 'Може да управлява модулите',
-	'ACL_A_LANGUAGE'	=> 'Може да управлява езиковите пакети',
-	'ACL_A_EMAIL'		=> 'Може да изпраща масов email',
-	'ACL_A_BOTS'		=> 'Може да управлява ботовете',
-	'ACL_A_REASONS'		=> 'Може да управлява причините за сигнал',
-	'ACL_A_BACKUP'		=> 'Може да бек-ъпва/възстановява база данни',
-	'ACL_A_SEARCH'		=> 'Може да променя настройките за търсене',
+	'acl_a_styles'		=> array('lang' => 'Can manage styles', 'cat' => 'misc'),
+	'acl_a_viewlogs'	=> array('lang' => 'Can view logs', 'cat' => 'misc'),
+	'acl_a_clearlogs'	=> array('lang' => 'Can clear logs', 'cat' => 'misc'),
+	'acl_a_modules'		=> array('lang' => 'Can manage modules', 'cat' => 'misc'),
+	'acl_a_language'	=> array('lang' => 'Can manage language packs', 'cat' => 'misc'),
+	'acl_a_email'		=> array('lang' => 'Can send mass e-mail', 'cat' => 'misc'),
+	'acl_a_bots'		=> array('lang' => 'Can manage bots', 'cat' => 'misc'),
+	'acl_a_reasons'		=> array('lang' => 'Can manage report/denial reasons', 'cat' => 'misc'),
+	'acl_a_backup'		=> array('lang' => 'Can backup/restore database', 'cat' => 'misc'),
+	'acl_a_search'		=> array('lang' => 'Can manage search backends and settings', 'cat' => 'misc'),
 ));
+
+?>

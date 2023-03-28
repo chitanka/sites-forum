@@ -1,10 +1,10 @@
-Subject: Отхвърлена тема - "{TOPIC_TITLE}"
+Subject: Topic disapproved - "{TOPIC_TITLE}"
 
-Здравейте {USERNAME},
+Hello {USERNAME},
 
-Вие получавате това известие, защото темата Ви "{TOPIC_TITLE}" в "{SITENAME}" беше отхвърлена от администратор или модератор на форума.
+You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
 
-Причините са показани долу
+The following reason was given for the disapproval:
 
 {REASON}
 

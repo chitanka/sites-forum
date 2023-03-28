@@ -1,8 +1,8 @@
-Subject: Затворен доклад - "{POST_SUBJECT}"
+Subject: Report closed - "{POST_SUBJECT}"
 
-Здравейте {USERNAME},
+Hello {USERNAME},
 
-Вие получавате това съобщение защото сигнала Ви за мнението "{POST_SUBJECT}" в темата "{TOPIC_TITLE}" в сайта "{SITENAME}" беше прегледано от модератор или администратор. Ако искате да получите повече информация се свържете с {CLOSER_NAME} чрез лично съобщение.
+You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
 
 
 {EMAIL_SIG}
