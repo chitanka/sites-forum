@@ -1,13 +1,15 @@
 <?php
 /**
 *
-* posting [Bulgarian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id$
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+* [Bulgarian]
 */
 
 /**
@@ -42,25 +44,26 @@ $lang = array_merge($lang, array(
 	'ADD_POLL'					=> 'Създаване на анкета',
 	'ADD_POLL_EXPLAIN'			=> 'Оставете полетата празни, ако не желаете да създадете анкета.',
 	'ALREADY_DELETED'			=> 'За съжаление това съобщение е било изтрито.',
+	'ATTACH_COMMENT_NO_EMOJIS'	=> 'The attachment comment contains forbidden characters (Emoji).',
 	'ATTACH_DISK_FULL'			=> 'Няма достатъчно място за съхраняване на прикачения файл.',
 	'ATTACH_QUOTA_REACHED'		=> 'Тази форумна система не разползга с повече място за прикачени файлове.',
 	'ATTACH_SIG'				=> 'Добавяне на подпис (може да се променя в настройките)',
 
 	'BBCODE_A_HELP'				=> 'Прикачен файл сред текста: [attachment=]filename.ext[/attachment]',
-	'BBCODE_B_HELP'				=> 'Получерен текст: [b]текст[/b]',
+	'BBCODE_B_HELP'				=> 'Получер: [b]текст[/b]',
 	'BBCODE_C_HELP'				=> 'Показване на код: [code]код[/code]',
 	'BBCODE_D_HELP'				=> 'Флаш: [flash=ширина,височина]http://url[/flash]',
 	'BBCODE_F_HELP'				=> 'Размер на шрифта: [size=85]малък текст[/size]',
 	'BBCODE_IS_OFF'				=> '%sBBCode%s е <em>изключен</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s е <em>включен</em>',
-	'BBCODE_I_HELP'				=> 'Курсивен текст: [i]текст[/i]',
+	'BBCODE_I_HELP'				=> 'Курсив: [i]текст[/i]',
 	'BBCODE_L_HELP'				=> 'Списък: [list][*]текст[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'Списъчен елемент: [*]текст',
 	'BBCODE_O_HELP'				=> 'Подреден списък: [list=1][*]Първа точка[/list] или [list=а][*]Точка а[/list]',
 	'BBCODE_P_HELP'				=> 'Изображение: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Цитат: [quote]текст[/quote]',
 	'BBCODE_S_HELP'				=> 'Цвят на шрифта: [color=red]текст[/color]  Съвет: може да ползвате и код за цвета, напр. color=#FF0000',
-	'BBCODE_U_HELP'				=> 'Подчертан текст: [u]текст[/u]',
+	'BBCODE_U_HELP'				=> 'Подчертан: [u]текст[/u]',
 	'BBCODE_W_HELP'				=> 'Адрес: [url]http://url[/url] или [url=http://url]текст[/url]',
 	'BBCODE_Y_HELP'				=> 'Списък: Добавяне на елемент към списъка',
 	'BUMP_ERROR'				=> 'Не може да вдигате темата толкова скоро след последното мнение.',
@@ -71,6 +74,14 @@ $lang = array_merge($lang, array(
 	'CANNOT_POST_ANNOUNCE'		=> 'Не може да пускате важни съобщения.',
 	'CANNOT_POST_STICKY'		=> 'Не може да пускате важни теми.',
 	'CHANGE_TOPIC_TO'			=> 'Смяна на типа на темата на',
+	'CHARS_POST_CONTAINS'		=> array(
+		1	=> 'Your message contains %1$d character.',
+		2	=> 'Your message contains %1$d characters.',
+	),
+	'CHARS_SIG_CONTAINS'		=> array(
+		1	=> 'Your signature contains %1$d character.',
+		2	=> 'Your signature contains %1$d characters.',
+	),
 	'CLOSE_TAGS'				=> 'Затваряне на елементите',
 	'CURRENT_TOPIC'				=> 'Текуща тема',
 
@@ -78,8 +89,26 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Изтриване на съобщението',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Наистина ли искате да изтриете съобщението?',
 	'DELETE_OWN_POSTS'			=> 'Може да изтривате само собствените си мнения.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Наистина ли желаете да изтриете мнението?',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> array(
+		1	=> 'Permanently delete this post so it can not be recovered',
+		2	=> 'Permanently delete %1$d posts so they can not be recovered',
+	),
+	'DELETE_POSTS_CONFIRM'		=> 'Are you sure you want to delete these posts?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deletion',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
 	'DELETE_POST_WARN'			=> 'Мнението не може да бъде възстановено след изтриване',
+	'DELETE_TOPIC_CONFIRM'		=> 'Are you sure you want to delete this topic?',
+	'DELETE_TOPIC_PERMANENTLY'	=> array(
+		1	=> 'Permanently delete this topic so it can not be recovered',
+		2	=> 'Permanently delete %1$d topics so they can not be recovered',
+	),
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Are you sure you want to delete these topics?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Изключване на BBCode',
 	'DISABLE_MAGIC_URL'			=> 'Без автоматично разпознаване на адреси (URL)',
 	'DISABLE_SMILIES'			=> 'Изключване на усмивките',
@@ -118,17 +147,35 @@ $lang = array_merge($lang, array(
 	'LOAD_DRAFT_EXPLAIN'		=> 'Here you are able to select the draft you want to continue writing. Your current post will be cancelled, all current post contents will be deleted. View, edit and delete drafts within your User Control Panel.',
 	'LOGIN_EXPLAIN_BUMP'		=> 'You need to login in order to bump topics within this forum.',
 	'LOGIN_EXPLAIN_DELETE'		=> 'You need to login in order to delete posts within this forum.',
+	'LOGIN_EXPLAIN_SOFT_DELETE'	=> 'You need to login in order to soft-delete posts within this forum.',
 	'LOGIN_EXPLAIN_POST'		=> 'You need to login in order to post within this forum.',
 	'LOGIN_EXPLAIN_QUOTE'		=> 'You need to login in order to quote posts within this forum.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'You need to login in order to reply to topics within this forum.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Your flash files may only be up to %1$d pixels high.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Your flash files may only be up to %1$d pixels wide.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Your images may only be up to %1$d pixels high.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Your images may only be up to %1$d pixels wide.',
+	'MAX_ATTACHMENT_FILESIZE'	=> 'Maximum filesize per attachment: %s.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
+	'MAX_FLASH_HEIGHT_EXCEEDED'	=> array(
+		1	=> 'Your flash files may only be up to %d pixel high.',
+		2	=> 'Your flash files may only be up to %d pixels high.',
+	),
+	'MAX_FLASH_WIDTH_EXCEEDED'	=> array(
+		1	=> 'Your flash files may only be up to %d pixel wide.',
+		2	=> 'Your flash files may only be up to %d pixels wide.',
+	),
+	'MAX_IMG_HEIGHT_EXCEEDED'	=> array(
+		1	=> 'Your images may only be up to %1$d pixel high.',
+		2	=> 'Your images may only be up to %1$d pixels high.',
+	),
+	'MAX_IMG_WIDTH_EXCEEDED'	=> array(
+		1	=> 'Your images may only be up to %d pixel wide.',
+		2	=> 'Your images may only be up to %d pixels wide.',
+	),
 
-	'MESSAGE_BODY_EXPLAIN'		=> 'Въведете съобщението си. (Не може да съдържа повече от <strong>%d</strong> знака.)',
+	'MESSAGE_BODY_EXPLAIN'		=> array(
+		0	=> '', // zero means no limit, so we don't view a message here.
+		1	=> 'Въведете съобщението си. (Не може да съдържа повече от <strong>един</strong> знак.)',
+		2	=> 'Въведете съобщението си. (Не може да съдържа повече от <strong>%d</strong> знака.)',
+	),
 	'MESSAGE_DELETED'			=> 'Съобщението беше изтрито.',
 	'MORE_SMILIES'				=> 'Още усмивки',
 
@@ -139,8 +186,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> 'Трябва да въведете заглавие на анкетата.',
 	'NO_POST'					=> 'Указаното мнение не съществува.',
 	'NO_POST_MODE'				=> 'Не е посочен вид на мнението.',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'The uploaded file was only partially uploaded.',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> 'The attachment’s file size is too large.<br />Could not determine the maximum size defined by PHP in php.ini.',
 	'PHP_SIZE_OVERRUN'			=> 'The attachment’s file size is too large, the maximum upload size is %1$d %2$s.<br />Please note this is set in php.ini and cannot be overridden.',
 	'PLACE_INLINE'				=> 'Поставяне сред текста',
@@ -150,8 +199,14 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Отговори на потребител',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Това е броят отговори, които всеки потребител може да избере при гласуване.',
 	'POLL_OPTIONS'				=> 'Отговори на анкетата',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Запишете всеки отговор на нов ред. Може да въведете до <strong>%d</strong> отговора.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Запишете всеки отговор на нов ред. Може да въведете до <strong>%d</strong> options. Ако премахнете или добавите отговори, досегашните гласове ще бъдат изтрити.',
+	'POLL_OPTIONS_EXPLAIN'		=> array(
+		1	=> 'Запишете всеки отговор на нов ред. Може да въведете само <strong>един</strong> отговор.',
+		2	=> 'Запишете всеки отговор на нов ред. Може да въведете до <strong>%d</strong> отговора.',
+	),
+	'POLL_OPTIONS_EDIT_EXPLAIN'		=> array(
+		1	=> 'Запишете всеки отговор на нов ред. Може да въведете само <strong>един</strong> отговор. Ако премахнете или добавите отговори, досегашните гласове ще бъдат изтрити.',
+		2	=> 'Запишете всеки отговор на нов ред. Може да въведете до <strong>%d</strong> отговора. Ако премахнете или добавите отговори, досегашните гласове ще бъдат изтрити.',
+	),
 	'POLL_QUESTION'				=> 'Въпрос',
 	'POLL_TITLE_TOO_LONG'		=> 'Заглавието на анкетата не трябва да съдържа повече от 100 знака.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Анкетата е прекалено голяма. Опитайте се да я съкратите.',
@@ -176,8 +231,13 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Пускане на темата като',
 	'PROGRESS_BAR'				=> 'Progress bar',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'You may embed only %1$d quotes within each other.',
+	'QUOTE_DEPTH_EXCEEDED'		=> array(
+		1	=> 'You may embed only %d quote within each other.',
+		2	=> 'You may embed only %d quotes within each other.',
+	),
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Запис като чернова',
 	'SAVE_DATE'					=> 'Записано на',
 	'SAVE_DRAFT'				=> 'Запис като чернова',
@@ -191,12 +251,16 @@ $lang = array_merge($lang, array(
 	'STYLES_TIP'				=> 'Съвет: Стиловете могат да се прилагат и върху маркиран текст.',
 
 	'TOO_FEW_CHARS'				=> 'Съобщението ви е прекалено късо.',
-	'TOO_FEW_CHARS_LIMIT'		=> 'Съобщението ви съдържа %1$d знака. Трябва да въведете поне %2$d.',
+	'TOO_FEW_CHARS_LIMIT'		=> array(
+		1	=> 'Трябва да въведете поне един знак.',
+		2	=> 'Трябва да въведете поне %1$d знака.',
+	),
 	'TOO_FEW_POLL_OPTIONS'		=> 'Посочете поне два възможни отговора.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Cannot add another attachment, %d is the maximum.',
 	'TOO_MANY_CHARS'			=> 'Съобщението ви е прекалено дълго.',
-	'TOO_MANY_CHARS_POST'		=> 'Съобщението ви съдържа %1$d знака, а са разрешени само %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'Подписът ви съдържа %1$d знака, а са разрешени само %2$d.',
+	'TOO_MANY_CHARS_LIMIT'		=> array(
+		2	=> 'Разрешени са само %1$d знака.',
+	),
 	'TOO_MANY_POLL_OPTIONS'		=> 'Посочили сте прекалено много възможни отговори.',
 	'TOO_MANY_SMILIES'			=> 'Съобщението ви съдържа прекалено много усмивки. Разрешени са само %d.',
 	'TOO_MANY_URLS'				=> 'Съобщението ви съдържа прекалено много връзки. Разрешени са само %d.',
@@ -204,7 +268,8 @@ $lang = array_merge($lang, array(
 	'TOPIC_BUMPED'				=> 'Темата беше вдигната.',
 
 	'UNAUTHORISED_BBCODE'		=> 'Не може да ползвате определени кодове: %s.',
-	'UNGLOBALISE_EXPLAIN'		=> 'To switch this topic back from being global to a normal topic, you need to select the forum you wish this topic to be displayed.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Обновяване на коментара',
 	'URL_INVALID'				=> 'Въведеният адрес е неправилен.',
 	'URL_NOT_FOUND'				=> 'Посоченият файл не можа да бъде намерен.',
@@ -220,8 +285,5 @@ $lang = array_merge($lang, array(
 	'VIEW_PRIVATE_MESSAGE'		=> '%sПреглед на изпратеното лично съобщение%s',
 
 	'WRONG_FILESIZE'			=> 'Файлът е по-голям от разрешения размер от %1d %2s.',
-	'WRONG_SIZE'				=> 'The image must be at least %1$d pixels wide, %2$d pixels high and at most %3$d pixels wide and %4$d pixels high. The submitted image is %5$d pixels wide and %6$d pixels high.',
-
-	// borislav
-	'SEO_URL' => 'Красив адрес',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 ));

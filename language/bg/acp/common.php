@@ -1,13 +1,15 @@
 <?php
 /**
 *
-* acp_common [Bulgarian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id$
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+* [Bulgarian]
 */
 
 /**
@@ -48,9 +50,9 @@ $lang = array_merge($lang, array(
 
 	'ACP_BACKUP'				=> 'Backup',
 	'ACP_BAN'					=> 'Banning',
-	'ACP_BAN_EMAILS'			=> 'Ban e-mails',
+	'ACP_BAN_EMAILS'			=> 'Ban emails',
 	'ACP_BAN_IPS'				=> 'Ban IPs',
-	'ACP_BAN_USERNAMES'			=> 'Ban usernames',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodes',
 	'ACP_BOARD_CONFIGURATION'	=> 'Board configuration',
 	'ACP_BOARD_FEATURES'		=> 'Board features',
@@ -60,19 +62,22 @@ $lang = array_merge($lang, array(
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
 
+	'ACP_CAT_CUSTOMISE'			=> 'Донапасване',
 	'ACP_CAT_DATABASE'			=> 'База от данни',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
+	'ACP_CAT_DOT_MODS'			=> 'Разширения',
 	'ACP_CAT_FORUMS'			=> 'Форуми',
 	'ACP_CAT_GENERAL'			=> 'Основни',
-	'ACP_CAT_MAINTENANCE'		=> 'Maintenance',
+	'ACP_CAT_MAINTENANCE'		=> 'Поддръжка',
 	'ACP_CAT_PERMISSIONS'		=> 'Права',
 	'ACP_CAT_POSTING'			=> 'Posting',
-	'ACP_CAT_STYLES'			=> 'Styles',
+	'ACP_CAT_STYLES'			=> 'Стилове',
 	'ACP_CAT_SYSTEM'			=> 'Система',
 	'ACP_CAT_USERGROUP'			=> 'Потребители и групи',
 	'ACP_CAT_USERS'				=> 'Потребители',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Client communication',
 	'ACP_COOKIE_SETTINGS'		=> 'Настройки за бисквитките',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Error log',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Custom profile fields',
 
@@ -82,6 +87,8 @@ $lang = array_merge($lang, array(
 
 	'ACP_EMAIL_SETTINGS'		=> 'Настройки за е-пощата',
 	'ACP_EXTENSION_GROUPS'		=> 'Manage extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
 
 	'ACP_FORUM_BASED_PERMISSIONS'	=> 'Forum based permissions',
 	'ACP_FORUM_LOGS'				=> 'Форумни дневници',
@@ -100,10 +107,12 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Управление на групите',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Управление на групите',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Групови права',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
+
+	'ACP_HELP_PHPBB'			=> 'Help support phpBB',
 
 	'ACP_ICONS'					=> 'Topic icons',
 	'ACP_ICONS_SMILIES'			=> 'Topic icons/smilies',
-	'ACP_IMAGESETS'				=> 'Imagesets',
 	'ACP_INACTIVE_USERS'		=> 'Неактивни потребители',
 	'ACP_INDEX'					=> 'ACP index',
 
@@ -115,6 +124,10 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Logging',
 
 	'ACP_MAIN'					=> 'ACP index',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Manage attachments',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
 	'ACP_MANAGE_EXTENSIONS'		=> 'Управление на разширенията',
 	'ACP_MANAGE_FORUMS'			=> 'Управление на форумите',
 	'ACP_MANAGE_RANKS'			=> 'Управление на ранговете',
@@ -157,14 +170,14 @@ $lang = array_merge($lang, array(
 	'ACP_SEARCH_SETTINGS'		=> 'Настройки за търсенето',
 
 	'ACP_SECURITY_SETTINGS'		=> 'Security settings',
-	'ACP_SEND_STATISTICS'		=> 'Send statistical information',
 	'ACP_SERVER_CONFIGURATION'	=> 'Server configuration',
 	'ACP_SERVER_SETTINGS'		=> 'Server settings',
 	'ACP_SIGNATURE_SETTINGS'	=> 'Signature settings',
 	'ACP_SMILIES'				=> 'Усмивки',
-	'ACP_STYLE_COMPONENTS'		=> 'Style components',
 	'ACP_STYLE_MANAGEMENT'		=> 'Style management',
 	'ACP_STYLES'				=> 'Styles',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Запис на промените',
 
@@ -203,21 +216,30 @@ $lang = array_merge($lang, array(
 
 	'ACTION'				=> 'Действие',
 	'ACTIONS'				=> 'Действия',
-	'ACTIVATE'				=> 'Activate',
+	'ACTIVATE'				=> 'Включване',
 	'ADD'					=> 'Добавяне',
 	'ADMIN'					=> 'Администрация',
-	'ADMIN_INDEX'			=> 'Admin index',
-	'ADMIN_PANEL'			=> 'Контролно табло на администратора',
+	'ADMIN_INDEX'			=> 'Основни настройки',
+	'ADMIN_PANEL'			=> 'Административен панел',
 
-	'ADM_LOGOUT'			=> 'Изход от КТА',
+	'ADM_LOGOUT'			=> 'Изход от админ. панел',
 	'ADM_LOGGED_OUT'		=> 'Successfully logged out from Administration Control Panel',
 
 	'BACK'					=> 'Обратно',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb.com/support">phpBB.com</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Web-safe colour swatch',
 	'CONFIG_UPDATED'		=> 'Configuration updated successfully.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task “%s”.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
+	'CSV_INVALID'			=> 'The provided comma-separated setting “%1$s” is invalid. The values should be delimited by comma only, it should not contain any leading or trailing delimiters.',
+	'CURRENT_VERSION'		=> 'Current version',
 
-	'DEACTIVATE'				=> 'Deactivate',
+	'DEACTIVATE'				=> 'Изключване',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'The entered path “%s” does not exist.',
 	'DIRECTORY_NOT_DIR'			=> 'The entered path “%s” is not a directory.',
 	'DIRECTORY_NOT_WRITABLE'	=> 'The entered path “%s” is not writable.',
@@ -226,6 +248,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Сваляне като',
 	'DOWNLOAD_STORE'			=> 'Download or store file',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'You may directly download the file or save it in your <samp>store/</samp> folder.',
+	'DOWNLOADS'					=> 'Downloads',
 
 	'EDIT'					=> 'Промяна',
 	'ENABLE'				=> 'Включване',
@@ -240,6 +263,9 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'Айпи адрес',
 	'IP_HOSTNAME'			=> 'Айпи адреси или домейни',
 
+	'LATEST_VERSION'		=> 'Latest version',
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Влезли сте като:',
 	'LOGIN_ADMIN'			=> 'Нужно е да сте регистриран потребител, за да можете да администрирате форумната система.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Нужно е да удостоверите самоличността си още веднъж, за да можете да администрирате форумната система.',
@@ -255,8 +281,9 @@ $lang = array_merge($lang, array(
 	'MOVE_UP'				=> 'Нагоре',
 
 	'NOTIFY'				=> 'Notification',
-	'NO_ADMIN'				=> 'You are not authorised to administrate this board.',
-	'NO_EMAILS_DEFINED'		=> 'No valid e-mail addresses found.',
+	'NO_ADMIN'				=> 'You are not authorised to administer this board.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'You need to enter your password to access the Administration Control Panel.',
 
 	'OFF'					=> 'изключено',
@@ -269,10 +296,12 @@ $lang = array_merge($lang, array(
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'You currently have the permissions from %1$s. You are able to browse the board with this user’s permissions, but not access the administration control panel since admin permissions were not transferred. You can <a href="%2$s"><strong>revert to your permission set</strong></a> at any time.',
 	'PROCEED_TO_ACP'					=> '%sProceed to the ACP%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'REMIND'							=> 'Remind',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Ново синхронизиране',
-	'RETURN_TO'							=> 'Обратно към…',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Избиране на анонимния потребител',
 	'SELECT_OPTION'			=> 'Избор',
 
@@ -283,9 +312,19 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Показване на всички операции',
 
-	'UCP'					=> 'Контролно табло на потребителя',
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
+
+	'UCP'					=> 'Потребителски панел',
+	'URL_INVALID'			=> 'The provided URL for the setting “%1$s” is invalid.',
+	'URL_SCHEME_INVALID'	=> 'The provided scheme “%2$s” in comma-separated setting “%1$s” is invalid. Scheme should start with a latin character followed by alphanumeric characters, hyphens or dots.',
 	'USERNAMES_EXPLAIN'		=> 'Запишете всяко име на отделен ред.',
-	'USER_CONTROL_PANEL'	=> 'Контролно табло на потребителя',
+	'USER_CONTROL_PANEL'	=> 'Потребителски панел',
+
+	'UPDATE_NEEDED'			=> 'The board is not up to date.',
+	'UPDATE_NOT_NEEDED'		=> 'The board is up to date.',
+	'UPDATES_AVAILABLE'		=> 'Updates available:',
 
 	'WARNING'				=> 'Предупреждение',
 ));
@@ -327,21 +366,24 @@ $lang = array_merge($lang, array(
 	'DATABASE_SERVER_INFO'	=> 'Database server',
 	'DATABASE_SIZE'			=> 'Database size',
 
-	// Enviroment configuration checks, mbstring related
+	// Environment configuration checks, mbstring related
 	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
 	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
 	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
 	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
 	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
-	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be left empty. You can check the current value on the <samp>PHP information</samp> page.',
 	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
-	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be left empty. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_DEFAULT_CHARSET'							=> 'Default charset is improperly configured',
+	'ERROR_DEFAULT_CHARSET_EXPLAIN'					=> '<var>default_charset</var> must be set to <samp>UTF-8</samp>. You can check the current value on the <samp>PHP information</samp> page.',
 
 	'FILES_PER_DAY'		=> 'Attachments per day',
 	'FORUM_STATS'		=> 'Board statistics',
 
 	'GZIP_COMPRESSION'	=> 'GZip compression',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for “%1$s” in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Not available',
 	'NUMBER_FILES'		=> 'Number of attachments',
 	'NUMBER_POSTS'		=> 'Number of posts',
@@ -349,46 +391,64 @@ $lang = array_merge($lang, array(
 	'NUMBER_USERS'		=> 'Number of users',
 	'NUMBER_ORPHAN'		=> 'Orphan attachments',
 
-	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
+	'PHP_VERSION'		=> 'PHP version',
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server (%1$s) will no longer be supported by future versions of phpBB. The minimum required version will be PHP %2$s. %3$sDetails%4$s',
 
 	'POSTS_PER_DAY'		=> 'Posts per day',
 
 	'PURGE_CACHE'			=> 'Purge the cache',
 	'PURGE_CACHE_CONFIRM'	=> 'Are you sure you wish to purge the cache?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Purge all cache related items, this includes any cached template files or queries.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Purge all sessions',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Are you sure you wish to purge all sessions? This will log out all users.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Purge all sessions. This will log out all users by truncating the session table.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Reset board’s start date',
 	'RESET_DATE_CONFIRM'			=> 'Are you sure you wish to reset the board’s start date?',
+	'RESET_DATE_SUCCESS'				=> 'Board’s start date reset',
 	'RESET_ONLINE'					=> 'Reset most users ever online',
 	'RESET_ONLINE_CONFIRM'			=> 'Are you sure you wish to reset the most users ever online counter?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Resynchronise post counts',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Only existing posts will be taken into consideration. Pruned posts will not be counted.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Are you sure you wish to resynchronise post counts?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Resynchronise dotted topics',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Are you sure you wish to resynchronise dotted topics?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'First unmarks all topics and then correctly marks topics that have seen any activity during the past six months.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Resynchronise statistics',
 	'RESYNC_STATS_CONFIRM'			=> 'Are you sure you wish to resynchronise statistics?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Recalculates the total number of posts, topics, users and files.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Run now',
 
 	'STATISTIC'					=> 'Statistic',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Resynchronise or reset statistics',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Topics per day',
 
 	'UPLOAD_DIR_SIZE'	=> 'Size of posted attachments',
 	'USERS_PER_DAY'		=> 'Users per day',
 
-	'VALUE'						=> 'Value',
-	'VERSIONCHECK_FAIL'			=> 'Failed to obtain latest version information.',
-	'VERSIONCHECK_FORCE_UPDATE'	=> 'Re-Check version',
-	'VIEW_ADMIN_LOG'			=> 'View administrator log',
-	'VIEW_INACTIVE_USERS'		=> 'View inactive users',
+	'VALUE'							=> 'Value',
+	'VERSIONCHECK_FAIL'				=> 'Failed to obtain latest version information.',
+	'VERSIONCHECK_FORCE_UPDATE'		=> 'Re-Check version',
+	'VERSION_CHECK'					=> 'Version check',
+	'VERSION_CHECK_EXPLAIN'			=> 'Checks to see if your phpBB installation is up to date.',
+	'VERSIONCHECK_INVALID_ENTRY'	=> 'Latest version information contains an unsupported entry.',
+	'VERSIONCHECK_INVALID_URL'		=> 'Latest version information contains invalid URL.',
+	'VERSIONCHECK_INVALID_VERSION'	=> 'Latest version information contains an invalid version.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Your phpBB installation is not up to date.<br />Below is a link to the release announcement, which contains more information as well as instructions on updating.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Your phpBB installation is not up to date.',
+	'VERSION_UP_TO_DATE_ACP'		=> 'Your phpBB installation is up to date. There are no updates available at this time.',
+	'VIEW_ADMIN_LOG'				=> 'View administrator log',
+	'VIEW_INACTIVE_USERS'			=> 'View inactive users',
 
 	'WELCOME_PHPBB'			=> 'Welcome to phpBB',
 	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
@@ -404,8 +464,8 @@ $lang = array_merge($lang, array(
 	'INACTIVE_REASON_REMIND'		=> 'Forced user account reactivation',
 	'INACTIVE_REASON_UNKNOWN'		=> 'Unknown',
 	'INACTIVE_USERS'				=> 'Inactive users',
-	'INACTIVE_USERS_EXPLAIN'		=> 'This is a list of users who have registered but whose accounts are inactive. You can activate, delete or remind (by sending an e-mail) these users if you wish.',
-	'INACTIVE_USERS_EXPLAIN_INDEX'	=> 'This is a list of the last 10 registered users who have inactive accounts. Accounts are inactive either because account activation was enabled in user registration settings and these users’ accounts have not yet been activated, or because these accounts have been deactivated. A full list is available by following the link below from where you can activate, delete or remind (by sending an e-mail) these users if you wish.',
+	'INACTIVE_USERS_EXPLAIN'		=> 'This is a list of users who have registered but whose accounts are inactive. You can activate, delete or remind (by sending an email) these users if you wish.',
+	'INACTIVE_USERS_EXPLAIN_INDEX'	=> 'This is a list of the last 10 registered users who have inactive accounts. Accounts are inactive either because account activation was enabled in user registration settings and these users’ accounts have not yet been activated, or because these accounts have been deactivated. A full list is available by following the link below from where you can activate, delete or remind (by sending an email) these users if you wish.',
 
 	'NO_INACTIVE_USERS'	=> 'No inactive users',
 
@@ -419,16 +479,18 @@ $lang = array_merge($lang, array(
 	'USER_IS_INACTIVE'		=> 'User is inactive',
 ));
 
-// Send statistics page
+// Help support phpBB page
 $lang = array_merge($lang, array(
 	'EXPLAIN_SEND_STATISTICS'	=> 'Please send information about your server and board configurations to phpBB for statistical analysis. All information that could identify you or your website has been removed - the data is entirely <strong>anonymous</strong>. We base decisions about future phpBB versions on this information. The statistics are made available publically. We also share this data with the PHP project, the programming language phpBB is made with.',
 	'EXPLAIN_SHOW_STATISTICS'	=> 'Using the button below you can preview all variables that will be transmitted.',
 	'DONT_SEND_STATISTICS'		=> 'Return to the ACP if you do not wish to send statistical information to phpBB.',
 	'GO_ACP_MAIN'				=> 'Go to the ACP start page',
 	'HIDE_STATISTICS'			=> 'Hide details',
-	'SEND_STATISTICS'			=> 'Send statistical information',
+	'SEND_STATISTICS'			=> 'Send statistics',
+	'SEND_STATISTICS_LONG'		=> 'Send statistical information',
 	'SHOW_STATISTICS'			=> 'Show details',
 	'THANKS_SEND_STATISTICS'	=> 'Thank you for submitting your information.',
+	'FAIL_SEND_STATISTICS'		=> 'phpBB was unable to send statistics',
 ));
 
 // Log Entries
@@ -443,13 +505,13 @@ $lang = array_merge($lang, array(
 	'LOG_ACL_ADD_ADMIN_GLOBAL_A_'		=> '<strong>Added or edited Administrators</strong><br />» %s',
 	'LOG_ACL_ADD_MOD_GLOBAL_M_'			=> '<strong>Added or edited Global Moderators</strong><br />» %s',
 
-	'LOG_ACL_ADD_USER_LOCAL_F_'			=> '<strong>Added or edited users’ forum access</strong> from %1$s<br />» %2$s',
-	'LOG_ACL_ADD_USER_LOCAL_M_'			=> '<strong>Added or edited users’ forum moderator access</strong> from %1$s<br />» %2$s',
-	'LOG_ACL_ADD_GROUP_LOCAL_F_'		=> '<strong>Added or edited groups’ forum access</strong> from %1$s<br />» %2$s',
-	'LOG_ACL_ADD_GROUP_LOCAL_M_'		=> '<strong>Added or edited groups’ forum moderator access</strong> from %1$s<br />» %2$s',
+	'LOG_ACL_ADD_USER_LOCAL_F_'			=> '<strong>Added or edited users’ forum access</strong> to %1$s<br />» %2$s',
+	'LOG_ACL_ADD_USER_LOCAL_M_'			=> '<strong>Added or edited users’ forum moderator access</strong> to %1$s<br />» %2$s',
+	'LOG_ACL_ADD_GROUP_LOCAL_F_'		=> '<strong>Added or edited groups’ forum access</strong> to %1$s<br />» %2$s',
+	'LOG_ACL_ADD_GROUP_LOCAL_M_'		=> '<strong>Added or edited groups’ forum moderator access</strong> to %1$s<br />» %2$s',
 
-	'LOG_ACL_ADD_MOD_LOCAL_M_'			=> '<strong>Added or edited Moderators</strong> from %1$s<br />» %2$s',
-	'LOG_ACL_ADD_FORUM_LOCAL_F_'		=> '<strong>Added or edited forum permissions</strong> from %1$s<br />» %2$s',
+	'LOG_ACL_ADD_MOD_LOCAL_M_'			=> '<strong>Added or edited Moderators</strong> for %1$s<br />» %2$s',
+	'LOG_ACL_ADD_FORUM_LOCAL_F_'		=> '<strong>Added or edited forum permissions</strong> for %1$s<br />» %2$s',
 
 	'LOG_ACL_DEL_ADMIN_GLOBAL_A_'		=> '<strong>Removed Administrators</strong><br />» %s',
 	'LOG_ACL_DEL_MOD_GLOBAL_M_'			=> '<strong>Removed Global Moderators</strong><br />» %s',
@@ -475,17 +537,18 @@ $lang = array_merge($lang, array(
 
 	'LOG_BAN_EXCLUDE_USER'	=> '<strong>Excluded user from ban</strong> for reason “<em>%1$s</em>”<br />» %2$s',
 	'LOG_BAN_EXCLUDE_IP'	=> '<strong>Excluded IP from ban</strong> for reason “<em>%1$s</em>”<br />» %2$s',
-	'LOG_BAN_EXCLUDE_EMAIL' => '<strong>Excluded e-mail from ban</strong> for reason “<em>%1$s</em>”<br />» %2$s',
+	'LOG_BAN_EXCLUDE_EMAIL' => '<strong>Excluded email from ban</strong> for reason “<em>%1$s</em>”<br />» %2$s',
 	'LOG_BAN_USER'			=> '<strong>Banned user</strong> for reason “<em>%1$s</em>”<br />» %2$s',
 	'LOG_BAN_IP'			=> '<strong>Banned IP</strong> for reason “<em>%1$s</em>”<br />» %2$s',
-	'LOG_BAN_EMAIL'			=> '<strong>Banned e-mail</strong> for reason “<em>%1$s</em>”<br />» %2$s',
+	'LOG_BAN_EMAIL'			=> '<strong>Banned email</strong> for reason “<em>%1$s</em>”<br />» %2$s',
 	'LOG_UNBAN_USER'		=> '<strong>Unbanned user</strong><br />» %s',
 	'LOG_UNBAN_IP'			=> '<strong>Unbanned IP</strong><br />» %s',
-	'LOG_UNBAN_EMAIL'		=> '<strong>Unbanned e-mail</strong><br />» %s',
+	'LOG_UNBAN_EMAIL'		=> '<strong>Unbanned email</strong><br />» %s',
 
 	'LOG_BBCODE_ADD'		=> '<strong>Added new BBCode</strong><br />» %s',
 	'LOG_BBCODE_EDIT'		=> '<strong>Edited BBCode</strong><br />» %s',
 	'LOG_BBCODE_DELETE'		=> '<strong>Deleted BBCode</strong><br />» %s',
+	'LOG_BBCODE_CONFIGURATION_ERROR'	=> '<strong>Error while configuring BBCode</strong>: %1$s<br />» %2$s',
 
 	'LOG_BOT_ADDED'		=> '<strong>New bot added</strong><br />» %s',
 	'LOG_BOT_DELETE'	=> '<strong>Deleted bot</strong><br />» %s',
@@ -501,7 +564,7 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_AUTH'			=> '<strong>Altered authentication settings</strong>',
 	'LOG_CONFIG_AVATAR'			=> '<strong>Altered avatar settings</strong>',
 	'LOG_CONFIG_COOKIE'			=> '<strong>Altered cookie settings</strong>',
-	'LOG_CONFIG_EMAIL'			=> '<strong>Altered e-mail settings</strong>',
+	'LOG_CONFIG_EMAIL'			=> '<strong>Altered email settings</strong>',
 	'LOG_CONFIG_FEATURES'		=> '<strong>Altered board features</strong>',
 	'LOG_CONFIG_LOAD'			=> '<strong>Altered load settings</strong>',
 	'LOG_CONFIG_MESSAGE'		=> '<strong>Altered private message settings</strong>',
@@ -513,7 +576,7 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_SERVER'			=> '<strong>Altered server settings</strong>',
 	'LOG_CONFIG_SETTINGS'		=> '<strong>Altered board settings</strong>',
 	'LOG_CONFIG_SIGNATURE'		=> '<strong>Altered signature settings</strong>',
-	'LOG_CONFIG_VISUAL'			=> '<strong>Altered antibot settings</strong>',
+	'LOG_CONFIG_VISUAL'			=> '<strong>Altered anti-spambot settings</strong>',
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Одобрена тема</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Повдигната тема</strong><br />» %s',
@@ -525,17 +588,23 @@ $lang = array_merge($lang, array(
 	'LOG_LOCK_POST'				=> '<strong>Заключено мнение</strong><br />» %s',
 	'LOG_MERGE'					=> '<strong>Слети мнения</strong> към темата<br />» %s',
 	'LOG_MOVE'					=> '<strong>Преместена тема</strong><br />» от %1$s към %2$s',
-	'LOG_PM_REPORT_CLOSED'		=> '<strong>Closed PM report</strong><br />» %s',
-	'LOG_PM_REPORT_DELETED'		=> '<strong>Deleted PM report</strong><br />» %s',
+	'LOG_MOVED_TOPIC'			=> '<strong>Преместена тема</strong><br />» %s',
+	'LOG_PM_REPORT_CLOSED'		=> '<strong>Затворен доклад за ЛС</strong><br />» %s',
+	'LOG_PM_REPORT_DELETED'		=> '<strong>Изтрит доклад за ЛС</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Одобрено мнение</strong><br />» %s',
 	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post “%1$s” with the following reason</strong><br />» %2$s',
 	'LOG_POST_EDITED'			=> '<strong>Променено мнение „%1$s“, написано от</strong><br />» %2$s',
-	'LOG_REPORT_CLOSED'			=> '<strong>Closed report</strong><br />» %s',
-	'LOG_REPORT_DELETED'		=> '<strong>Deleted report</strong><br />» %s',
-	'LOG_SPLIT_DESTINATION'		=> '<strong>Moved split posts</strong><br />» to %s',
+	'LOG_POST_RESTORED'			=> '<strong>Възстановено мнение</strong><br />» %s',
+	'LOG_REPORT_CLOSED'			=> '<strong>Затворен доклад</strong><br />» %s',
+	'LOG_REPORT_DELETED'		=> '<strong>Изтрит доклад</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic “%1$s” written by</strong><br />» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post “%1$s” written by “%2$s” for the following reason</strong><br />» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic “%1$s” written by “%2$s” for the following reason</strong><br />» %3$s',
+	'LOG_SPLIT_DESTINATION'		=> '<strong>Преместени разделени мнения</strong><br />» to %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Разделени мнения</strong><br />» от %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Одобрена тема</strong><br />» %s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Възстановена тема</strong><br />» %s',
 	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic “%1$s” with the following reason</strong><br />%2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Resynchronised topic counters</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Сменен вид на тема</strong><br />» %s',
@@ -554,7 +623,8 @@ $lang = array_merge($lang, array(
 	'LOG_DOWNLOAD_REMOVE_IP'	=> '<strong>Removed IP/hostname from download list</strong><br />» %s',
 
 	'LOG_ERROR_JABBER'		=> '<strong>Jabber error</strong><br />» %s',
-	'LOG_ERROR_EMAIL'		=> '<strong>E-mail error</strong><br />» %s',
+	'LOG_ERROR_EMAIL'		=> '<strong>Email error</strong><br />» %s',
+	'LOG_ERROR_CAPTCHA'		=> '<strong>CAPTCHA error</strong><br />» %s',
 
 	'LOG_FORUM_ADD'							=> '<strong>Created new forum</strong><br />» %s',
 	'LOG_FORUM_COPIED_PERMISSIONS'			=> '<strong>Copied forum permissions</strong> from %1$s<br />» %2$s',
@@ -588,19 +658,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Error while creating image</strong><br />» Error in %1$s on line %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Added new imageset to database</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Add new imageset on filesystem</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Deleted imageset</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Edited imageset details</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Edited imageset</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Exported imageset</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Imageset misses “%2$s” localisation</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Refreshed “%2$s” localisation of imageset</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Refreshed imageset</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Activated inactive users</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Deleted inactive users</strong><br />» %s',
-	'LOG_INACTIVE_REMIND'	=> '<strong>Sent reminder e-mails to inactive users</strong><br />» %s',
+	'LOG_INACTIVE_REMIND'	=> '<strong>Sent reminder emails to inactive users</strong><br />» %s',
 	'LOG_INSTALL_CONVERTED'	=> '<strong>Converted from %1$s to phpBB %2$s</strong>',
 	'LOG_INSTALL_INSTALLED'	=> '<strong>Installed phpBB %s</strong>',
 
@@ -617,7 +677,7 @@ $lang = array_merge($lang, array(
 	'LOG_LANGUAGE_FILE_REPLACED'	=> '<strong>Replaced language file</strong><br />» %s',
 	'LOG_LANGUAGE_FILE_SUBMITTED'	=> '<strong>Submitted language file and placed in store folder</strong><br />» %s',
 
-	'LOG_MASS_EMAIL'		=> '<strong>Sent mass e-mail</strong><br />» %s',
+	'LOG_MASS_EMAIL'		=> '<strong>Sent mass email</strong><br />» %s',
 
 	'LOG_MCP_CHANGE_POSTER'	=> '<strong>Changed poster in topic “%1$s”</strong><br />» from %2$s to %3$s',
 
@@ -642,6 +702,8 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>User role edited</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>User role removed</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
+
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profile field activated</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profile field added</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profile field deactivated</strong><br />» %s',
@@ -650,13 +712,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Pruned forums</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Auto-pruned forums</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Users deactivated</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Users pruned and posts deleted</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Users pruned and posts retained</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Purged cache</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Purged sessions</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Added new rank</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Removed rank</strong><br />» %s',
@@ -666,36 +728,48 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Removed report/denial reason</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Updated report/denial reason</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Referer validation failed</strong><br />»Referer was “<em>%1$s</em>”. The request was rejected and the session killed.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />»Referrer was “<em>%1$s</em>”. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Board start date reset</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Most users online reset</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>User post counts resynchronised</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Dotted topics resynchronised</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Post, topic and user statistics resynchronised</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Created search index for</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Removed search index for</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />» %s',
+
+	'LOG_SPAMHAUS_OPEN_RESOLVER'		=> 'Spamhaus does not allow queries using an open resolver. Blacklist checking has been disabled. For more information, see https://www.spamhaus.com/product/help-for-spamhaus-public-mirror-users/.',
+	'LOG_SPAMHAUS_VOLUME_LIMIT'			=> 'Spamhaus query volume limit has been exceeded. Blacklist checking has been disabled. For more information, see https://www.spamhaus.com/product/help-for-spamhaus-public-mirror-users/.',
+
 	'LOG_STYLE_ADD'				=> '<strong>Added new style</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Deleted style</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Edited style</strong><br />» %s',
 	'LOG_STYLE_EXPORT'			=> '<strong>Exported style</strong><br />» %s',
 
+	// @deprecated 3.1
 	'LOG_TEMPLATE_ADD_DB'			=> '<strong>Added new template set to database</strong><br />» %s',
+	// @deprecated 3.1
 	'LOG_TEMPLATE_ADD_FS'			=> '<strong>Add new template set on filesystem</strong><br />» %s',
 	'LOG_TEMPLATE_CACHE_CLEARED'	=> '<strong>Deleted cached versions of template files in template set <em>%1$s</em></strong><br />» %2$s',
 	'LOG_TEMPLATE_DELETE'			=> '<strong>Deleted template set</strong><br />» %s',
 	'LOG_TEMPLATE_EDIT'				=> '<strong>Edited template set <em>%1$s</em></strong><br />» %2$s',
 	'LOG_TEMPLATE_EDIT_DETAILS'		=> '<strong>Edited template details</strong><br />» %s',
 	'LOG_TEMPLATE_EXPORT'			=> '<strong>Exported template set</strong><br />» %s',
+	// @deprecated 3.1
 	'LOG_TEMPLATE_REFRESHED'		=> '<strong>Refreshed template set</strong><br />» %s',
 
+	// @deprecated 3.1
 	'LOG_THEME_ADD_DB'			=> '<strong>Added new theme to database</strong><br />» %s',
+	// @deprecated 3.1
 	'LOG_THEME_ADD_FS'			=> '<strong>Add new theme on filesystem</strong><br />» %s',
 	'LOG_THEME_DELETE'			=> '<strong>Theme deleted</strong><br />» %s',
 	'LOG_THEME_EDIT_DETAILS'	=> '<strong>Edited theme details</strong><br />» %s',
 	'LOG_THEME_EDIT'			=> '<strong>Edited theme <em>%1$s</em></strong>',
 	'LOG_THEME_EDIT_FILE'		=> '<strong>Edited theme <em>%1$s</em></strong><br />» Modified file <em>%2$s</em>',
 	'LOG_THEME_EXPORT'			=> '<strong>Exported theme</strong><br />» %s',
+	// @deprecated 3.1
 	'LOG_THEME_REFRESHED'		=> '<strong>Refreshed theme</strong><br />» %s',
 
 	'LOG_UPDATE_DATABASE'	=> '<strong>Updated Database from version %1$s to version %2$s</strong>',
@@ -704,7 +778,7 @@ $lang = array_merge($lang, array(
 	'LOG_USER_ACTIVE'		=> '<strong>User activated</strong><br />» %s',
 	'LOG_USER_BAN_USER'		=> '<strong>Banned User via user management</strong> for reason “<em>%1$s</em>”<br />» %2$s',
 	'LOG_USER_BAN_IP'		=> '<strong>Banned IP via user management</strong> for reason “<em>%1$s</em>”<br />» %2$s',
-	'LOG_USER_BAN_EMAIL'	=> '<strong>Banned e-mail via user management</strong> for reason “<em>%1$s</em>”<br />» %2$s',
+	'LOG_USER_BAN_EMAIL'	=> '<strong>Banned email via user management</strong> for reason “<em>%1$s</em>”<br />» %2$s',
 	'LOG_USER_DELETED'		=> '<strong>Deleted user</strong><br />» %s',
 	'LOG_USER_DEL_ATTACH'	=> '<strong>Removed all attachments made by the user</strong><br />» %s',
 	'LOG_USER_DEL_AVATAR'	=> '<strong>Removed user avatar</strong><br />» %s',
@@ -717,7 +791,7 @@ $lang = array_merge($lang, array(
 	'LOG_USER_REACTIVATE'	=> '<strong>Forced user account reactivation</strong><br />» %s',
 	'LOG_USER_REMOVED_NR'	=> '<strong>Removed newly registered flag from user</strong><br />» %s',
 
-	'LOG_USER_UPDATE_EMAIL'	=> '<strong>User “%1$s” changed e-mail</strong><br />» from “%2$s” to “%3$s”',
+	'LOG_USER_UPDATE_EMAIL'	=> '<strong>User “%1$s” changed email</strong><br />» from “%2$s” to “%3$s”',
 	'LOG_USER_UPDATE_NAME'	=> '<strong>Changed username</strong><br />» from “%1$s” to “%2$s”',
 	'LOG_USER_USER_UPDATE'	=> '<strong>Updated user details</strong><br />» %s',
 
@@ -741,10 +815,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>User resigned membership from group</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Deleted user warning</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Deleted %2$s user warnings</strong><br />» %1$s', // Example: '<strong>Deleted 2 user warnings</strong><br />» username'
+	'LOG_WARNINGS_DELETED'		=> array(
+		1 => '<strong>Deleted user warning</strong><br />» %1$s',
+		2 => '<strong>Deleted %2$d user warnings</strong><br />» %1$s', // Example: '<strong>Deleted 2 user warnings</strong><br />» username'
+	),
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Deleted all user warnings</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Added word censor</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Deleted word censor</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Edited word censor</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extension’s data deleted</strong><br />» %s',
+	'LOG_EXT_UPDATE'	=> '<strong>Extension updated</strong><br />» %s',
 ));

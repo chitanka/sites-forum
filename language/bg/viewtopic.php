@@ -1,13 +1,15 @@
 <?php
 /**
 *
-* viewtopic [Bulgarian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id$
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+* [Bulgarian]
 */
 
 /**
@@ -36,6 +38,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Approve',
 	'ATTACHMENT'						=> 'Прикачен файл',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Прикачването на файлове е изключено.',
 
@@ -47,14 +50,15 @@ $lang = array_merge($lang, array(
 	'BUMPED_BY'				=> 'Последно вдигната от %1$s на %2$s.',
 	'BUMP_TOPIC'			=> 'Вдигане на темата',
 
-	'CODE'					=> 'Код',
-	'COLLAPSE_QR'			=> 'Скриване на бързия отговор',
-
 	'DELETE_TOPIC'			=> 'Изтриване на темата',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Disapprove',
 	'DOWNLOAD_NOTICE'		=> 'Нямате необходимите права, за да разглеждате прикачените файлове.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Последната промяна е направена от %1$s на %2$s. Мнението е било променяно %3$d пъти.',
-	'EDITED_TIME_TOTAL'		=> 'Последната и единствена промяна е направена от %1$s на %2$s.',
+	'EDITED_TIMES_TOTAL'	=> array(
+		1	=> 'Последната и единствена промяна е направена от %2$s на %3$s.',
+		2	=> 'Последната промяна е направена от %2$s на %1$s. Мнението е било променяно %1$d пъти.',
+	),
 	'EMAIL_TOPIC'			=> 'Пращане на писмо на приятел',
 	'ERROR_NO_ATTACHMENT'	=> 'Посоченият прикачен файл вече не съществува.',
 
@@ -70,8 +74,10 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Смяна на „Глобална“',
 	'MAKE_NORMAL'				=> 'Смяна на „Обикновена“',
 	'MAKE_STICKY'				=> 'Смяна на „Важна“',
-	'MAX_OPTIONS_SELECT'		=> 'Може да изберете до <strong>%d</strong> отговора',
-	'MAX_OPTION_SELECT'			=> 'Може да изберете само един отговор',
+	'MAX_OPTIONS_SELECT'		=> array(
+		1	=> 'Може да изберете само един отговор',
+		2	=> 'Може да изберете до <strong>%d</strong> отговора',
+	),
 	'MISSING_INLINE_ATTACHMENT'	=> 'Прикаченият файл <strong>%s</strong> вече не съществува',
 	'MOVE_TOPIC'				=> 'Преместване на темата',
 
@@ -81,22 +87,25 @@ $lang = array_merge($lang, array(
 	'NO_UNREAD_POSTS'		=> 'В темата няма непрочетени мнения.',
 	'NO_VOTE_OPTION'		=> 'Трябва да изберете отговор при гласуването.',
 	'NO_VOTES'				=> 'Няма гласове',
+	'NO_AUTH_PRINT_TOPIC'	=> 'You are not authorised to print topics.',
 
 	'POLL_ENDED_AT'			=> 'Анкетата е приключила на %s',
 	'POLL_RUN_TILL'			=> 'Анкетата ще продължи до %s',
 	'POLL_VOTED_OPTION'		=> 'Гласувахте за това',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Преглед за печат',
 
 	'QUICK_MOD'				=> 'Инструменти за бърза модерация',
 	'QUICKREPLY'			=> 'Бърз отговор',
-	'QUOTE'					=> 'Цитиране на',
 
 	'REPLY_TO_TOPIC'		=> 'Отговор на темата',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sОбратно към мнението%s',
 
-	'SHOW_QR'				=> 'Бърз отговор',
 	'SUBMIT_VOTE'			=> 'Гласуване',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Брой гласове',
 
 	'UNLOCK_TOPIC'			=> 'отключване на темата',
@@ -105,10 +114,11 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Следваща тема',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Предишна тема',
 	'VIEW_RESULTS'			=> 'Резултати',
-	'VIEW_TOPIC_POST'		=> 'едно мнение',
-	'VIEW_TOPIC_POSTS'		=> '%d мнения',
+	'VIEW_TOPIC_POSTS'		=> array(
+		1	=> 'едно мнение',
+		2	=> '%d мнения',
+	),
 	'VIEW_UNREAD_POST'		=> 'Първо непрочетено мнение',
-	'VISIT_WEBSITE'			=> 'Сайт',
 	'VOTE_SUBMITTED'		=> 'Гласът ви беше записан.',
 	'VOTE_CONVERTED'		=> 'Changing votes is not supported for converted polls.',
 

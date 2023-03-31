@@ -1,13 +1,15 @@
 <?php
 /**
 *
-* captcha_qa [Bulgarian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id$
-* @copyright (c) 2009 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+* [Bulgarian]
 */
 
 /**
@@ -39,6 +41,7 @@ $lang = array_merge($lang, array(
 	'CAPTCHA_QA'				=> 'Въпроси и отговори',
 	'CONFIRM_QUESTION_EXPLAIN'	=> 'Този въпрос служи за улавяне на ботове и предотвратяване на спама.',
 	'CONFIRM_QUESTION_WRONG'	=> 'Дадохте грешен отговор на въпроса.',
+	'CONFIRM_QUESTION_MISSING'	=> 'Questions for the captcha could not be retrieved. Please contact a board administrator.',
 
 	'QUESTION_ANSWERS'			=> 'Отговори',
 	'ANSWERS_EXPLAIN'			=> 'Въведете правилните отговори, по един на ред.',
@@ -59,5 +62,4 @@ $lang = array_merge($lang, array(
 
 	'QA_ERROR_MSG'				=> 'Please fill in all fields and enter at least one answer.',
 	'QA_LAST_QUESTION'			=> 'You cannot delete all questions while the plugin is active.',
-
 ));

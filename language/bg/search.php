@@ -1,13 +1,15 @@
 <?php
 /**
 *
-* search [Bulgarian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id$
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+* [Bulgarian]
 */
 
 /**
@@ -41,11 +43,16 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Показване на резултатите като',
 
-	'FOUND_SEARCH_MATCH'		=> 'Търсенето даде един резултат',
-	'FOUND_SEARCH_MATCHES'		=> 'Търсенето даде %d резултата',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Търсенето даде повече от %d резултата',
+	'FOUND_SEARCH_MATCHES'		=> array(
+		1	=> 'Търсенето даде един резултат',
+		2	=> 'Търсенето даде %d резултата',
+	),
+	'FOUND_MORE_SEARCH_MATCHES'		=> array(
+		1	=> 'Търсенето даде повече от един резултат',
+		2	=> 'Търсенето даде повече от %d резултата',
+	),
 
-	'GLOBAL'				=> 'Глобално съобщение',
+	'GLOBAL'				=> 'Глобално обявление',
 
 	'IGNORED_TERMS'			=> 'пренебрегнати',
 	'IGNORED_TERMS_EXPLAIN'	=> 'Следните думи в заявката ви бяха пренебрегнати, защото са прекалено общи: <strong>%s</strong>.',
@@ -56,23 +63,33 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Трябва да влезете, за да може да прегледате собствените си непрочетени мнения.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Трябва да влезете, за да може да прегледате новите мнения от последното ви посещение.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Превишили сте ограничението от %1$d думи при търсенето.',
+	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> array(
+		1	=> 'Превишили сте ограничението от една дума при търсенето.',
+		2	=> 'Превишили сте ограничението от %1$d думи при търсенето.',
+	),
 
 	'NO_KEYWORDS'			=> 'Въведете поне една дума, съдържаща не по-малко от %d и не повече от %d знака. Знакът за маска (*) не се брои.',
 	'NO_RECENT_SEARCHES'	=> 'Няма скорошни търсения.',
 	'NO_SEARCH'				=> 'Не вие е разрешено да претърсвате форумната система.',
 	'NO_SEARCH_RESULTS'		=> 'Не бяха намерени резултати.',
-	'NO_SEARCH_TIME'		=> 'В момента търсенето е изключено. Изчакайте няколко минути и опитайте пак..',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
+	'NO_SEARCH_TIME'		=> array(
+		// skip 1
+		2	=> 'В момента търсенето е изключено. Изчакайте няколко минути и опитайте пак.',
+	),
+	'NO_SEARCH_UNREADS'		=> 'Sorry but searching for unread posts has been disabled on this board.',
 	'WORD_IN_NO_POST'		=> 'Думата <strong>%s</strong> не се среща в нито едно мнение.',
 	'WORDS_IN_NO_POST'		=> 'Думите <strong>%s</strong> не се срещат в нито едно мнение.',
 
 	'POST_CHARACTERS'		=> 'знака от мненията',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Скорошни търсения',
 	'RESULT_DAYS'			=> 'Ограничаване до последните',
 	'RESULT_SORT'			=> 'Сортиране по',
 	'RETURN_FIRST'			=> 'Показване на първите',
-	'RETURN_TO_SEARCH_ADV'	=> 'Обратно към разширеното търсене',
+	'RETURN_FIRST_EXPLAIN'	=> 'Въведете 0, за да се покаже цялото мнение.',
+	'GO_TO_SEARCH_ADV'	=> 'Обратно към разширеното търсене',
 
 	'SEARCHED_FOR'				=> 'Търсене на',
 	'SEARCHED_TOPIC'			=> 'Претърсвана тема',
@@ -99,6 +116,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'форум',
 	'SORT_POST_SUBJECT'			=> 'заглавие на мнението',
 	'SORT_TIME'					=> 'час',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Трябва да въведете поне %d знака от името на автора.',
+	'TOO_FEW_AUTHOR_CHARS'	=> array(
+		1	=> 'Трябва да въведете поне един знак от името на автора.',
+		2	=> 'Трябва да въведете поне %d знака от името на автора.',
+	),
 ));

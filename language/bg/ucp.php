@@ -1,13 +1,15 @@
 <?php
 /**
 *
-* ucp [Bulgarian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id$
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+* [Bulgarian]
 */
 
 /**
@@ -37,22 +39,22 @@ if (empty($lang) || !is_array($lang))
 
 // Privacy policy and T&C
 $lang = array_merge($lang, array(
-	'TERMS_OF_USE_CONTENT'	=> 'By accessing “%1$s” (hereinafter “we”, “us”, “our”, “%1$s”, “%2$s”), you agree to be legally bound by the following terms. If you do not agree to be legally bound by all of the following terms then please do not access and/or use “%1$s”. We may change these at any time and we’ll do our utmost in informing you, though it would be prudent to review this regularly yourself as your continued usage of “%1$s” after changes mean you agree to be legally bound by these terms as they are updated and/or amended.<br />
-	<br />
-	Our forums are powered by phpBB (hereinafter “they”, “them”, “their”, “phpBB software”, “www.phpbb.com”, “phpBB Group”, “phpBB Teams”) which is a bulletin board solution released under the “<a href="http://opensource.org/licenses/gpl-license.php">General Public License</a>” (hereinafter “GPL”) and can be downloaded from <a href="https://www.phpbb.com/">www.phpbb.com</a>. The phpBB software only facilitates internet based discussions, the phpBB Group are not responsible for what we allow and/or disallow as permissible content and/or conduct. For further information about phpBB, please see: <a href="https://www.phpbb.com/">https://www.phpbb.com/</a>.<br />
-	<br />
+	'TERMS_OF_USE_CONTENT'	=> 'By accessing “%1$s” (hereinafter “we”, “us”, “our”, “%1$s”, “%2$s”), you agree to be legally bound by the following terms. If you do not agree to be legally bound by all of the following terms then please do not access and/or use “%1$s”. We may change these at any time and we’ll do our utmost in informing you, though it would be prudent to review this regularly yourself as your continued usage of “%1$s” after changes mean you agree to be legally bound by these terms as they are updated and/or amended.
+	<br><br>
+	Our forums are powered by phpBB (hereinafter “they”, “them”, “their”, “phpBB software”, “www.phpbb.com”, “phpBB Limited”, “phpBB Teams”) which is a bulletin board solution released under the “<a href="http://opensource.org/licenses/gpl-2.0.php">GNU General Public License v2</a>” (hereinafter “GPL”) and can be downloaded from <a href="https://www.phpbb.com/">www.phpbb.com</a>. The phpBB software only facilitates internet based discussions; phpBB Limited is not responsible for what we allow and/or disallow as permissible content and/or conduct. For further information about phpBB, please see: <a href="https://www.phpbb.com/">https://www.phpbb.com/</a>.
+	<br><br>
 	You agree not to post any abusive, obscene, vulgar, slanderous, hateful, threatening, sexually-orientated or any other material that may violate any laws be it of your country, the country where “%1$s” is hosted or International Law. Doing so may lead to you being immediately and permanently banned, with notification of your Internet Service Provider if deemed required by us. The IP address of all posts are recorded to aid in enforcing these conditions. You agree that “%1$s” have the right to remove, edit, move or close any topic at any time should we see fit. As a user you agree to any information you have entered to being stored in a database. While this information will not be disclosed to any third party without your consent, neither “%1$s” nor phpBB shall be held responsible for any hacking attempt that may lead to the data being compromised.
 	',
 
-	'PRIVACY_POLICY'		=> 'This policy explains in detail how “%1$s” along with its affiliated companies (hereinafter “we”, “us”, “our”, “%1$s”, “%2$s”) and phpBB (hereinafter “they”, “them”, “their”, “phpBB software”, “www.phpbb.com”, “phpBB Group”, “phpBB Teams”) use any information collected during any session of usage by you (hereinafter “your information”).<br />
-	<br />
-	Your information is collected via two ways. Firstly, by browsing “%1$s” will cause the phpBB software to create a number of cookies, which are small text files that are downloaded on to your computer’s web browser temporary files. The first two cookies just contain a user identifier (hereinafter “user-id”) and an anonymous session identifier (hereinafter “session-id”), automatically assigned to you by the phpBB software. A third cookie will be created once you have browsed topics within “%1$s” and is used to store which topics have been read, thereby improving your user experience.<br />
-	<br />
-	We may also create cookies external to the phpBB software whilst browsing “%1$s”, though these are outside the scope of this document which is intended to only cover the pages created by the phpBB software. The second way in which we collect your information is by what you submit to us. This can be, and is not limited to: posting as an anonymous user (hereinafter “anonymous posts”), registering on “%1$s” (hereinafter “your account”) and posts submitted by you after registration and whilst logged in (hereinafter “your posts”).<br />
-	<br />
-	Your account will at a bare minimum contain a uniquely identifiable name (hereinafter “your user name”), a personal password used for logging into your account (hereinafter “your password”) and a personal, valid e-mail address (hereinafter “your e-mail”). Your information for your account at “%1$s” is protected by data-protection laws applicable in the country that hosts us. Any information beyond your user name, your password, and your e-mail address required by “%1$s” during the registration process is either mandatory or optional, at the discretion of “%1$s”. In all cases, you have the option of what information in your account is publicly displayed. Furthermore, within your account, you have the option to opt-in or opt-out of automatically generated e-mails from the phpBB software.<br />
-	<br />
-	Your password is ciphered (a one-way hash) so that it is secure. However, it is recommended that you do not reuse the same password across a number of different websites. Your password is the means of accessing your account at “%1$s”, so please guard it carefully and under no circumstance will anyone affiliated with “%1$s”, phpBB or another 3rd party, legitimately ask you for your password. Should you forget your password for your account, you can use the “I forgot my password” feature provided by the phpBB software. This process will ask you to submit your user name and your e-mail, then the phpBB software will generate a new password to reclaim your account.<br />
+	'PRIVACY_POLICY'		=> 'This policy explains in detail how “%1$s” along with its affiliated companies (hereinafter “we”, “us”, “our”, “%1$s”, “%2$s”) and phpBB (hereinafter “they”, “them”, “their”, “phpBB software”, “www.phpbb.com”, “phpBB Limited”, “phpBB Teams”) use any information collected during any session of usage by you (hereinafter “your information”).
+	<br><br>
+	Your information is collected via two ways. Firstly, by browsing “%1$s” will cause the phpBB software to create a number of cookies, which are small text files that are downloaded on to your computer’s web browser temporary files. The first two cookies just contain a user identifier (hereinafter “user-id”) and an anonymous session identifier (hereinafter “session-id”), automatically assigned to you by the phpBB software. A third cookie will be created once you have browsed topics within “%1$s” and is used to store which topics have been read, thereby improving your user experience.
+	<br><br>
+	We may also create cookies external to the phpBB software whilst browsing “%1$s”, though these are outside the scope of this document which is intended to only cover the pages created by the phpBB software. The second way in which we collect your information is by what you submit to us. This can be, and is not limited to: posting as an anonymous user (hereinafter “anonymous posts”), registering on “%1$s” (hereinafter “your account”) and posts submitted by you after registration and whilst logged in (hereinafter “your posts”).
+	<br><br>
+	Your account will at a bare minimum contain a uniquely identifiable name (hereinafter “your user name”), a personal password used for logging into your account (hereinafter “your password”) and a personal, valid email address (hereinafter “your email”). Your information for your account at “%1$s” is protected by data-protection laws applicable in the country that hosts us. Any information beyond your user name, your password, and your email address required by “%1$s” during the registration process is either mandatory or optional, at the discretion of “%1$s”. In all cases, you have the option of what information in your account is publicly displayed. Furthermore, within your account, you have the option to opt-in or opt-out of automatically generated emails from the phpBB software.
+	<br><br>
+	Your password is ciphered (a one-way hash) so that it is secure. However, it is recommended that you do not reuse the same password across a number of different websites. Your password is the means of accessing your account at “%1$s”, so please guard it carefully and under no circumstance will anyone affiliated with “%1$s”, phpBB or another 3rd party, legitimately ask you for your password. Should you forget your password for your account, you can use the “I forgot my password” feature provided by the phpBB software. This process will ask you to submit your user name and your email, then the phpBB software will generate a new password to reclaim your account.
 	',
 ));
 
@@ -88,13 +90,26 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Това е списък на вашите прикачени файлове.',
 	'ATTACHMENTS_DELETED'			=> 'Прикачените файлове бяха изтрити.',
 	'ATTACHMENT_DELETED'			=> 'Прикаченият файл беше изтрит.',
+	'ATTACHMENT_LOCKED'				=> 'This topic is locked, you cannot delete the attachment.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Категория',
-	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$d pixels, height: %2$d pixels, file size: %3$.2f KiB.',
-	'AVATAR_FEATURES_DISABLED'		=> 'The avatar functionality is currently disabled.',
+	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
+	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
+	'AVATAR_DRIVER_LOCAL_TITLE'		=> 'Аватар от галерия',
+	'AVATAR_DRIVER_LOCAL_EXPLAIN'	=> 'Избор на аватар от предварително подбрано множество',
+	'AVATAR_DRIVER_REMOTE_TITLE'	=> 'Премахване на аватара',
+	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Връзка към аватар от друг сайт',
+	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Качване на аватар',
+	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Можете да качите свой собствен аватар.',
+	'AVATAR_EXPLAIN'				=> 'Допустим размер: ширина: %1$d пиксела, височина: %2$d пиксела, файлов размер: %3$.2f KiB.',
+	'AVATAR_EXPLAIN_NO_FILESIZE'	=> 'Допустим размер: ширина: %1$s, височина: %2$s.',
+	'AVATAR_FEATURES_DISABLED'		=> 'Използването на аватари е забранено.',
 	'AVATAR_GALLERY'				=> 'Локална галерия',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Could not upload avatar to %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Your avatar cannot be displayed because avatars have been disallowed.',
 	'AVATAR_PAGE'					=> 'Страница',
+	'AVATAR_SELECT'					=> 'Избор на аватар',
+	'AVATAR_TYPE'					=> 'Източник на аватар',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Your current avatar cannot be displayed because its type has been disallowed.',
 
 	'BACK_TO_DRAFTS'			=> 'Обратно към съхранените чернови',
@@ -103,7 +118,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Ако посочите година, възрастта ви ще се показва, когато имате рожден ден.',
 	'BOARD_DATE_FORMAT'			=> 'Формат на датите',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Синтаксисът е същият като този при функцията <a href="http://www.php.net/date">date()</a>.',
-	'BOARD_DST'					=> 'Лятно часово време (ЛЧВ)',
 	'BOARD_LANGUAGE'			=> 'Език',
 	'BOARD_STYLE'				=> 'Облик',
 	'BOARD_TIMEZONE'			=> 'Часова зона',
@@ -123,8 +137,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sОбратно към папката „%3$s“%2$s',
 	'CONFIRMATION'				=> 'Confirmation of registration',
 	'CONFIRM_CHANGES'			=> 'Confirm changes',
-	'CONFIRM_EMAIL'				=> 'Confirm e-mail address',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'You only need to specify this if you are changing your e-mail address.',
 	'CONFIRM_EXPLAIN'			=> 'To prevent automated registrations the board requires you to enter a confirmation code. The code is displayed in the image you should see below. If you are visually impaired or cannot otherwise read this code please contact the %sBoard Administrator%s.',
 	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'If you cannot read the code you can request a new one by clicking the button.',
@@ -168,7 +180,6 @@ $lang = array_merge($lang, array(
 	'DEMOTE_SELECTED'			=> 'Понижаване на избраните',
 	'DISABLE_CENSORS'			=> 'Включване на цензуриране на думи',
 	'DISPLAY_GALLERY'			=> 'Display gallery',
-	'DOMAIN_NO_MX_RECORD_EMAIL'	=> 'Въведеният адрес за електронна поща не притежава валиден MX запис.',
 	'DOWNLOADS'					=> 'Сваляния',
 	'DRAFTS_DELETED'			=> 'Всички избрани чернови бяха изтрити.',
 	'DRAFTS_EXPLAIN'			=> 'Тук можете да преглеждате, променяте или изтривате черновите си.',
@@ -188,29 +199,50 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Изнасяне на прегледа',
 
 	'FIELD_REQUIRED'					=> 'The field “%s” must be completed.',
-	'FIELD_TOO_SHORT'					=> 'The field “%1$s” is too short, a minimum of %2$d characters is required.',
-	'FIELD_TOO_LONG'					=> 'The field “%1$s” is too long, a maximum of %2$d characters is allowed.',
-	'FIELD_TOO_SMALL'					=> 'The value of “%1$s” is too small, a minimum value of %2$d is required.',
-	'FIELD_TOO_LARGE'					=> 'The value of “%1$s” is too large, a maximum value of %2$d is allowed.',
+	'FIELD_TOO_SHORT'					=> array(
+		1	=> 'The field “%2$s” is too short, a minimum of %1$d character is required.',
+		2	=> 'The field “%2$s” is too short, a minimum of %1$d characters is required.',
+	),
+	'FIELD_TOO_LONG'					=> array(
+		1	=> 'The field “%2$s” is too long, a maximum of %1$d character is allowed.',
+		2	=> 'The field “%2$s” is too long, a maximum of %1$d characters is allowed.',
+	),
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'The field “%s” has invalid characters, only numbers are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'The field “%s” has invalid characters, only alphanumeric characters are allowed.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'The field “%s” has an invalid date.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'The field “%s” has an invalid value.',
-
 
 	'FOE_MESSAGE'				=> 'Съобщение от неприятел',
 	'FOES_EXPLAIN'				=> 'Неприятелите са пренебрегнати потребители. Техните мнения ще бъдат само частично видими, но все пак ще им е разрешено да ви изпращат лични съобщения. Обърнете внимание, че не може да пренебрегвате модератори или администратори.',
 	'FOES_UPDATED'				=> 'Списъкът с неприятелите ви беше обновен.',
 	'FOLDER_ADDED'				=> 'Папката беше добавена.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d от %2$d съобщения',
+	'FOLDER_MESSAGE_STATUS'		=> array(
+		1	=> '%2$d от %1$s съобщения',
+		2	=> '%2$d от %1$s съобщения',
+	),
 	'FOLDER_NAME_EMPTY'			=> 'Трябва да въедете име на папката.',
 	'FOLDER_NAME_EXIST'			=> 'Папката <strong>%s</strong> вече съществува.',
 	'FOLDER_OPTIONS'			=> 'Настройки на папката',
 	'FOLDER_RENAMED'			=> 'Папката беше преименувана.',
 	'FOLDER_REMOVED'			=> 'Папката беше премахната.',
-	'FOLDER_STATUS_MSG'			=> 'Папката е %1$d%% пълна (%2$d от %3$d съобщения)',
-	'FORWARD_PM'				=> 'Пренасочване на ЛС',
+	'FOLDER_STATUS_MSG'			=> array(
+		1	=> 'Папката е %3$d%% пълна (%2$d от %1$s съобщения)',
+		2	=> 'Папката е %3$d%% пълна (%2$d от %1$s съобщения)',
+	),
+	'FORWARD_PM'				=> 'Препращане на ЛС',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Before you may continue browsing the board you are required to change your password.',
 	'FRIEND_MESSAGE'			=> 'Съобщение от приятел',
 	'FRIENDS'					=> 'Приятели',
@@ -227,6 +259,11 @@ $lang = array_merge($lang, array(
 
 	'GLOBAL_ANNOUNCEMENT'		=> 'Глобално съобщение',
 
+	'GRAVATAR_AVATAR_EMAIL'			=> 'Gravatar email',
+	'GRAVATAR_AVATAR_EMAIL_EXPLAIN'	=> 'Enter the email address you used for registering your account on <a href="http://www.gravatar.com/">Gravatar</a>.',
+	'GRAVATAR_AVATAR_SIZE'			=> 'Avatar dimensions',
+	'GRAVATAR_AVATAR_SIZE_EXPLAIN'	=> 'Specify the width and height of the avatar, leave blank to attempt automatic verification.',
+
 	'HIDE_ONLINE'				=> 'Скриване на състоянието ми, когато съм на линия',
 	'HIDE_ONLINE_EXPLAIN'		=> 'Промяната на тази настройка ще се отрази едва при следващото посещение.',
 	'HOLD_NEW_MESSAGES'			=> 'Без приемане на нови съобщения (Новите съобщения ще бъдат задържани, докато не се освободи достатъчно място)',
@@ -236,6 +273,7 @@ $lang = array_merge($lang, array(
 	'IMPORTANT_NEWS'			=> 'Важни съобщения',
 	'INVALID_USER_BIRTHDAY'			=> 'Въвели сте невалидна дата като рожден ден.',
 	'INVALID_CHARS_USERNAME'	=> 'The username contains forbidden characters.',
+	'INVALID_EMOJIS_USERNAME'	=> 'The username contains forbidden characters (Emoji).',
 	'INVALID_CHARS_NEW_PASSWORD'=> 'The password does not contain the required characters.',
 	'ITEMS_REQUIRED'			=> 'The items marked with * are required profile fields and need to be filled out.',
 
@@ -247,6 +285,12 @@ $lang = array_merge($lang, array(
 	'LINK_REMOTE_SIZE'			=> 'Размери на аватара',
 	'LINK_REMOTE_SIZE_EXPLAIN'	=> 'Specify the width and height of the avatar, leave blank to attempt automatic verification.',
 	'LOGIN_EXPLAIN_UCP'			=> 'Влезте, за да имате достъп до контролното табло на потребителя.',
+	'LOGIN_LINK'					=> 'Link or register your account on an external service with your board account',
+	'LOGIN_LINK_EXPLAIN'			=> 'You have attempted to login with an external service that is not yet connected to an account on this board. You must now either link this account to an existing account or create a new account.',
+	'LOGIN_LINK_MISSING_DATA'		=> 'Data that is necessary to link your account with an external service is not available. Please restart the login process.',
+	'LOGIN_LINK_NO_DATA_PROVIDED'	=> 'No data has been provided to this page to link an external account to a forum account. Please contact the board administrator if you continue to experience problems.',
+	'LOGIN_KEY'					=> 'Login Key',
+	'LOGIN_TIME'				=> 'Login Time',
 	'LOGIN_REDIRECT'			=> 'You have been successfully logged in.',
 	'LOGOUT_FAILED'				=> 'You were not logged out, as the request did not match your session. Please contact the board administrator if you continue to experience problems.',
 	'LOGOUT_REDIRECT'			=> 'You have been successfully logged out.',
@@ -260,6 +304,7 @@ $lang = array_merge($lang, array(
 	'MESSAGE_EDITED'				=> 'Съобщението беше променено.',
 	'MESSAGE_HISTORY'				=> 'История на съобщенията',
 	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Съобщението е било изтрито от автора си.',
+	'MESSAGE_REPORTED_MESSAGE'		=> 'Докладвано съобщение',
 	'MESSAGE_SENT_ON'				=> 'на',
 	'MESSAGE_STORED'				=> 'Съобщението беше изпратено.',
 	'MESSAGE_TO'					=> 'До',
@@ -267,16 +312,44 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Преместване на съобщенията от премахнатата папка в',
 	'MOVE_DOWN'						=> 'Надолу',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Преместване в %s',
-	'MOVE_PM_ERROR'					=> 'Възникна грешка при преместването на съобщенията в новата папка. Бяха преместени само %1d от всичките %2d съобщения.',
+	'MOVE_PM_ERROR'					=> array(
+		1	=> 'Възникна грешка при преместването на съобщенията в новата папка. Само едно от всичките %2d съобщения беше преместено.',
+		2	=> 'Възникна грешка при преместването на съобщенията в новата папка. Само %1d от всичките %2d съобщения бяха преместени.',
+	),
 	'MOVE_TO_FOLDER'				=> 'Преместване в папка',
 	'MOVE_UP'						=> 'Нагоре',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'You did not enter a confirm e-mail address.',
-	'NEW_EMAIL_ERROR'				=> 'Въведените адреси за електронна поща не съвпадат.',
 	'NEW_FOLDER_NAME'				=> 'Ново име на папка',
 	'NEW_PASSWORD'					=> 'Нова парола',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'You did not enter a confirm password.',
 	'NEW_PASSWORD_ERROR'			=> 'Въведените пароли не съвпадат.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_FORUM'							=> 'Someone replies to a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_REPORT_CLOSED'					=> 'Your report on a post is closed by a moderator',
+	'NOTIFICATION_TYPE_REPORT_PM'						=> 'Someone reports a private message',
+	'NOTIFICATION_TYPE_REPORT_PM_CLOSED'				=> 'Your report on a private message is closed by a moderator',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Метод на известяване',
 	'NOTIFY_METHOD_BOTH'			=> 'И двава',
 	'NOTIFY_METHOD_EMAIL'			=> 'Само по имейл',
@@ -294,19 +367,23 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Не може да добавите себе си в списъка с неприятелите.',
 	'NOT_AGREE'						=> 'Не мога да се съглася с тези правила',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'The destination folder “%s” seems to be full. The requested action has not been taken.',
-	'NOT_MOVED_MESSAGE'				=> 'Имате едно лично съобщение на опашка, защото папката ви е пълна.',
-	'NOT_MOVED_MESSAGES'			=> 'Имате %d лични съобщения на опашка, защото папката ви е пълна.',
+	'NOT_MOVED_MESSAGES'			=> array(
+		1	=> 'Имате едно лично съобщение на опашка, защото папката ви е пълна.',
+		2	=> 'Имате %d лични съобщения на опашка, защото папката ви е пълна.',
+	),
 	'NO_ACTION_MODE'				=> 'Не е указано действие за съобщението.',
 	'NO_AUTHOR'						=> 'Съобщението няма автор',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'None',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'You are not authorised to delete private messages.',
 	'NO_AUTH_EDIT_MESSAGE'			=> 'You are not authorised to edit private messages.',
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'You are not authorised to forward private messages.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'You are not authorised to send private messages to groups.',
-	'NO_AUTH_PASSWORD_REMINDER'		=> 'You are not authorised to request a new password.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'You are not authorised to read private messages that are on hold.',
 	'NO_AUTH_READ_MESSAGE'			=> 'You are not authorised to read private messages.',
+	'NO_AUTH_PRINT_MESSAGE'			=> 'You are not authorised to print private messages.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'You are not able to read this message because it was removed by the author.',
 	'NO_AUTH_SEND_MESSAGE'			=> 'You are not authorised to send private messages.',
 	'NO_AUTH_SIGNATURE'				=> 'You are not authorised to define a signature.',
@@ -316,6 +393,7 @@ $lang = array_merge($lang, array(
 	'NO_BOOKMARKS_SELECTED'		=> 'Не сте избрали отметки.',
 	'NO_EDIT_READ_MESSAGE'		=> 'Личното съобщение не може да бъде променено, защото вече е било прочетено.',
 	'NO_EMAIL_USER'				=> 'The e-mail/username information submitted could not be found.',
+	'EMAIL_NOT_UNIQUE'			=> 'Email you specified is used by multiple users. You must specify username as well.',
 	'NO_FOES'					=> 'Няма неприятели',
 	'NO_FRIENDS'				=> 'Няма приятели',
 	'NO_FRIENDS_OFFLINE'		=> 'Няма приятели извън форума',
@@ -328,6 +406,7 @@ $lang = array_merge($lang, array(
 	'NO_OLDER_PM'				=> 'Няма по-стари съобщения.',
 	'NO_PASSWORD_SUPPLIED'		=> 'Не може да влезете без парола.',
 	'NO_RECIPIENT'				=> 'Не е посочен получател.',
+	'NO_RESET_TOKEN'			=> 'You did not provide a password reset token.',
 	'NO_RULES_DEFINED'			=> 'Няма правила.',
 	'NO_SAVED_DRAFTS'			=> 'Няма съхранени чернови.',
 	'NO_TO_RECIPIENT'			=> 'None',
@@ -336,12 +415,13 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_TOPICS'			=> 'Нямате абонаменти за теми.',
 
 	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$d and %2$d characters long, must contain letters in mixed case and must contain numbers.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$d and %2$d characters.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be at least %1$s long.',
 	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$d and %2$d characters long and must contain letters in mixed case.',
 	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$d and %2$d characters long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Password',
 	'PASSWORD_ACTIVATED'		=> 'Your new password has been activated.',
-	'PASSWORD_UPDATED'			=> 'A new password was sent to your registered e-mail address.',
+	'PASSWORD_RESET'			=> 'Your password has been successfully reset.',
+	'PASSWORD_RESET_LINK_SENT'	=> 'If your account exists, a password reset link was sent to your registered email address. If you do not receive an email, it may be because you are banned, your account is not activated, you have requested multiple password resets within a short time frame, or you are not allowed to change your password. Contact an administrator if any of those reasons apply. Also, please check your spam filter.',
 	'PERMISSIONS_RESTORED'		=> 'Successfully restored original permissions.',
 	'PERMISSIONS_TRANSFERRED'	=> 'Successfully transferred permissions from <strong>%s</strong>, you are now able to browse the board with this user’s permissions.<br />Please note that admin permissions were not transferred. You are able to revert to your permission set at any time.',
 	'PM_DISABLED'				=> 'Изпращането на лични съобщения е изключено.',
@@ -349,13 +429,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'This message was sent by a user no longer registered.',
 	'PM_ICON'					=> 'Иконка',
 	'PM_INBOX'					=> 'Входяща кутия',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Посочените потребители не съществуват.',
 	'PM_OUTBOX'					=> 'Изходяща кутия',
 	'PM_SENTBOX'				=> 'Изпратени съобщения',
 	'PM_SUBJECT'				=> 'Заглавие на съобщението',
 	'PM_TO'						=> 'Изпращане до',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Някои потребители не бяха добавени, защото са забранили получаването на лични съобщения.',
-	'POPUP_ON_PM'				=> 'Отворяне на нов прозорец при ново лично съобщение',
 	'POST_EDIT_PM'				=> 'Промяна на съобщението',
 	'POST_FORWARD_PM'			=> 'Пренасочване на съобщението',
 	'POST_NEW_PM'				=> 'Ново лично съобщение',
@@ -367,10 +450,13 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Настройките ви бяха обновени.',
 	'PROFILE_INFO_NOTICE'		=> 'Обърнете внимание, че информацията тук може да се вижда от другите потребители. Полетата със звезда (*) трябва да се попълнят.',
 	'PROFILE_UPDATED'			=> 'Профилът ви беше обновен.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'Тази функционалност не се ползва.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Получател',
 	'RECIPIENTS'						=> 'Получатели',
 	'REGISTRATION'						=> 'Registration',
+	'OAUTH_REGISTRATION'				=> 'Registration using external services',
 	'RELEASE_MESSAGES'					=> '%sRelease all on-hold messages%s… they will be re-sorted into the appropriate folder if enough space is made available.',
 	'REMOVE_ADDRESS'					=> 'Премахване на адреса',
 	'REMOVE_SELECTED_BOOKMARKS'			=> 'Премахване на избраните отметки',
@@ -383,6 +469,8 @@ $lang = array_merge($lang, array(
 	'REPLIED_MESSAGE'					=> 'Съобщение с отговор',
 	'REPLY_TO_ALL'						=> 'Отговор на изпращача и на всички получатели.',
 	'REPORT_PM'							=> 'докладване на личното съобщение',
+	'RESET_PASSWORD'					=> 'Reset password',
+	'RESET_TOKEN_EXPIRED_OR_INVALID'	=> 'The password reset token you supplied is invalid or has expired.',
 	'RESIGN_SELECTED'					=> 'Напускане на избраните',
 	'RETURN_FOLDER'						=> '%1$sОбратно към предишната папка%2$s',
 	'RETURN_UCP'						=> '%sОбратно към контролното табло на потребителя%s',
@@ -391,17 +479,20 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Правилото беше премахнато.',
 	'RULE_LIMIT_REACHED'				=> 'Не може да добавяте повече правила за личните съобщения, защото сте достигнали максималния им брой.',
 	'RULE_NOT_DEFINED'					=> 'Правилото не е зададено правилно.',
-	'RULE_REMOVED_MESSAGE'				=> 'Едно лично съобщение е било премахнато заради избраното филтриране.',
-	'RULE_REMOVED_MESSAGES'				=> '%d лични съобщения са били премахнати заради избраното филтриране.',
+	'RULE_REMOVED_MESSAGES'				=> array(
+		1	=> 'Едно лично съобщение е било премахнато заради избраното филтриране.',
+		2	=> '%d лични съобщения са били премахнати заради избраното филтриране.',
+	),
 
 	'SAME_PASSWORD_ERROR'		=> 'The new password you entered is the same as your current password.',
 	'SEARCH_YOUR_POSTS'			=> 'Моите мнения',
-	'SEND_PASSWORD'				=> 'Изпращане на парола',
 	'SENT_AT'					=> 'Изпратено',			// Used before dates in private messages
 	'SHOW_EMAIL'				=> 'Разрешаване на писма от други потребители',
 	'SIGNATURE_EXPLAIN'			=> 'Това е текст, който може да бъде добавен след всяко ваше мнение. Има ограничение от %d знака.',
 	'SIGNATURE_PREVIEW'			=> 'Подписът ви ще изглежда така',
 	'SIGNATURE_TOO_LONG'		=> 'Подписът ви е твърде дълъг.',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Сортиране',
 	'SORT_COMMENT'				=> 'Коментар',
 	'SORT_DOWNLOADS'			=> 'Сваляния',
@@ -411,20 +502,33 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Размер',
 
 	'TIMEZONE'					=> 'Часова зона',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Предложение: %s',
+	'TIMEZONE_INVALID'			=> 'Посочената часова зона е невалидна.',
 	'TO'						=> 'До',
+	'TO_MASS'					=> 'Получатели',
+	'TO_ADD'					=> 'Добавяне на получател',
+	'TO_ADD_MASS'				=> 'Добавяне на получатели',
+	'TO_ADD_GROUPS'				=> 'Добавяне на групи',
 	'TOO_MANY_RECIPIENTS'		=> 'Опитахте да изпратите лично съобщение до прекалено много получатели.',
 	'TOO_MANY_REGISTERS'		=> 'You have exceeded the maximum number of registration attempts for this session. Please try again later.',
 
-	'UCP'						=> 'Контролно табло на потребителя',
+	'UCP'						=> 'Потребителски панел',
 	'UCP_ACTIVATE'				=> 'Activate account',
 	'UCP_ADMIN_ACTIVATE'		=> 'Please note that you will need to enter a valid e-mail address before your account is activated. The administrator will review your account and if approved you will receive an e-mail at the address you specified.',
-	'UCP_AIM'					=> 'Адрес в AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Прикачени файлове',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Link',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_COPPA_BEFORE'			=> 'преди %s',
 	'UCP_COPPA_ON_AFTER'		=> 'на или след %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Please note that you will need to enter a valid e-mail address before your account is activated. You will receive an e-mail at the address you provide that contains an account activation link.',
-	'UCP_ICQ'					=> 'Номер за ICQ',
 	'UCP_JABBER'				=> 'Адрес в Jabber',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Общ преглед',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Прикачени файлове',
@@ -433,8 +537,12 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Начало',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Абонаменти',
 
-	'UCP_MSNM'					=> 'Адрес в WL/MSN',
 	'UCP_NO_ATTACHMENTS'		=> 'Досега не сте пращали файлове.',
+
+	'UCP_NOTIFICATION_LIST'				=> 'Известия',
+	'UCP_NOTIFICATION_LIST_EXPLAIN'		=> 'Тук можете да прегледате всички минали известия.',
+	'UCP_NOTIFICATION_OPTIONS'			=> 'Edit notification options',
+	'UCP_NOTIFICATION_OPTIONS_EXPLAIN'	=> 'Here you can set your preferred notification methods for the board.',
 
 	'UCP_PREFS'					=> 'Форумни настройки',
 	'UCP_PREFS_PERSONAL'		=> 'Общи настройки',
@@ -445,8 +553,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Ново лично съобщение',
 	'UCP_PM_DRAFTS'				=> 'Чернови за лични съобщения',
 	'UCP_PM_OPTIONS'			=> 'Правила, папки и настройки',
-	'UCP_PM_POPUP'				=> 'Лични съобщения',
-	'UCP_PM_POPUP_TITLE'		=> 'Прозорец за личните съобщения',
 	'UCP_PM_UNREAD'				=> 'Непрочетени съобщения',
 	'UCP_PM_VIEW'				=> 'Преглед на съобщенията',
 
@@ -455,16 +561,16 @@ $lang = array_merge($lang, array(
 	'UCP_PROFILE_PROFILE_INFO'	=> 'Профил',
 	'UCP_PROFILE_REG_DETAILS'	=> 'Настройки',
 	'UCP_PROFILE_SIGNATURE'		=> 'Подпис',
+	'UCP_PROFILE_AUTOLOGIN_KEYS'=> 'Ключове за автоматичен вход',
 
 	'UCP_USERGROUPS'			=> 'Групи',
 	'UCP_USERGROUPS_MEMBER'		=> 'Членства',
 	'UCP_USERGROUPS_MANAGE'		=> 'Групи',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Creating a new account is currently not possible.',
-	'UCP_REMIND'					=> 'Изпращане на парола',
 	'UCP_RESEND'					=> 'Изпращане на писмо за активиране',
-	'UCP_WELCOME'					=> 'Добре дошли в контролното табло на потребителя. Тук можете да наблюдавате и управлявате профила и настройките си, както и абонаментите си за форуми и теми. Можете да изпращате и лични съобщения, в случай че това е разрешено. Преди да продължите, се уверете, че сте прочели всички важни съобщения.',
-	'UCP_YIM'						=> 'Адрес в Yahoo Messenger',
+	'UCP_WELCOME'					=> 'Добре дошли в потребителския панел. Тук можете да наблюдавате и управлявате профила и настройките си, както и абонаментите си за форуми и теми. Можете да изпращате и лични съобщения, в случай че това е разрешено. Преди да продължите, се уверете, че сте прочели всички важни съобщения.',
 	'UCP_ZEBRA'						=> 'Приятели и неприятели',
 	'UCP_ZEBRA_FOES'				=> 'Неприятели',
 	'UCP_ZEBRA_FRIENDS'				=> 'Приятели',
@@ -479,7 +585,7 @@ $lang = array_merge($lang, array(
 	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$d and %2$d chars long and use only ASCII characters, so no special symbols.',
 	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$d and %2$d chars long and use only letter or number characters.',
 	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$d and %2$d chars long and use letter, number, space or -+_[] characters.',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$d and %2$d characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Дъжлината трябва да е между %1$d и %2$d знака.',
 	'USERNAME_TAKEN_USERNAME'		=> 'The username you entered is already in use, please select an alternative.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'The username you entered has been disallowed or contains a disallowed word. Please choose a different name.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'The usernames you specified could either not be found or are not activated users.',
@@ -492,10 +598,13 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Следващо ЛС',
 	'VIEW_PM'					=> 'View message',
 	'VIEW_PM_INFO'				=> 'Информация за съобщението',
-	'VIEW_PM_MESSAGE'			=> 'едно съобщение',
-	'VIEW_PM_MESSAGES'			=> '%d съобщения',
+	'VIEW_PM_MESSAGES'			=> array(
+		1	=> 'едно съобщение',
+		2	=> '%d съобщения',
+	),
 	'VIEW_PREVIOUS_HISTORY'		=> 'Предишно ЛС от историята',
 	'VIEW_PREVIOUS_PM'			=> 'Предишно ЛС',
+	'VIEW_PROFILE'				=> 'Преглед на профила',
 	'VIEW_SIGS'					=> 'Показване на подписи',
 	'VIEW_SMILIES'				=> 'Показване на усмивките като изображения',
 	'VIEW_TOPICS_DAYS'			=> 'Показване на темите от последните',
@@ -546,7 +655,6 @@ $lang = array_merge($lang, array(
 		'TO_GROUP'		=> 'към моята основна група',
 		'TO_ME'			=> 'към мен'
 	),
-
 
 	'GROUPS_EXPLAIN'	=> 'Групите позволяват на администраторите по-лесното управляване на потребителите. Всеки потребител е причислен към дадена основна група, според която се определя как той се вижда от другите потребители, напр. цвят на името, аватар, ранг и т.н.<br /> Ако администраторите го позволяват, ще ви е възможно да смените основната си група, както и да се присъединявате към други групи. Някои групи може да ви дадат допълнителни права за преглед на съдържанието или пък някакви други възможности в определени области.',
 	'GROUP_LEADER'		=> 'Водачества',

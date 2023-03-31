@@ -1,13 +1,15 @@
 <?php
 /**
 *
-* memberlist [Bulgarian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id$
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+* [Bulgarian]
 */
 
 /**
@@ -47,11 +49,13 @@ $lang = array_merge($lang, array(
 
 	'BEFORE'				=> 'преди',
 
-	'CC_EMAIL'				=> 'Получаване на копие на това писмо',
-	'CONTACT_USER'			=> 'Връзка с',
+	'CC_SENDER'				=> 'Получаване на копие на това писмо',
+	'CONTACT_ADMIN'			=> 'Връзка с администратор',
 
 	'DEST_LANG'				=> 'Език',
 	'DEST_LANG_EXPLAIN'		=> 'Изберете подходящ език (ако е наличен) за получателя на писмото.',
+
+	'EDIT_PROFILE'			=> 'Управление на профила',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Писмото ще бъде изпратено като чист текст, затова не включвайте HTML или BBCode. Получателят ще има възможност да отговори на личния ви адрес.',
 	'EMAIL_DISABLED'		=> 'Sorry but all e-mail related functions have been disabled.',
@@ -61,6 +65,8 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Трябва да въведете текст на писмото.',
 	'EMPTY_MESSAGE_IM'		=> 'Трябва да въведете текст на съобщението.',
 	'EMPTY_NAME_EMAIL'		=> 'Трябва да въведете истинското име на получателя.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
 	'EMPTY_SUBJECT_EMAIL'	=> 'Трябва да въведете тема на писмото.',
 	'EQUAL_TO'				=> 'точно',
 
@@ -72,16 +78,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Hide member search',
 
 	'IM_ADD_CONTACT'		=> 'Добавяне на контакт',
-	'IM_AIM'				=> 'Необходимо е да разполагате с AOL Instant Messenger, за да може да ползвате тази функция.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Download application',
-	'IM_ICQ'				=> 'Обърнете внимание, че потребителят може да е избрал да не получава мигновени съобщения.',
 	'IM_JABBER'				=> 'Обърнете внимание, че потребителят може да е избрал да не получава мигновени съобщения.',
 	'IM_JABBER_SUBJECT'		=> 'Това е автоматично съобщение, не му отговаряйте! Имате съобщение от %1$s при %2$s.',
 	'IM_MESSAGE'			=> 'Вашето съобщение',
-	'IM_MSNM'				=> 'Необходимо е да разполагате с Windows Messenger, за да може да ползвате тази функция.',
-	'IM_MSNM_BROWSER'		=> 'Браузърът ви не поддържа това.',
-	'IM_MSNM_CONNECT'		=> "MSNM is not connected.\nYou have to connect to MSNM to continue.",
 	'IM_NAME'				=> 'Вашето име',
 	'IM_NO_DATA'			=> 'Липсва подходяща информация за връзка с потребителя.',
 	'IM_NO_JABBER'			=> 'Форумната система не поддържа мигновени съобщения чрез Jabber. Необходимо е да разполагате с инсталиран клиент за Jabber, за да се свържете с потребителя.',
@@ -93,15 +93,20 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Последна активност',
 	'LESS_THAN'					=> 'по-малко от',
-	'LIST_USER'					=> 'един потребител',
-	'LIST_USERS'				=> '%d потребители',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'The board requires you to be registered and logged in to view the team listing.',
+	'LIST_USERS'				=> array(
+		1	=> 'един потребител',
+		2	=> '%d потребители',
+	),
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'The board requires you to be registered and logged in to access the memberlist.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'The board requires you to be registered and logged in to search users.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'The board requires you to be registered and logged in to view profiles.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'повече от',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Не ви е разрешено да пращате електронни писма на този потребител.',
 	'NO_VIEW_USERS'			=> 'Не ви е разрешено да преглеждате списъка с потребителите или техните профили.',
 
@@ -117,12 +122,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Вземане на избраните',
 	'SELECT_SORT_METHOD'	=> 'Избиране на метод за сортиране',
-	'SEND_AIM_MESSAGE'		=> 'Изпращане на съобщение по AIM',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Изпращане на съобщение по ICQ',
 	'SEND_IM'				=> 'Мигновено съобщение',
 	'SEND_JABBER_MESSAGE'	=> 'Изпращане на съобщение по Jabber',
 	'SEND_MESSAGE'			=> 'Съобщение',
-	'SEND_MSNM_MESSAGE'		=> 'Изпращане на съобщение по  MSNM/WLM',
 	'SEND_YIM_MESSAGE'		=> 'Изпращане на съобщение по YIM',
 	'SORT_EMAIL'			=> 'Е-поща',
 	'SORT_LAST_ACTIVE'		=> 'Последна актовност',
@@ -135,12 +140,15 @@ $lang = array_merge($lang, array(
 	'USER_LAST_REMINDED'	=> array(
 		0		=> 'No reminder sent at this time',
 		1		=> '%1$d reminder sent<br />» %2$s',
+		2		=> '%1$d reminder sent<br />» %2$s',
 	),
 	'USER_ONLINE'			=> 'На линия',
 	'USER_PRESENCE'			=> 'Board presence',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Преглед на профил — %s',
-	'VISITED'				=> 'Последно посещение',
-
-	'WWW'					=> 'Сайт',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
 ));
