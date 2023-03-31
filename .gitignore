@@ -1,8 +1,7 @@
 /cache
 /images/avatars/upload
 /files/*
-/install*
+/store/*.log
 /config.php
-*.log
 /rocketchat.config.php
 /vendor
