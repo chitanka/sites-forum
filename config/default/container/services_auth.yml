@@ -26,6 +26,18 @@ services:
         tags:
             - { name: auth.provider }
 
+    auth.provider.mylib:
+        class: chitanka\auth\mylib
+        arguments:
+            - '@config'
+            - '@dbal.conn'
+            - '@request'
+            - '@user'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+        tags:
+            - { name: auth.provider }
+
     auth.provider.apache:
         class: phpbb\auth\provider\apache
         arguments:
