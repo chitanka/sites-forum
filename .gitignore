@@ -1,14 +1,8 @@
 /cache
-images/avatars/upload
+/images/avatars/upload
 /files/*
-install*
-config.php
+/install*
+/config.php
 *.log
-*.pid
-#*.min.js
-chat/logs*
-chat/css/usercolors.css
-chat/socket/server.log
-chat/socket/server.pid
 /rocketchat.config.php
 /vendor
