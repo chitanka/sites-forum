@@ -678,7 +678,7 @@ $lang = array_merge($lang, array(
 	'RETURN_PAGE'				=> '%sОбратно към предишната страница%s',
 	'RETURN_TOPIC'				=> '%sОбратно към предишната тема%s',
 	'RETURN_TO'					=> 'Обратно към',
-	'RETURN_TO_INDEX'			=> 'Return to Board Index',
+	'RETURN_TO_INDEX'			=> 'Обратно към началната страница',
 
 	'ROUTE_NOT_FOUND'				=> 'The requested route “%s” could not be found.',
 	'ROUTE_INVALID_MISSING_PARAMS'	=> 'Invalid or missing parameters passed for route “%s”.',
