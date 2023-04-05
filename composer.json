@@ -53,7 +53,8 @@
 		"symfony/routing": "~3.4",
 		"symfony/twig-bridge": "~3.4",
 		"symfony/yaml": "~3.4",
-		"twig/twig": "^1.0 || ^2.0"
+		"twig/twig": "^1.0 || ^2.0",
+		"chitanka/rocket-chat-client": "^0.1.2"
 	},
 	"require-dev": {
 		"fabpot/goutte": "~3.2",

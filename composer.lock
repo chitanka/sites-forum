@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0201f3008dec8046725fd5e9afd61ba7",
+    "content-hash": "cb2be10bf664e61ec427536c6e75183e",
     "packages": [
         {
             "name": "bantu/ini-get-wrapper",
@@ -39,6 +39,41 @@
                 "source": "https://github.com/bantuXorg/php-ini-get-wrapper/tree/v1.0.1"
             },
             "time": "2014-09-15T13:12:35+00:00"
+        },
+        {
+            "name": "chitanka/rocket-chat-client",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chitanka/rocket-chat-client.git",
+                "reference": "dd8d5d8d9de6b5fd55e480eeb4eadca4ab0ffd50"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chitanka/rocket-chat-client/zipball/dd8d5d8d9de6b5fd55e480eeb4eadca4ab0ffd50",
+                "reference": "dd8d5d8d9de6b5fd55e480eeb4eadca4ab0ffd50",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Chitanka\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple PHP client for Rocket.Chat",
+            "homepage": "https://github.com/chitanka/rocket-chat-client",
+            "keywords": [
+                "rocket.chat"
+            ],
+            "support": {
+                "issues": "https://github.com/chitanka/rocket-chat-client/issues",
+                "source": "https://github.com/chitanka/rocket-chat-client/tree/master"
+            },
+            "time": "2019-03-17T20:12:31+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
@@ -5090,5 +5125,5 @@
     "platform-overrides": {
         "php": "7.1.3"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
