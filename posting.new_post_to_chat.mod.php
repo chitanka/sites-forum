@@ -2,7 +2,7 @@
 // now post the message to rocketchat too
 $rcCfg = require __DIR__.'/rocketchat.config.php';
 require __DIR__.'/vendor/chitanka/rocket-chat-client/src/RocketChatClient.php';
-$rocketchatClient = new \Chitanka\RocketChatClient($rcCfg['url'], $rcCfg['username'], $rcCfg['password'], $rcCfg['notifications_channel']);
+$rocketchatClient = new \Chitanka\RocketChatClient($rcCfg['url'], $rcCfg['username'], $rcCfg['password'], $rcCfg['notifications_channel'], $rcCfg['avatar']);
 
 $true_title = $post_data['forum_name'] .': ' . $post_data['post_subject'];
 // Remove all the http formatting from the topic_title
