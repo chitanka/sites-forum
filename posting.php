@@ -1602,12 +1602,13 @@ if ($submit || $preview || $refresh)
 			// Moderators must go through post approval like ordinary users.
 			if ((!$auth->acl_get('f_noapprove', $data['forum_id']) && empty($data['force_approved_state'])) || (isset($data['force_approved_state']) && !$data['force_approved_state']))
 			{
-				include_once $phpbb_root_path.'posting.new_post_to_chat.mod.php'; // chitanka custom
 				meta_refresh(10, $redirect_url);
 				$message = ($mode == 'edit') ? $user->lang['POST_EDITED_MOD'] : $user->lang['POST_STORED_MOD'];
 				$message .= (($user->data['user_id'] == ANONYMOUS) ? '' : ' '. $user->lang['POST_APPROVAL_NOTIFY']);
 				$message .= '<br /><br />' . sprintf($user->lang['RETURN_FORUM'], '<a href="' . append_sid("{$phpbb_root_path}viewforum.$phpEx", 'f=' . $data['forum_id']) . '">', '</a>');
 				trigger_error($message);
+			} else {
+				include_once $phpbb_root_path.'posting.new_post_to_chat.mod.php'; // chitanka custom
 			}
 
 			redirect($redirect_url);
